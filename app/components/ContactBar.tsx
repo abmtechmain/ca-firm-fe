@@ -1,6 +1,6 @@
 export default function ContactBar() {
   return (
-    <div className="bg-white py-2 sm:py-[13px] px-4 sm:px-6 lg:px-[80px]">
+    <div className="hidden md:block bg-white py-2 sm:py-[13px] px-4 sm:px-6 lg:px-[80px]">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-start sm:justify-end gap-2 sm:gap-4 md:gap-8 lg:gap-12" style={{ fontFamily: 'var(--font-roboto), sans-serif', fontSize: '14px' }}>
           <div className="flex items-center gap-2">

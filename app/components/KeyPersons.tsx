@@ -3,7 +3,7 @@ import { KEY_PERSONS, BRAND_COLORS } from '../constants';
 
 export const KeyPersons: React.FC = () => {
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <div className=" mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       {KEY_PERSONS.map((person) => (
         <div 
           key={person.id} 

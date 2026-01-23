@@ -58,7 +58,7 @@ export default function Services() {
         subtext="Comprehensive services designed to meet statutory requirements, reduce compliance risks, and support informed business decisions."
       />
       
-      <section className="w-full px-18 py-12 bg-white">
+      <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-10 md:py-12 bg-white">
         <div className="max-w-7xl mx-auto space-y-12">
           {/* Header */}
           <div className="text-center space-y-4">
@@ -76,9 +76,9 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-[1fr_0.65fr] gap-8">
+          <div className="grid lg:grid-cols-[1fr_0.65fr] gap-6 md:gap-8">
             {/* Services Grid */}
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-4 md:gap-6">
               <ServiceCard 
                 title="GST REGISTRATION & FILING"
                 description="Complete Assistance For GST Registration, Return Filing, Reconciliations, And Ongoing Compliance To Ensure Timely And Accurate Submissions."

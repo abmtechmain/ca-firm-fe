@@ -13,12 +13,12 @@ export default function ConsultationForm() {
   };
 
   return (
-    <section className="w-full px-18 py-12 bg-white">
-      <div className="max-w-7xl mx-auto space-y-24">
+    <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-10 md:py-12 bg-white">
+      <div className="max-w-7xl mx-auto space-y-12 md:space-y-16 lg:space-y-24">
         {/* Consultation Section */}
-        <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-12 items-start">
+        <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-6 md:gap-8 lg:gap-12 items-start">
           {/* Left Side: Text & Socials */}
-          <div className="space-y-8">
+          <div className="space-y-4 md:space-y-6 lg:space-y-8">
             <h2 
               className="text-[#FF541F] font-bold uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '24px' }}
@@ -62,7 +62,7 @@ export default function ConsultationForm() {
 
           {/* Right Side: Form Card */}
           <div 
-            className="bg-white rounded-xl shadow-xl border border-slate-100 p-8 md:p-10"
+            className="bg-white rounded-xl shadow-xl border border-slate-100 p-4 sm:p-6 md:p-8 lg:p-10"
             style={{ fontFamily: 'var(--font-instrument-sans), sans-serif' }}
           >
             <form className="space-y-4">

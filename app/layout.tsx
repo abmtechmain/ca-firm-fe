@@ -50,7 +50,7 @@ export default function RootLayout({
         <NavigationWrapper />
         
         {children}
-        <section className="w-full px-18 py-16 bg-white">
+        <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <ContactSection />
         </div>

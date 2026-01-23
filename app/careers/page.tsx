@@ -28,14 +28,14 @@ export default function Careers() {
         subtext="Work with experienced chartered accountants, gain real-world exposure, and grow in a culture built on ethics, learning, and responsibility."
       />
       
-      <section className="w-full px-18 py-12 bg-white">
+      <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-10 md:py-12 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-[60%_40%] items-start">
+          <div className="grid lg:grid-cols-[60%_40%] gap-6 md:gap-8 items-start">
             {/* Left Side: Job Opening Details (Slightly larger) */}
-            <div className="space-y-8">
-              <div className="flex gap-4 items-start">
+            <div className="space-y-6 md:space-y-8">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
                 <div 
-                  className="bg-[#006080] text-white px-2 py-4 text-2xl font-semibold shadow-sm"
+                  className="bg-[#006080] text-white px-3 sm:px-2 py-3 sm:py-4 text-xl sm:text-2xl font-semibold shadow-sm"
                   style={{ fontFamily: 'var(--font-roboto), sans-serif' }}
                 >
                   01
@@ -78,10 +78,10 @@ export default function Careers() {
 
             {/* Right Side: Join Our Team Form (Slightly smaller) */}
             <div 
-              className="bg-white rounded-3xl shadow-xl p-6 border border-slate-100 w-full"
+              className="bg-white rounded-3xl shadow-xl p-4 sm:p-6 md:p-8 lg:p-10 border border-slate-100 w-full"
               style={{ fontFamily: 'var(--font-instrument-sans), sans-serif' }}
             >
-              <h3 className="text-center text-[28px] text-slate-800 mb-4 tracking-tight">Join Our Team</h3>
+              <h3 className="text-center text-xl sm:text-2xl md:text-[28px] text-slate-800 mb-4 tracking-tight">Join Our Team</h3>
               
               <form className="space-y-5">
                 <div className="space-y-4">

@@ -21,3 +21,30 @@ export interface CaseStudy {
   outcome: string;
   imageUrl: string;
 }
+
+export interface StrengthItem {
+  title: string;
+  description: string;
+}
+
+export interface StrengthMain {
+  title: string;
+  description: string;
+  imageUrl: string;
+}
+
+export interface TeamMember {
+  id: string;
+  name: string;
+  role: string;
+  description: string;
+  imageUrl: string;
+}
+
+export interface Founder {
+  tag: string;
+  name: string;
+  role: string;
+  description: string[];
+  imageUrl: string;
+}

@@ -11,7 +11,7 @@ export const CaseStudySection: React.FC<CaseStudySectionProps> = ({ caseStudy })
     <div className="max-w-6xl mx-auto px-4 sm:px-6">
       <div className="grid grid-cols-1 lg:grid-cols-[45%_55%] gap-12 lg:gap-16 items-start">
         {/* Left: Image with specific shadow and sizing */}
-        <div className="rounded-sm overflow-hidden aspect-[16/9] lg:aspect-[1.5/1] shadow-lg">
+        <div className="rounded-sm overflow-hidden aspect-[16/9] lg:aspect-[1.8/1] shadow-lg">
           <img 
             src={caseStudy.imageUrl} 
             alt="Client Profile" 

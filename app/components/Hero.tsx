@@ -32,19 +32,17 @@ const Hero: React.FC<HeroProps> = ({
         }}
       />
 
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid md:grid-cols-2 gap-8 items-center">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid md:grid-cols-2 gap-6 md:gap-8 items-center">
         <div>
           <h1 
-            className="font-extrabold text-white leading-tight uppercase tracking-tight"
-            style={{ fontSize: '40px' }}
+            className="font-extrabold text-white leading-tight uppercase tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-[40px]"
           >
             {title}
           </h1>
         </div>
         <div className="md:pl-12">
           <p 
-            className="text-slate-200 leading-relaxed font-light pl-6"
-            style={{ fontSize: '18px' }}
+            className="text-slate-200 leading-relaxed font-light pl-0 md:pl-6 text-sm sm:text-base md:text-lg"
           >
             {subtext}
           </p>

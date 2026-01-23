@@ -6,15 +6,14 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="w-full px-18 py-16">
+      <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-12 md:py-16">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-stretch gap-8 max-h-[60vh]">
+          <div className="flex flex-col lg:flex-row items-stretch gap-6 md:gap-8 lg:max-h-[60vh]">
           {/* Left Section - 70% */}
-          <div className="w-[70%] pr-8 flex flex-col justify-between">
+          <div className="w-full lg:w-[70%] lg:pr-8 flex flex-col justify-between gap-4 md:gap-6">
             <h1 
-              className="leading-tight"
+              className="leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[64px]"
               style={{ 
-                fontSize: '64px', 
                 color: '#044860',
                 fontWeight: 'bold'
               }}
@@ -22,19 +21,17 @@ export default function Home() {
               Trusted Chartered Accountants for Tax, GST & Compliance Solutions
             </h1>
             <p 
-              className="leading-relaxed"
+              className="leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl"
               style={{ 
-                fontSize: '20px', 
                 color: '#0000008A'
               }}
             >
               Providing reliable accounting, taxation, audit, and advisory services to individuals, startups, and growing businesses with accuracy and integrity.
             </p>
             <button 
-              className="px-8 py-3 rounded-lg font-semibold text-white hover:opacity-90 transition-opacity"
+              className="px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold text-white hover:opacity-90 transition-opacity text-sm sm:text-base w-full sm:w-fit"
               style={{ 
-                backgroundColor: '#F37920',
-                width: 'fit-content'
+                backgroundColor: '#F37920'
               }}
             >
               CALL US NOW
@@ -42,7 +39,7 @@ export default function Home() {
           </div>
 
           {/* Right Section - 30% */}
-          <div className="w-[30%] relative ml-auto">
+          <div className="w-full lg:w-[30%] relative lg:ml-auto">
             <Image
               src="/images/1abb6196e142f17f533a7e3c15ae5ffb09e8fcb1.jpg"
               alt="Professional Portrait"
@@ -52,7 +49,8 @@ export default function Home() {
               priority
             />
             {/* Rating Card on Top Left */}
-            <div className="absolute -top-6 -left-26 bg-white rounded-4xl shadow-lg p-2 px-8 z-10 flex items-center gap-3 font-poppins border border-gray-200">
+            <div className="hidden md:block absolute -top-6 -left-26 bg-white rounded-4xl shadow-lg p-2 px-4 md:px-8 z-10 flex items-center gap-2 md:gap-3 font-poppins border border-gray-200">
+              <div className='flex items-center gap-4'>
               <div>
                 <Image src="/images/Star 1.svg" alt="Star" width={50} height={50} />
               </div>
@@ -60,15 +58,18 @@ export default function Home() {
                 <div className="text-[24px] font-medium text-black">4.9</div>
                 <div className="text-[18px] text-gray-600">Review</div>
               </div>
+              </div>
             </div>
             {/* Experience Card on Bottom Left */}
-            <div className="absolute -bottom-6 -left-36 bg-white rounded-3xl shadow-lg p-2 px-6 z-10 flex items-center gap-3 font-poppins border border-gray-200">
+            <div className="hidden md:block absolute -bottom-6 -left-36 bg-white rounded-3xl shadow-lg p-2 px-4 md:px-6 z-10 flex items-center gap-2 md:gap-3 font-poppins border border-gray-200">
+              <div className='flex items-center gap-4'>
               <div className="w-14 h-14 bg-[#056385] rounded-3xl flex items-center justify-center">
                 <span className="text-white font-medium" style={{ fontSize: '24px' }}>35</span>
               </div>
               <div>
                 <div className="text-gray-600" style={{ fontSize: '20px' }}>Years of</div>
                 <div className="text-gray-600" style={{ fontSize: '20px' }}>Experience</div>
+              </div>
               </div>
             </div>
           </div>
@@ -77,7 +78,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="w-full px-18 py-16 bg-white">
+      <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-8 ">
@@ -105,11 +106,11 @@ export default function Home() {
           </div>
 
           {/* Content Grid */}
-          <div className="flex gap-8 mt-12 items-stretch">
+          <div className="flex flex-col lg:flex-row gap-6 md:gap-8 mt-8 md:mt-12 items-stretch">
             {/* Left Side - 2x2 Grid */}
-            <div className="w-[50%] grid grid-cols-2 gap-6">
+            <div className="w-full lg:w-[50%] grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
               {/* Card 1: Experienced Professionals */}
-              <div className="bg-white rounded-xl px-6 py-10 border border-gray-400">
+              <div className="bg-white rounded-xl px-4 sm:px-6 py-6 sm:py-8 md:py-10 border border-gray-400">
                 <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Image
                     src="/images/professional.png"
@@ -119,16 +120,16 @@ export default function Home() {
                     className="object-contain"
                   />
                 </div>
-                <h3 className="font-bold mb-2 uppercase" style={{ color: '#023F55', fontSize: '24px' }}>
+                <h3 className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl" style={{ color: '#023F55' }}>
                   EXPERIENCED PROFESSIONALS
                 </h3>
-                <p style={{ color: '#0000008A', fontSize: '18px' }}>
+                <p className="text-sm sm:text-base md:text-lg" style={{ color: '#0000008A' }}>
                   Qualified Chartered Accountants With Hands-On Experience Across Taxation, Audit, And Regulatory Compliance.
                 </p>
               </div>
 
               {/* Card 2: Timely Compliance */}
-              <div className="bg-white rounded-xl px-6 py-10 border border-gray-400">
+              <div className="bg-white rounded-xl px-4 sm:px-6 py-6 sm:py-8 md:py-10 border border-gray-400">
                 <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Image
                     src="/images/timely.png"
@@ -138,16 +139,16 @@ export default function Home() {
                     className="object-contain"
                   />
                 </div>
-                <h3 className="font-bold mb-2 uppercase" style={{ color: '#023F55', fontSize: '24px' }}>
+                <h3 className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl" style={{ color: '#023F55' }}>
                   TIMELY COMPLIANCE
                 </h3>
-                <p style={{ color: '#0000008A', fontSize: '18px' }}>
+                <p className="text-sm sm:text-base md:text-lg" style={{ color: '#0000008A' }}>
                   Structured Processes And Proactive Reminders Ensure All Statutory Filings And Deadlines Are Met Without Last-Minute Stress.
                 </p>
               </div>
 
               {/* Card 3: Practical Solutions */}
-              <div className="bg-white rounded-xl px-6 py-10 border border-gray-400">
+              <div className="bg-white rounded-xl px-4 sm:px-6 py-6 sm:py-8 md:py-10 border border-gray-400">
                 <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Image
                     src="/images/Group.png"
@@ -157,16 +158,16 @@ export default function Home() {
                     className="object-contain"
                   />
                 </div>
-                <h3 className="font-bold mb-2 uppercase" style={{ color: '#023F55', fontSize: '24px' }}>
+                <h3 className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl" style={{ color: '#023F55' }}>
                   PRACTICAL SOLUTIONS
                 </h3>
-                <p style={{ color: '#0000008A', fontSize: '18px' }}>
+                <p className="text-sm sm:text-base md:text-lg" style={{ color: '#0000008A' }}>
                   Advice That Is Clear, Actionable, And Aligned With Your Business Realities – Not Just Theoretical Interpretations.
                 </p>
               </div>
 
               {/* Card 4: Client-Focused Approach */}
-              <div className="bg-white rounded-xl px-6 py-10 border border-gray-400">
+              <div className="bg-white rounded-xl px-4 sm:px-6 py-6 sm:py-8 md:py-10 border border-gray-400">
                 <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Image
                     src="/images/Vector.png"
@@ -176,17 +177,17 @@ export default function Home() {
                     className="object-contain"
                   />
                 </div>
-                <h3 className="font-bold mb-2 uppercase" style={{ color: '#023F55', fontSize: '24px' }}>
+                <h3 className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl" style={{ color: '#023F55' }}>
                   CLIENT-FOCUSED APPROACH
                 </h3>
-                <p style={{ color: '#0000008A', fontSize: '18px' }}>
+                <p className="text-sm sm:text-base md:text-lg" style={{ color: '#0000008A' }}>
                   Personalized Attention, Transparent Communication, And Solutions Tailored To Your Specific Requirements.
                 </p>
               </div>
             </div>
 
             {/* Right Side - Large Card */}
-            <div className="w-[50%] flex">
+            <div className="w-full lg:w-[50%] flex">
               <div className="bg-white rounded-xl border border-gray-400 overflow-hidden w-full flex flex-col">
                 {/* Image */}
                 <div className="w-full h-1/2 relative">
@@ -234,7 +235,7 @@ export default function Home() {
       </section>
 
       {/* Meet Our Team Button Section */}
-      <section className="w-full px-18 bg-white">
+      <section className="w-full px-4 sm:px-6 lg:px-18 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center">
             <button 
@@ -250,7 +251,7 @@ export default function Home() {
       </section>
 
       {/* Key Services Section */}
-      <section className="w-full px-18 py-16 bg-white relative overflow-hidden">
+      <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-12 md:py-16 bg-white relative overflow-hidden">
         {/* Background Logo with 20% opacity */}
         <div className="absolute inset-0 pointer-events-none" >
           <Image
@@ -346,7 +347,7 @@ export default function Home() {
       </section>
 
       {/* How We Work Section */}
-      <section className="w-full px-18 py-16 bg-white">
+      <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-12">
@@ -484,7 +485,7 @@ export default function Home() {
       </section>
 
       {/* Numbers That Speak Section */}
-      <section className="w-full px-18 py-16 relative overflow-hidden">
+      <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-12 md:py-16 relative overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <Image

@@ -42,8 +42,8 @@ export default function Careers() {
                 </div>
                 <div className="space-y-2">
                   <h2 
-                    className="text-[#006080] font-bold text-2xl uppercase tracking-tight leading-tight"
-                    style={{ fontFamily: 'var(--font-instrument-sans), sans-serif' }}
+                    className="text-[#006080] font-bold uppercase tracking-tight leading-tight"
+                    style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '24px' }}
                   >
                     OPENING FOR CA LOCATION: MUMBAI
                   </h2>

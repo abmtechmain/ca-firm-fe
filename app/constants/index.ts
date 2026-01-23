@@ -1,4 +1,4 @@
-import { BlogPost, DownloadItem, CaseStudy, StrengthItem, StrengthMain, TeamMember, Founder } from '../types';
+import { BlogPost, DownloadItem, CaseStudy, StrengthItem, StrengthMain, TeamMember, Founder, KeyPerson } from '../types';
 
 export const BLOG_POSTS: BlogPost[] = [
   {
@@ -175,6 +175,21 @@ export const FOUNDER_DATA: Founder = {
   ],
   imageUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800'
 };
+
+export const KEY_PERSONS: KeyPerson[] = Array(5).fill({
+  id: '1',
+  name: 'CA. SAMPAT KACHU MANDLIK',
+  phone: '+91 88885 5599',
+  qualification: 'FCA, M. COM',
+  imageUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=600',
+  description: [
+    "- Qualified Since 2018.",
+    "- Senior Partner Of The Firm.",
+    "- Having 7 Years Post Qualification Of Experience In Providing The Firm's Core And Additional Services. She Is Responsible For The Computerization & Atomization Of Several Processes, Leading To Faster Response Times And Increased Client Satisfaction Levels. In Recent Past, He Has Also Handled Assignments In The Field Of Corporate Restructuring For Our Key Clients And Conducting Audit & Advisory Services Of Various Laws Related To Taxation With Its Technical And Analytical Aspects.",
+    "- Experience Of Management & Internal Audit Of Limited As Well As Listed Companies.",
+    "- Experience Of Work In Various Laws E.G. Direct Taxes, Indirect Taxes, And Company Law Etc."
+  ]
+}).map((p, i) => ({ ...p, id: i.toString() }));
 
 export const BRAND_COLORS = {
   primary: '#0e6d8a',

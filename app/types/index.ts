@@ -48,3 +48,12 @@ export interface Founder {
   description: string[];
   imageUrl: string;
 }
+
+export interface KeyPerson {
+  id: string;
+  name: string;
+  phone: string;
+  qualification: string;
+  imageUrl: string;
+  description: string[];
+}

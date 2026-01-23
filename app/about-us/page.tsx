@@ -2,6 +2,7 @@ import Hero from '../components/Hero';
 import { WhoWeAre } from '../components/WhoWeAre';
 import { VisionMission } from '../components/VisionMission';
 import { FounderSection } from '../components/FounderSection';
+import { KeyPersons } from '../components/KeyPersons';
 import { TeamSection } from '../components/TeamSection';
 import { KeyStrengths } from '../components/KeyStrengths';
 import { BRAND_COLORS } from '../constants';
@@ -29,6 +30,28 @@ export default function AboutUs() {
       {/* Founder Section */}
       <section className="w-full px-4 sm:px-6 lg:px-18 py-12 md:py-16 lg:py-20 bg-white">
         <FounderSection />
+      </section>
+      
+      {/* Key Persons Section */}
+      <section className="w-full px-4 sm:px-6 lg:px-18 py-12 md:py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Title */}
+          <div className="text-center mb-12 md:mb-16">
+            <div className="inline-block relative">
+              <h2 
+                className="font-extrabold tracking-tight uppercase"
+                style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
+              >
+                KEY PERSONS
+              </h2>
+              <div 
+                className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                style={{ backgroundColor: BRAND_COLORS.primary }}
+              ></div>
+            </div>
+          </div>
+          <KeyPersons />
+        </div>
       </section>
       
       {/* Team Members Section */}

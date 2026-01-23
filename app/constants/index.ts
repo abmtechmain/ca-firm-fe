@@ -197,3 +197,84 @@ export const BRAND_COLORS = {
   textMuted: '#71717a', // Slightly adjusted for exact match
   textHeading: '#18181b',
 };
+
+export const LEGAL_CONTENT = {
+  privacyPolicy: {
+    title: 'PRIVACY POLICY',
+    intro: 'We are committed to protecting the privacy and confidentiality of information shared with us.',
+    content: [
+      {
+        heading: null,
+        text: 'We value your privacy and are committed to safeguarding any personal or business information provided through this website.'
+      },
+      {
+        heading: 'Information We Collect',
+        text: 'We may collect personal information such as name, phone number, email address, and details related to your enquiry when you submit a form or contact us.'
+      },
+      {
+        heading: 'Use of Information',
+        text: 'The information collected is used solely for responding to enquiries, providing professional services, and maintaining communication related to our services.'
+      },
+      {
+        heading: 'Data Protection',
+        text: 'We implement reasonable security measures to protect information against unauthorized access, disclosure, or misuse.'
+      },
+      {
+        heading: 'Third-Party Disclosure',
+        text: 'We do not sell, trade, or share personal information with third parties except where required by law or for regulatory compliance.'
+      },
+      {
+        heading: 'Consent',
+        text: 'By using this website and submitting your information, you consent to the terms of this Privacy Policy.'
+      }
+    ]
+  },
+  termsConditions: {
+    title: 'TERMS & CONDITIONS',
+    intro: 'Please read these terms carefully before using this website.',
+    content: [
+      {
+        heading: null,
+        text: 'By accessing or using this website, you agree to be bound by the following terms and conditions.'
+      },
+      {
+        heading: 'Website Usage',
+        text: 'The content on this website is provided for general informational purposes only and does not constitute professional advice.'
+      },
+      {
+        heading: 'Professional Engagement',
+        text: 'Any professional services will be provided only after formal engagement and agreement, as per applicable laws and professional standards.'
+      },
+      {
+        heading: 'Accuracy of Information',
+        text: 'While reasonable efforts are made to ensure accuracy, we do not guarantee that the information on this website is complete, current, or error-free.'
+      },
+      {
+        heading: 'Limitation of Liability',
+        text: 'We shall not be liable for any loss or damage arising from reliance on information available on this website.'
+      },
+      {
+        heading: 'Governing Law',
+        text: 'These terms shall be governed by and interpreted in accordance with applicable laws of India.'
+      }
+    ]
+  },
+  disclaimer: {
+    title: 'DISCLAIMER',
+    intro: 'The information provided on this website is for general guidance only.',
+    content: [
+      {
+        heading: null,
+        text: 'The content on this website is intended for general informational purposes and should not be considered as professional, legal, or financial advice.'
+      },
+      {
+        heading: null,
+        text: 'Professional advice should be sought before acting on any information provided on this website. We do not accept responsibility for any loss arising from actions taken based on the information available herein.'
+      },
+      {
+        heading: null,
+        text: 'Use of this website does not create a client-professional relationship unless formally agreed in writing.'
+      }
+    ]
+  }
+};

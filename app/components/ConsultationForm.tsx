@@ -159,8 +159,8 @@ export default function ConsultationForm() {
             />
           </div>
           
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-[#023F55] bg-opacity-40 z-[1]"></div>
+          {/* Light Overlay for text readability */}
+          <div className="absolute inset-0 bg-black/20 z-[1]"></div>
           
           {/* Content */}
           <div className="relative z-[2] h-full flex flex-col items-center justify-center px-8 text-center space-y-6">

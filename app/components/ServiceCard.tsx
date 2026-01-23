@@ -9,11 +9,7 @@ interface ServiceCardProps {
 export default function ServiceCard({ icon, title, description }: ServiceCardProps) {
   return (
     <div 
-      className="bg-white rounded-xl px-6 py-12 border border-gray-400 transition-all duration-300 cursor-pointer group relative overflow-hidden hover:border-white" 
-      style={{ 
-        width: '280px', 
-        height: '320px'
-      }}
+      className="bg-white rounded-xl px-4 sm:px-6 py-8 sm:py-10 md:py-12 border border-gray-400 transition-all duration-300 cursor-pointer group relative overflow-hidden hover:border-white w-full sm:w-[280px] min-h-[280px] sm:min-h-[320px] flex flex-col" 
     >
       {/* Gradient background on hover */}
       <div 

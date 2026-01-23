@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import ConsultationForm from '../components/ConsultationForm';
+import { BRAND_COLORS } from '../constants';
 
 const ServiceCard = ({ title, description, icon }: { title: string, description: string, icon: React.ReactNode }) => (
   <div className="bg-white border border-[#a0c4d1] rounded-lg overflow-hidden flex flex-col items-center p-6 text-center hover:shadow-lg transition-shadow">
@@ -61,13 +62,19 @@ export default function Services() {
       <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-10 md:py-12 bg-white">
         <div className="max-w-7xl mx-auto space-y-12">
           {/* Header */}
-          <div className="text-center space-y-4">
-            <h2 
-              className="text-[#ea580c] font-extrabold uppercase tracking-widest border-b-2 border-[#006080] inline-block pb-1"
-              style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '24px' }}
-            >
-              SERVICES OVERVIEW
-            </h2>
+          <div className="text-center space-y-6 mb-12">
+            <div className="inline-block relative">
+              <h2 
+                className="font-extrabold tracking-tight uppercase"
+                style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
+              >
+                SERVICES OVERVIEW
+              </h2>
+              <div 
+                className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                style={{ backgroundColor: BRAND_COLORS.primary }}
+              ></div>
+            </div>
             <p 
               className="text-slate-500 text-xs md:text-sm max-w-2xl mx-auto font-light leading-relaxed px-4"
               style={{ fontFamily: 'var(--font-instrument-sans), sans-serif' }}
@@ -156,12 +163,18 @@ export default function Services() {
               className="bg-white border border-[#a0c4d1] rounded-lg p-8 h-full"
               style={{ fontFamily: 'var(--font-instrument-sans), sans-serif' }}
             >
-              <h3 
-                className="text-[#ea580c] font-bold mb-8 uppercase tracking-widest border-b border-[#a0c4d1]/30 pb-4"
-                style={{ fontSize: '24px' }}
-              >
-                INDUSTRIES SERVED
-              </h3>
+              <div className="inline-block relative mb-8">
+                <h3 
+                  className="font-extrabold tracking-tight uppercase"
+                  style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
+                >
+                  INDUSTRIES SERVED
+                </h3>
+                <div 
+                  className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                  style={{ backgroundColor: BRAND_COLORS.primary }}
+                ></div>
+              </div>
               <ul className="space-y-4">
                 {industries.map((item, index) => (
                   <li 

@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Hero from '../components/Hero';
+import { BRAND_COLORS } from '../constants';
 
 export default function Careers() {
   const [fileName, setFileName] = useState<string>('');
@@ -41,12 +42,18 @@ export default function Careers() {
                   01
                 </div>
                 <div className="space-y-2">
-                  <h2 
-                    className="text-[#006080] font-bold uppercase tracking-tight leading-tight"
-                    style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '24px' }}
-                  >
-                    OPENING FOR CA LOCATION: MUMBAI
-                  </h2>
+                  <div className="inline-block relative">
+                    <h2 
+                      className="font-extrabold tracking-tight uppercase leading-tight"
+                      style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
+                    >
+                      OPENING FOR CA LOCATION: MUMBAI
+                    </h2>
+                    <div 
+                      className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                      style={{ backgroundColor: BRAND_COLORS.primary }}
+                    ></div>
+                  </div>
                   <p 
                     className="text-gray-700 text-base leading-relaxed max-w-lg"
                     style={{ fontFamily: 'var(--font-instrument-sans), sans-serif' }}

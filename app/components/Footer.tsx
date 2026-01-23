@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
               alt="SKMRD & ASSOCIATES"
               width={300}
               height={200}
-              className="w-auto h-auto object-contain"
+              className="w-full max-w-[280px] sm:max-w-[300px] md:max-w-[350px] h-auto object-contain"
             />
           </div>
 

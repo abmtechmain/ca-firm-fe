@@ -49,26 +49,26 @@ export default function Home() {
               priority
             />
             {/* Rating Card on Top Left */}
-            <div className="hidden md:block absolute -top-6 -left-26 bg-white rounded-4xl shadow-lg p-2 px-4 md:px-8 z-10 flex items-center gap-2 md:gap-3 font-poppins border border-gray-200">
-              <div className='flex items-center gap-4'>
-              <div>
-                <Image src="/images/Star 1.svg" alt="Star" width={50} height={50} />
+            <div className="hidden md:block absolute top-2 md:top-4 lg:-top-6 left-2 md:left-4 lg:-left-6 xl:-left-8 bg-white rounded-2xl md:rounded-3xl lg:rounded-4xl shadow-lg p-2 md:p-3 px-3 md:px-6 lg:px-8 z-10 flex items-center gap-2 md:gap-3 font-poppins border border-gray-200">
+              <div className='flex items-center gap-2 md:gap-4'>
+              <div className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 flex-shrink-0">
+                <Image src="/images/Star 1.svg" alt="Star" width={50} height={50} className="w-full h-full" />
               </div>
               <div>
-                <div className="text-[24px] font-medium text-black">4.9</div>
-                <div className="text-[18px] text-gray-600">Review</div>
+                <div className="text-base md:text-lg lg:text-xl xl:text-[24px] font-medium text-black">4.9</div>
+                <div className="text-xs md:text-sm lg:text-base xl:text-[18px] text-gray-600">Review</div>
               </div>
               </div>
             </div>
             {/* Experience Card on Bottom Left */}
-            <div className="hidden md:block absolute -bottom-6 -left-36 bg-white rounded-3xl shadow-lg p-2 px-4 md:px-6 z-10 flex items-center gap-2 md:gap-3 font-poppins border border-gray-200">
-              <div className='flex items-center gap-4'>
-              <div className="w-14 h-14 bg-[#056385] rounded-3xl flex items-center justify-center">
-                <span className="text-white font-medium" style={{ fontSize: '24px' }}>35</span>
+            <div className="hidden md:block absolute bottom-2 md:bottom-4 lg:-bottom-6 left-2 md:left-4 lg:-left-8 xl:-left-12 bg-white rounded-2xl md:rounded-3xl shadow-lg p-2 md:p-3 px-3 md:px-4 lg:px-6 z-10 flex items-center gap-2 md:gap-3 font-poppins border border-gray-200">
+              <div className='flex items-center gap-2 md:gap-4'>
+              <div className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-[#056385] rounded-2xl md:rounded-3xl flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-medium text-base md:text-lg lg:text-xl xl:text-[24px]">35</span>
               </div>
               <div>
-                <div className="text-gray-600" style={{ fontSize: '20px' }}>Years of</div>
-                <div className="text-gray-600" style={{ fontSize: '20px' }}>Experience</div>
+                <div className="text-gray-600 text-sm md:text-base lg:text-lg xl:text-[20px]">Years of</div>
+                <div className="text-gray-600 text-sm md:text-base lg:text-lg xl:text-[20px]">Experience</div>
               </div>
               </div>
             </div>
@@ -80,20 +80,23 @@ export default function Home() {
       {/* Why Choose Us Section */}
       <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto">
-          {/* Heading */}
-          <div className="text-center mb-8 ">
-            <h2 
-              className="uppercase mb-2"
-              style={{ 
-                fontSize: '24px', 
-                color: '#FF541F',
-                fontWeight: 'bold',
-                fontFamily: 'var(--font-instrument-sans), sans-serif'
-              }}
-            >
-              WHY CHOOSE US
-            </h2>
-            <div className="w-36 h-1 bg-[#056385] mx-auto mb-6"></div>
+              {/* Heading */}
+              <div className="text-center mb-8">
+                <div className="inline-block relative mb-6">
+                  <h2 
+                    className="font-extrabold tracking-tight uppercase"
+                    style={{ 
+                      fontSize: '24px', 
+                      color: '#FF541F'
+                    }}
+                  >
+                    WHY CHOOSE US
+                  </h2>
+                  <div 
+                    className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                    style={{ backgroundColor: '#056385' }}
+                  ></div>
+                </div>
             <p 
               className="max-w-3xl mx-auto"
               style={{ 
@@ -264,30 +267,33 @@ export default function Home() {
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-          {/* Heading */}
-          <div className="text-center mb-12">
-          <h2 
-              className="uppercase mb-2"
-              style={{ 
-                fontSize: '24px', 
-                color: '#FF541F',
-                fontWeight: 'bold',
-                fontFamily: 'var(--font-instrument-sans), sans-serif'
-              }}
-            >
-              KEY SERVICES
-            </h2>
-            <div className="w-36 h-1 bg-[#056385] mx-auto mb-6"></div>
-          </div>
+              {/* Heading */}
+              <div className="text-center mb-12">
+                <div className="inline-block relative mb-6">
+                  <h2 
+                    className="font-extrabold tracking-tight uppercase"
+                    style={{ 
+                      fontSize: '24px', 
+                      color: '#FF541F'
+                    }}
+                  >
+                    KEY SERVICES
+                  </h2>
+                  <div 
+                    className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                    style={{ backgroundColor: '#056385' }}
+                  ></div>
+                </div>
+              </div>
 
           {/* Service Cards */}
-          <div className="flex flex-col gap-12 max-w-5xl mx-auto">
+          <div className="flex flex-col gap-6 sm:gap-8 md:gap-12 max-w-5xl mx-auto">
             {/* Top Row - 3 Cards */}
-            <div className="flex justify-evenly gap-12">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center items-stretch gap-4 sm:gap-6 md:gap-8 lg:gap-12">
               {/* Card 1: Advisory */}
               <ServiceCard
                 icon={
-                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 }
@@ -298,7 +304,7 @@ export default function Home() {
               {/* Card 2: Income Tax */}
               <ServiceCard
                 icon={
-                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 }
@@ -309,7 +315,7 @@ export default function Home() {
               {/* Card 3: Audit & Assurance */}
               <ServiceCard
                 icon={
-                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                   </svg>
                 }
@@ -319,11 +325,11 @@ export default function Home() {
             </div>
 
             {/* Bottom Row - 2 Cards */}
-            <div className="flex justify-evenly gap-12">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center items-stretch gap-4 sm:gap-6 md:gap-8 lg:gap-12">
               {/* Card 4: GST */}
               <ServiceCard
                 icon={
-                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 }
@@ -334,7 +340,7 @@ export default function Home() {
               {/* Card 5: Company Law */}
               <ServiceCard
                 icon={
-                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 }
@@ -351,21 +357,25 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-12">
-            <h2 
-              className="uppercase mb-2 font-instrument-sans"
-              style={{ 
-                fontSize: '24px', 
-                color: '#FF541F',
-                fontWeight: 'bold',
-              }}
-            >
-              HOW WE WORK
-            </h2>
-            <div className="w-36 h-1 bg-[#FF541F] mx-auto mb-6"></div>
+            <div className="inline-block relative mb-6">
+              <h2 
+                className="font-extrabold tracking-tight uppercase"
+                style={{ 
+                  fontSize: '24px', 
+                  color: '#FF541F'
+                }}
+              >
+                HOW WE WORK
+              </h2>
+              <div 
+                className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                style={{ backgroundColor: '#056385' }}
+              ></div>
+            </div>
             <p 
-              className="max-w-3xl mx-auto"
+              className="max-w-3xl mx-auto text-sm sm:text-base md:text-lg px-4"
               style={{ 
-                fontSize: '20px', 
+                fontSize: '16px', 
                 color: '#0000008A'
               }}
             >
@@ -374,16 +384,17 @@ export default function Home() {
           </div>
 
           {/* Main Content Area */}
-          <div className="flex items-center gap-12 mt-16">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 mt-8 md:mt-12 lg:mt-16">
             {/* Left Column */}
-            <div className="flex-1 flex flex-col gap-12">
+            <div className="w-full lg:flex-1 flex flex-col gap-8 md:gap-10 lg:gap-12">
               {/* Consultation */}
-              <div className="text-left">
+              <div className="text-left lg:text-left">
                 <h3 
                   className="font-bold mb-3 uppercase"
                   style={{ 
                     color: '#056385', 
-                    fontSize: '24px'
+                    fontSize: '20px',
+                    lineHeight: '1.3'
                   }}
                 >
                   CONSULTATION
@@ -391,7 +402,7 @@ export default function Home() {
                 <p 
                   style={{ 
                     color: '#0000008A', 
-                    fontSize: '18px',
+                    fontSize: '16px',
                     lineHeight: '1.6'
                   }}
                 >
@@ -400,12 +411,13 @@ export default function Home() {
               </div>
 
               {/* Analysis */}
-              <div className="text-left">
+              <div className="text-left lg:text-left">
                 <h3 
                   className="font-bold mb-3 uppercase"
                   style={{ 
                     color: '#056385', 
-                    fontSize: '24px'
+                    fontSize: '20px',
+                    lineHeight: '1.3'
                   }}
                 >
                   ANALYSIS
@@ -413,7 +425,7 @@ export default function Home() {
                 <p 
                   style={{ 
                     color: '#0000008A', 
-                    fontSize: '18px',
+                    fontSize: '16px',
                     lineHeight: '1.6'
                   }}
                 >
@@ -423,26 +435,26 @@ export default function Home() {
             </div>
 
             {/* Central Image */}
-            <div className="flex-shrink-0">
+            <div className="w-full lg:flex-shrink-0 lg:w-auto flex justify-center my-4 lg:my-0">
               <Image
                 src="/images/024d546ae1f8a1e7f688d26bf57ae6a52b6c5d37.jpg"
                 alt="How We Work"
                 width={400}
                 height={500}
-                className="rounded-xl object-cover"
-                style={{ width: '400px', height: '500px' }}
+                className="rounded-xl object-cover w-full max-w-[300px] sm:max-w-[350px] lg:max-w-[400px] h-auto aspect-[4/5]"
               />
             </div>
 
             {/* Right Column */}
-            <div className="flex-1 flex flex-col gap-12">
+            <div className="w-full lg:flex-1 flex flex-col gap-8 md:gap-10 lg:gap-12">
               {/* Execution */}
-              <div className="text-right">
+              <div className="text-left lg:text-right">
                 <h3 
                   className="font-bold mb-3 uppercase"
                   style={{ 
                     color: '#056385', 
-                    fontSize: '24px'
+                    fontSize: '20px',
+                    lineHeight: '1.3'
                   }}
                 >
                   EXECUTION
@@ -450,7 +462,7 @@ export default function Home() {
                 <p 
                   style={{ 
                     color: '#0000008A', 
-                    fontSize: '18px',
+                    fontSize: '16px',
                     lineHeight: '1.6'
                   }}
                 >
@@ -459,12 +471,13 @@ export default function Home() {
               </div>
 
               {/* Ongoing Support */}
-              <div className="text-right">
+              <div className="text-left lg:text-right">
                 <h3 
                   className="font-bold mb-3 uppercase"
                   style={{ 
                     color: '#056385', 
-                    fontSize: '24px'
+                    fontSize: '20px',
+                    lineHeight: '1.3'
                   }}
                 >
                   ONGOING SUPPORT
@@ -472,7 +485,7 @@ export default function Home() {
                 <p 
                   style={{ 
                     color: '#0000008A', 
-                    fontSize: '18px',
+                    fontSize: '16px',
                     lineHeight: '1.6'
                   }}
                 >
@@ -498,28 +511,28 @@ export default function Home() {
           <div className="absolute inset-0 bg-[#044860] opacity-90"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10 py-8 md:py-12 lg:py-16">
           {/* Top Section - Heading and Description */}
-          <div className="flex gap-12 mb-16">
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 mb-8 md:mb-12 lg:mb-16">
             {/* Left - Main Heading */}
-            <div className="w-[70%]">
+            <div className="w-full lg:w-[70%]">
               <h2 
                 className="text-white font-bold leading-tight"
                 style={{ 
-                  fontSize: '40px',
-                  lineHeight: '1.2'
+                  fontSize: '24px',
+                  lineHeight: '1.3'
                 }}
               >
-                NUMBERS THAT SPEAK TO WHAT<br />WE'VE BUILT OVER THE YEARS
+                NUMBERS THAT SPEAK TO WHAT<br className="hidden sm:block" />WE'VE BUILT OVER THE YEARS
               </h2>
             </div>
 
             {/* Right - Description */}
-            <div className="w-[30%] flex items-center">
+            <div className="w-full lg:w-[30%] flex items-center">
               <p 
-                className="text-white"
+                className="text-white text-sm md:text-base"
                 style={{ 
-                  fontSize: '16px',
+                  fontSize: '14px',
                   lineHeight: '1.6'
                 }}
               >
@@ -529,94 +542,94 @@ export default function Home() {
           </div>
 
           {/* Data Cards Grid */}
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {/* Row 1 */}
-            <div className="backdrop-blur-sm rounded-xl border border-white px-8 py-6 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
+            <div className="backdrop-blur-sm rounded-xl border border-white px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
               <div 
-                className="text-white font-bold mb-3"
-                style={{ fontSize: '56px' }}
+                className="text-white font-bold mb-2 md:mb-3"
+                style={{ fontSize: '36px' }}
               >
                 15+
               </div>
               <div 
-                className="text-white uppercase"
-                style={{ fontSize: '16px' }}
+                className="text-white uppercase text-xs sm:text-sm md:text-base"
+                style={{ fontSize: '14px' }}
               >
                 YEARS IN THE FIELD
               </div>
             </div>
 
-              <div className="backdrop-blur-sm rounded-xl border border-white px-8 py-6 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
+              <div className="backdrop-blur-sm rounded-xl border border-white px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
               <div 
-                className="text-white font-bold mb-3"
-                style={{ fontSize: '56px' }}
+                className="text-white font-bold mb-2 md:mb-3"
+                style={{ fontSize: '36px' }}
               >
                 800+
               </div>
               <div 
-                className="text-white uppercase"
-                style={{ fontSize: '16px' }}
+                className="text-white uppercase text-xs sm:text-sm md:text-base"
+                style={{ fontSize: '14px' }}
               >
                 CLIENTS SERVED
               </div>
             </div>
 
-            <div className="backdrop-blur-sm rounded-xl border border-white px-8 py-6 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
+            <div className="backdrop-blur-sm rounded-xl border border-white px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
               <div 
-                className="text-white font-bold mb-3"
-                style={{ fontSize: '56px' }}
+                className="text-white font-bold mb-2 md:mb-3"
+                style={{ fontSize: '36px' }}
               >
                 20+
               </div>
               <div 
-                className="text-white uppercase"
-                style={{ fontSize: '16px' }}
+                className="text-white uppercase text-xs sm:text-sm md:text-base"
+                style={{ fontSize: '14px' }}
               >
                 INDUSTRIES COVERED
               </div>
             </div>
 
             {/* Row 2 */}
-            <div className="backdrop-blur-sm rounded-xl border border-white px-8 py-6 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
+            <div className="backdrop-blur-sm rounded-xl border border-white px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
               <div 
-                className="text-white font-bold mb-3"
-                style={{ fontSize: '56px' }}
+                className="text-white font-bold mb-2 md:mb-3"
+                style={{ fontSize: '36px' }}
               >
                 5000+
               </div>
               <div 
-                className="text-white uppercase"
-                style={{ fontSize: '16px' }}
+                className="text-white uppercase text-xs sm:text-sm md:text-base"
+                style={{ fontSize: '14px' }}
               >
                 RETURNS FILED
               </div>
             </div>
 
-            <div className="backdrop-blur-sm rounded-xl border border-white px-8 py-6 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
+            <div className="backdrop-blur-sm rounded-xl border border-white px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
               <div 
-                className="text-white font-bold mb-3"
-                style={{ fontSize: '56px' }}
+                className="text-white font-bold mb-2 md:mb-3"
+                style={{ fontSize: '36px' }}
               >
                 98%
               </div>
               <div 
-                className="text-white uppercase"
-                style={{ fontSize: '16px' }}
+                className="text-white uppercase text-xs sm:text-sm md:text-base"
+                style={{ fontSize: '14px' }}
               >
                 CLIENT SATISFACTION
               </div>
             </div>
 
-            <div className="backdrop-blur-sm rounded-xl border border-white px-8 py-6 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
+            <div className="backdrop-blur-sm rounded-xl border border-white px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
               <div 
-                className="text-white font-bold mb-3"
-                style={{ fontSize: '56px' }}
+                className="text-white font-bold mb-2 md:mb-3"
+                style={{ fontSize: '36px' }}
               >
                 24/7
               </div>
               <div 
-                className="text-white uppercase"
-                style={{ fontSize: '16px' }}
+                className="text-white uppercase text-xs sm:text-sm md:text-base"
+                style={{ fontSize: '14px' }}
               >
                 SUPPORT AVAILABLE
               </div>

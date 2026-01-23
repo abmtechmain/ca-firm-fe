@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Hero from '../components/Hero';
+import { BRAND_COLORS } from '../constants';
 
 export default function Contact() {
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
@@ -45,12 +46,18 @@ export default function Contact() {
           <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-6 md:gap-8 lg:gap-12 items-start">
             {/* Left Side: Text & Socials */}
             <div className="space-y-4 md:space-y-6 lg:space-y-8">
-              <h2 
-                className="text-[#006080] font-bold uppercase tracking-tight"
-                style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '24px' }}
-              >
-                REQUEST A CONSULTATION
-              </h2>
+              <div className="relative inline-block">
+                <h2 
+                  className="font-extrabold tracking-tight uppercase block"
+                  style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
+                >
+                  REQUEST A CONSULTATION
+                </h2>
+                <div 
+                  className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                  style={{ backgroundColor: BRAND_COLORS.primary }}
+                ></div>
+              </div>
               <p 
                 className="text-slate-500 text-sm leading-relaxed max-w-sm"
                 style={{ fontFamily: 'var(--font-instrument-sans), sans-serif' }}

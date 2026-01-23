@@ -22,10 +22,14 @@ export default function Resources() {
             <div className="inline-block relative">
               <h1 
                 className="font-extrabold tracking-tight uppercase"
-                style={{ color: BRAND_COLORS.primary, fontSize: '24px' }}
+                style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
               >
                 Blogs & Articles
               </h1>
+              <div 
+                className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                style={{ backgroundColor: BRAND_COLORS.primary }}
+              ></div>
             </div>
             
             <p className="max-w-2xl mx-auto text-gray-500 text-sm md:text-base leading-relaxed">

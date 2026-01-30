@@ -2,82 +2,37 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ServiceCard from './components/ServiceCard';
 import ContactSection from './components/ContactSection';
+import HeroCarousel from './components/HeroCarousel';
 
 export default function Home() {
   return (
     <div>
-      {/* Hero Section */}
-      <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-12 md:py-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-stretch gap-6 md:gap-8 lg:max-h-[60vh]">
-          {/* Left Section - 70% */}
-          <div className="w-full lg:w-[70%] lg:pr-8 flex flex-col justify-between gap-4 md:gap-6">
-            <h1 
-              className="leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[64px]"
-              style={{ 
-                color: '#044860',
-                fontWeight: 'bold'
-              }}
-            >
-              Trusted Chartered Accountants for Tax, GST & Compliance Solutions
-            </h1>
-            <p 
-              className="leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl"
-              style={{ 
-                color: '#0000008A'
-              }}
-            >
-              Providing reliable accounting, taxation, audit, and advisory services to individuals, startups, and growing businesses with accuracy and integrity.
-            </p>
-            <Link 
-              href="/contact"
-              className="px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold text-white hover:opacity-90 transition-opacity text-sm sm:text-base w-full sm:w-fit cursor-pointer inline-block text-center"
-              style={{ 
-                backgroundColor: '#F37920'
-              }}
-            >
-              CALL US NOW
-            </Link>
-          </div>
-
-          {/* Right Section - 30% */}
-          <div className="w-full lg:w-[30%] relative lg:ml-auto">
-            <Image
-              src="/images/1abb6196e142f17f533a7e3c15ae5ffb09e8fcb1.jpg"
-              alt="Professional Portrait"
-              width={500}
-              height={700}
-              className="w-full h-full object-contain object-right rounded-lg"
-              priority
-            />
-            {/* Rating Card on Top Left */}
-            <div className="hidden md:block absolute top-2 md:top-4 lg:-top-6 left-2 md:left-4 lg:-left-6 xl:-left-8 bg-white rounded-2xl md:rounded-3xl lg:rounded-4xl shadow-lg p-2 md:p-3 px-3 md:px-6 lg:px-8 z-10 flex items-center gap-2 md:gap-3 font-poppins border border-gray-200">
-              <div className='flex items-center gap-2 md:gap-4'>
-              <div className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 flex-shrink-0">
-                <Image src="/images/Star 1.svg" alt="Star" width={50} height={50} className="w-full h-full" />
-              </div>
-              <div>
-                <div className="text-base md:text-lg lg:text-xl xl:text-[24px] font-medium text-black">4.9</div>
-                <div className="text-xs md:text-sm lg:text-base xl:text-[18px] text-gray-600">Review</div>
-              </div>
-              </div>
-            </div>
-            {/* Experience Card on Bottom Left */}
-            <div className="hidden md:block absolute bottom-2 md:bottom-4 lg:-bottom-6 left-2 md:left-4 lg:-left-8 xl:-left-12 bg-white rounded-2xl md:rounded-3xl shadow-lg p-2 md:p-3 px-3 md:px-4 lg:px-6 z-10 flex items-center gap-2 md:gap-3 font-poppins border border-gray-200">
-              <div className='flex items-center gap-2 md:gap-4'>
-              <div className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-[#056385] rounded-2xl md:rounded-3xl flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-medium text-base md:text-lg lg:text-xl xl:text-[24px]">35</span>
-              </div>
-              <div>
-                <div className="text-gray-600 text-sm md:text-base lg:text-lg xl:text-[20px]">Years of</div>
-                <div className="text-gray-600 text-sm md:text-base lg:text-lg xl:text-[20px]">Experience</div>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-      </section>
+      {/* Hero Section - Carousel */}
+      <HeroCarousel
+        slides={[
+          {
+            title: 'Trusted Chartered Accountants for Tax, GST & Compliance Solutions',
+            description: 'Providing reliable accounting, taxation, audit, and advisory services to individuals, startups, and growing businesses with accuracy and integrity.',
+            image: '/images/1abb6196e142f17f533a7e3c15ae5ffb09e8fcb1.jpg',
+            buttonText: 'CALL US NOW',
+            buttonLink: '/contact'
+          },
+          {
+            title: 'Expert Financial Advisory & Strategic Planning Services',
+            description: 'Comprehensive financial solutions tailored to your business needs, helping you make informed decisions and achieve your financial goals.',
+            image: '/images/07a218b42ba9b47ead7dbb5118c354ba40d191b6.jpg',
+            buttonText: 'GET STARTED',
+            buttonLink: '/contact'
+          },
+          {
+            title: 'Professional Audit & Assurance Services You Can Trust',
+            description: 'Rigorous audit processes and compliance solutions ensuring your business meets all regulatory requirements with confidence.',
+            image: '/images/d7b411f0d5119b394fee184dc05ce3b4caf98d3d.jpg',
+            buttonText: 'LEARN MORE',
+            buttonLink: '/services'
+          }
+        ]}
+      />
 
       {/* Why Choose Us Section */}
       <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-12 md:py-16 bg-white">
@@ -359,7 +314,7 @@ export default function Home() {
       <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 md:mb-16">
             <div className="inline-block relative mb-6">
               <h2 
                 className="font-extrabold tracking-tight uppercase"
@@ -386,115 +341,138 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Main Content Area */}
-          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 mt-8 md:mt-12 lg:mt-16">
-            {/* Left Column */}
-            <div className="w-full lg:flex-1 flex flex-col gap-8 md:gap-10 lg:gap-12">
-              {/* Consultation */}
-              <div className="text-left lg:text-left">
-                <h3 
-                  className="font-bold mb-3 uppercase"
-                  style={{ 
-                    color: '#056385', 
-                    fontSize: '20px',
-                    lineHeight: '1.3'
-                  }}
-                >
-                  CONSULTATION
-                </h3>
-                <p 
-                  style={{ 
-                    color: '#0000008A', 
-                    fontSize: '16px',
-                    lineHeight: '1.6'
-                  }}
-                >
-                  We Begin By Understanding Your Requirements, Business Structure, And Compliance Needs Through A Detailed Discussion.
-                </p>
-              </div>
-
-              {/* Analysis */}
-              <div className="text-left lg:text-left">
-                <h3 
-                  className="font-bold mb-3 uppercase"
-                  style={{ 
-                    color: '#056385', 
-                    fontSize: '20px',
-                    lineHeight: '1.3'
-                  }}
-                >
-                  ANALYSIS
-                </h3>
-                <p 
-                  style={{ 
-                    color: '#0000008A', 
-                    fontSize: '16px',
-                    lineHeight: '1.6'
-                  }}
-                >
-                  Our Team Reviews Your Financial And Regulatory Position To Identify Risks, Obligations, And Opportunities.
-                </p>
-              </div>
+          {/* Main Content Area - 3x2 Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
+            {/* Top Row: Text | Image | Text */}
+            {/* Consultation - Top Left */}
+            <div className="text-center order-2 md:order-1">
+              <h3 
+                className="font-bold mb-3 uppercase"
+                style={{ 
+                  color: '#056385', 
+                  fontSize: '20px',
+                  lineHeight: '1.3'
+                }}
+              >
+                CONSULTATION
+              </h3>
+              <p 
+                style={{ 
+                  color: '#0000008A', 
+                  fontSize: '16px',
+                  lineHeight: '1.6'
+                }}
+              >
+                We Begin By Understanding Your Requirements, Business Structure, And Compliance Needs Through A Detailed Discussion.
+              </p>
             </div>
 
-            {/* Central Image */}
-            <div className="w-full lg:flex-shrink-0 lg:w-auto flex justify-center my-4 lg:my-0">
+            {/* Image - Top Center */}
+            <div className="w-full flex justify-center order-1 md:order-2">
               <Image
                 src="/images/024d546ae1f8a1e7f688d26bf57ae6a52b6c5d37.jpg"
                 alt="How We Work"
                 width={400}
-                height={500}
-                className="rounded-xl object-cover w-full max-w-[300px] sm:max-w-[350px] lg:max-w-[400px] h-auto aspect-[4/5]"
+                height={200}
+                className="rounded-xl object-cover w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px] h-auto aspect-[4/2]"
               />
             </div>
 
-            {/* Right Column */}
-            <div className="w-full lg:flex-1 flex flex-col gap-8 md:gap-10 lg:gap-12">
-              {/* Execution */}
-              <div className="text-left lg:text-right">
-                <h3 
-                  className="font-bold mb-3 uppercase"
-                  style={{ 
-                    color: '#056385', 
-                    fontSize: '20px',
-                    lineHeight: '1.3'
-                  }}
-                >
-                  EXECUTION
-                </h3>
-                <p 
-                  style={{ 
-                    color: '#0000008A', 
-                    fontSize: '16px',
-                    lineHeight: '1.6'
-                  }}
-                >
-                  We Handle All Filings, Documentation, And Regulatory Procedures With Accuracy And Timely Execution.
-                </p>
-              </div>
+            {/* Execution - Top Right */}
+            <div className="text-center order-3 md:order-3">
+              <h3 
+                className="font-bold mb-3 uppercase"
+                style={{ 
+                  color: '#056385', 
+                  fontSize: '20px',
+                  lineHeight: '1.3'
+                }}
+              >
+                EXECUTION
+              </h3>
+              <p 
+                style={{ 
+                  color: '#0000008A', 
+                  fontSize: '16px',
+                  lineHeight: '1.6'
+                }}
+              >
+                We Handle All Filings, Documentation, And Regulatory Procedures With Accuracy And Timely Execution.
+              </p>
+            </div>
 
-              {/* Ongoing Support */}
-              <div className="text-left lg:text-right">
-                <h3 
-                  className="font-bold mb-3 uppercase"
-                  style={{ 
-                    color: '#056385', 
-                    fontSize: '20px',
-                    lineHeight: '1.3'
-                  }}
-                >
-                  ONGOING SUPPORT
-                </h3>
-                <p 
-                  style={{ 
-                    color: '#0000008A', 
-                    fontSize: '16px',
-                    lineHeight: '1.6'
-                  }}
-                >
-                  Continuous Assistance, Updates, And Advisory Support To Ensure Ongoing Compliance And Informed Decision-Making.
-                </p>
-              </div>
+            {/* Bottom Row: Text | Text | Text */}
+            {/* Analysis - Bottom Left */}
+            <div className="text-center order-4">
+              <h3 
+                className="font-bold mb-3 uppercase"
+                style={{ 
+                  color: '#056385', 
+                  fontSize: '20px',
+                  lineHeight: '1.3'
+                }}
+              >
+                ANALYSIS
+              </h3>
+              <p 
+                style={{ 
+                  color: '#0000008A', 
+                  fontSize: '16px',
+                  lineHeight: '1.6'
+                }}
+              >
+                Our Team Reviews Your Financial And Regulatory Position To Identify Risks, Obligations, And Opportunities.
+              </p>
+            </div>
+
+                        <div className="text-center order-4">
+              <h3 
+                className="font-bold mb-3 uppercase"
+                style={{ 
+                  color: '#056385', 
+                  fontSize: '20px',
+                  lineHeight: '1.3'
+                }}
+              >
+                ANALYSIS
+              </h3>
+              <p 
+                style={{ 
+                  color: '#0000008A', 
+                  fontSize: '16px',
+                  lineHeight: '1.6'
+                }}
+              >
+                Our Team Reviews Your Financial And Regulatory Position To Identify Risks, Obligations, And Opportunities.
+              </p>
+            </div>
+
+            {/* Ongoing Support - Bottom Center */}
+            <div className="text-center order-5">
+              <h3 
+                className="font-bold mb-3 uppercase"
+                style={{ 
+                  color: '#056385', 
+                  fontSize: '20px',
+                  lineHeight: '1.3'
+                }}
+              >
+                ONGOING SUPPORT
+              </h3>
+              <p 
+                style={{ 
+                  color: '#0000008A', 
+                  fontSize: '16px',
+                  lineHeight: '1.6'
+                }}
+              >
+                Continuous Assistance, Updates, And Advisory Support To Ensure Ongoing Compliance And Informed Decision-Making.
+              </p>
+            </div>
+
+            {/* Empty or additional text - Bottom Right */}
+            <div className="text-center order-6">
+              {/* You can add another text block here if needed, or leave empty */}
             </div>
           </div>
         </div>

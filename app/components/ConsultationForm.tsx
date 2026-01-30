@@ -3,14 +3,55 @@
 import { useState, useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Image from 'next/image';
-import { BRAND_COLORS } from '../constants';
+import { BRAND_COLORS, CONTACT_INFO } from '../constants';
+import { sendEmail } from '../utils/emailService';
 
 export default function ConsultationForm() {
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleRecaptchaChange = (value: string | null) => {
     setRecaptchaValue(value);
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    if (!recaptchaValue) {
+      setSubmitMessage({ type: 'error', text: 'Please complete the reCAPTCHA verification' });
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitMessage(null);
+
+    const formData = new FormData(e.currentTarget);
+    const formValues = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      phone: formData.get('phone') as string,
+      service: formData.get('service') as string,
+      message: formData.get('message') as string,
+      formType: 'consultation' as const,
+    };
+
+    try {
+      const result = await sendEmail(formValues);
+      if (result.success) {
+        setSubmitMessage({ type: 'success', text: 'Thank you! Your consultation request has been submitted successfully.' });
+        formRef.current?.reset();
+        recaptchaRef.current?.reset();
+      } else {
+        setSubmitMessage({ type: 'error', text: result.error || 'Failed to submit request. Please try again.' });
+      }
+    } catch (error) {
+      setSubmitMessage({ type: 'error', text: 'An error occurred. Please try again.' });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -72,11 +113,20 @@ export default function ConsultationForm() {
             className="bg-white rounded-xl shadow-xl border border-slate-100 p-4 sm:p-6 md:p-8 lg:p-10"
             style={{ fontFamily: 'var(--font-instrument-sans), sans-serif' }}
           >
-            <form className="space-y-4">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
+              {submitMessage && (
+                <div className={`p-4 rounded-lg text-center ${
+                  submitMessage.type === 'success' ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'
+                }`}>
+                  {submitMessage.text}
+                </div>
+              )}
               <div className="w-full">
                 <input 
                   type="text" 
-                  placeholder="Name :" 
+                  name="name"
+                  placeholder="Name :"
+                  required
                   className="w-full border border-slate-200 rounded-lg p-3 px-5 text-sm outline-none focus:border-[#006080] transition-colors text-slate-700 placeholder:text-slate-400"
                   style={{ fontSize: '16px' }}
                 />
@@ -85,13 +135,17 @@ export default function ConsultationForm() {
               <div className="grid md:grid-cols-2 gap-4">
                 <input 
                   type="email" 
-                  placeholder="Email :" 
+                  name="email"
+                  placeholder="Email :"
+                  required
                   className="w-full border border-slate-200 rounded-lg p-3 px-5 text-sm outline-none focus:border-[#006080] transition-colors text-slate-700 placeholder:text-slate-400"
                   style={{ fontSize: '16px' }}
                 />
                 <input 
                   type="tel" 
-                  placeholder="Mobile No :" 
+                  name="phone"
+                  placeholder="Mobile No :"
+                  required
                   className="w-full border border-slate-200 rounded-lg p-3 px-5 text-sm outline-none focus:border-[#006080] transition-colors text-slate-700 placeholder:text-slate-400"
                   style={{ fontSize: '16px' }}
                 />
@@ -99,13 +153,15 @@ export default function ConsultationForm() {
 
               <div className="relative">
                 <select 
+                  name="service"
+                  required
                   className="w-full border border-slate-200 rounded-lg p-3 px-5 text-sm outline-none focus:border-[#006080] transition-colors text-slate-400 bg-white appearance-none"
                   style={{ fontSize: '16px' }}
                 >
                   <option value="">Service Required</option>
-                  <option value="audit">Audit & Assurance</option>
-                  <option value="tax">Taxation</option>
-                  <option value="advisory">Business Advisory</option>
+                  <option value="Audit & Assurance">Audit & Assurance</option>
+                  <option value="Taxation">Taxation</option>
+                  <option value="Business Advisory">Business Advisory</option>
                 </select>
                 <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -116,8 +172,10 @@ export default function ConsultationForm() {
 
               <div className="w-full">
                 <textarea 
-                  placeholder="Message :" 
+                  name="message"
+                  placeholder="Message :"
                   rows={5}
+                  required
                   className="w-full border border-slate-200 rounded-lg p-5 text-sm outline-none focus:border-[#006080] transition-colors text-slate-700 placeholder:text-slate-400 resize-none"
                   style={{ fontSize: '16px' }}
                 ></textarea>
@@ -134,11 +192,12 @@ export default function ConsultationForm() {
                 </div>
 
                 <button 
-                  type="submit" 
-                  className="bg-[#006080] hover:bg-[#004d66] text-white font-bold py-3 px-8 rounded-lg transition-all text-xs tracking-wider uppercase shadow-md active:scale-95"
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="bg-[#006080] hover:bg-[#004d66] disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3 px-8 rounded-lg transition-all text-xs tracking-wider uppercase shadow-md active:scale-95"
                   style={{ fontSize: '16px' }}
                 >
-                  SUBMIT ENQUIRY
+                  {isSubmitting ? 'SUBMITTING...' : 'SUBMIT ENQUIRY'}
                 </button>
               </div>
             </form>
@@ -146,9 +205,8 @@ export default function ConsultationForm() {
         </div>
 
         {/* Contact Banner Section */}
-        <div className="relative rounded-2xl overflow-hidden h-[400px]">
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0">
+        {/* <div className="relative rounded-2xl overflow-hidden h-[400px]"> */}
+          {/* <div className="absolute inset-0 z-0">
             <Image
               src="/images/d7b411f0d5119b394fee184dc05ce3b4caf98d3d.jpg"
               alt="Office background"
@@ -157,22 +215,18 @@ export default function ConsultationForm() {
               priority
               sizes="100vw"
             />
-          </div>
+          </div> */}
           
           {/* Light Overlay for text readability */}
-          <div className="absolute inset-0 bg-black/20 z-[1]"></div>
-          
+          {/* <div className="absolute inset-0 bg-blue-900/60 z-[1]"></div> */}
           {/* Content */}
-          <div className="relative z-[2] h-full flex flex-col items-center justify-center px-8 text-center space-y-6">
-            {/* Main Heading */}
+          {/* <div className="relative z-[2] h-full flex flex-col items-center justify-center px-8 text-center space-y-6">
             <h2 
               className="text-white font-bold text-3xl md:text-4xl uppercase tracking-tight"
               style={{ fontFamily: 'var(--font-instrument-sans), sans-serif' }}
             >
               NOT SURE WHICH SERVICE YOU<br />NEED?
             </h2>
-            
-            {/* Descriptive Text */}
             <p 
               className="text-white text-base md:text-lg max-w-2xl"
               style={{ fontFamily: 'var(--font-instrument-sans), sans-serif' }}
@@ -180,10 +234,7 @@ export default function ConsultationForm() {
               Our Team Will Help Assess Your Needs And Guide<br />
               You To The Appropriate Solution.
             </p>
-            
-            {/* Contact Info and Button */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-8">
-              {/* Phone Number */}
               <div className="flex items-center gap-3">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -192,11 +243,9 @@ export default function ConsultationForm() {
                   className="text-white font-bold text-xl md:text-2xl"
                   style={{ fontFamily: 'var(--font-instrument-sans), sans-serif' }}
                 >
-                  +91 654 356 6589
+                  {CONTACT_INFO.landline}
                 </span>
               </div>
-              
-              {/* Get In Touch Button */}
               <button 
                 className="bg-gray-200 hover:bg-gray-300 border border-gray-300 rounded-lg px-6 py-3 flex items-center gap-2 transition-colors"
                 style={{ fontFamily: 'var(--font-instrument-sans), sans-serif' }}
@@ -207,8 +256,8 @@ export default function ConsultationForm() {
                 </svg>
               </button>
             </div>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
       </div>
     </section>
   );

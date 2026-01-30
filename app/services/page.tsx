@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import ConsultationForm from '../components/ConsultationForm';
-import { BRAND_COLORS } from '../constants';
+import { BRAND_COLORS, SERVICES_OFFERED } from '../constants';
 
 const ServiceCard = ({ title, description, icon }: { title: string, description: string, icon: React.ReactNode }) => (
   <div className="bg-white border border-[#a0c4d1] rounded-lg overflow-hidden flex flex-col items-center p-6 text-center hover:shadow-lg transition-shadow">
@@ -37,6 +37,7 @@ export default function Services() {
   const industries = [
     "MANUFACTURING",
     "REAL ESTATE AND CONSTRUCTION",
+    "INFORMATION TECHNOLOGY",
     "FINANCIAL INSTITUTION",
     "HEALTHCARE",
     "RETAIL AND CONSUMER GOODS",
@@ -187,6 +188,70 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+
+          {/* Detailed Services Section */}
+          <div className="space-y-12">
+            <div className="text-center">
+              <div className="inline-block relative">
+                <h2 
+                  className="font-extrabold tracking-tight uppercase"
+                  style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
+                >
+                  SERVICES OFFERED
+                </h2>
+                <div 
+                  className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                  style={{ backgroundColor: BRAND_COLORS.primary }}
+                ></div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {SERVICES_OFFERED.map((category, idx) => (
+                <div 
+                  key={idx}
+                  className="bg-white border border-gray-400 rounded-xl p-6 md:p-8 transition-all duration-300 cursor-pointer group relative overflow-hidden hover:border-white"
+                  style={{ fontFamily: 'var(--font-instrument-sans), sans-serif' }}
+                >
+                  {/* Gradient background on hover */}
+                  <div 
+                    className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{ 
+                      background: 'linear-gradient(to bottom, #044860, #056385)'
+                    }}
+                  ></div>
+                  
+                  {/* Top Right Circular Blur */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full opacity-0 group-hover:opacity-80 transition-opacity duration-300 blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+                  
+                  {/* Bottom Middle Circle - Solid center with blurred edges */}
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {/* Blurred outer circle - behind */}
+                    <div className="absolute w-40 h-40 bg-white rounded-full blur-3xl opacity-80" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}></div>
+                  </div>
+
+                  <h3 
+                    className="text-[#023F55] font-bold mb-6 uppercase tracking-tight transition-colors duration-300 group-hover:text-white relative z-10"
+                    style={{ fontSize: '20px' }}
+                  >
+                    {category.category}
+                  </h3>
+                  <ul className="space-y-3 relative z-10">
+                    {category.services.map((service, serviceIdx) => (
+                      <li 
+                        key={serviceIdx}
+                        className="flex items-start gap-3 text-[#0000008A] transition-colors duration-300 group-hover:text-white"
+                        style={{ fontSize: '16px', lineHeight: '1.6' }}
+                      >
+                        <span className="w-1.5 h-1.5 bg-[#006080] rounded-full mt-2 flex-shrink-0 transition-colors duration-300 group-hover:bg-white"></span>
+                        <span>{service}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
         </div>

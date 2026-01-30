@@ -3,34 +3,70 @@
 import { useState, useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Hero from '../components/Hero';
-import { BRAND_COLORS } from '../constants';
+import { BRAND_COLORS, CONTACT_INFO } from '../constants';
+import { sendEmail } from '../utils/emailService';
 
 export default function Contact() {
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleRecaptchaChange = (value: string | null) => {
     setRecaptchaValue(value);
   };
 
-  const locations = [
-    {
-      city: 'BANGALORE',
-      address: '4/1, Brunton Road, Opp To Old Passport Office, Off M.G. Road, Bangalore - 560025, Karnataka'
-    },
-    {
-      city: 'HYDERABAD',
-      address: '4th Floor, Nest Vault Co-Working, Apurupa Turbo Tower, No:36 Pillar No:1680, Jubilee Hills, Hyderabad, Telangana 500033.'
-    },
-    {
-      city: 'MUMBAI',
-      address: '5th Floor, NO, Quest Technopolis Knowledge Park, Mahankali Caves Road, Andheri East, Mumbai, Mumbai Suburban, Maharashtra, 400093'
-    },
-    {
-      city: 'NASHIK',
-      address: 'Rajnarayan Towers, 4th Floor 70, Race Course Road, Gopalapuram, Coimbatore - 641018, Nashik'
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    if (!recaptchaValue) {
+      setSubmitMessage({ type: 'error', text: 'Please complete the reCAPTCHA verification' });
+      return;
     }
-  ];
+
+    setIsSubmitting(true);
+    setSubmitMessage(null);
+
+    const formData = new FormData(e.currentTarget);
+    const formValues = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      phone: formData.get('phone') as string,
+      service: formData.get('service') as string,
+      message: formData.get('message') as string,
+      formType: 'contact' as const,
+    };
+
+    try {
+      const result = await sendEmail(formValues);
+      if (result.success) {
+        setSubmitMessage({ type: 'success', text: 'Thank you! Your enquiry has been submitted successfully.' });
+        formRef.current?.reset();
+        recaptchaRef.current?.reset();
+      } else {
+        setSubmitMessage({ type: 'error', text: result.error || 'Failed to submit enquiry. Please try again.' });
+      }
+    } catch (error) {
+      setSubmitMessage({ type: 'error', text: 'An error occurred. Please try again.' });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const locations = CONTACT_INFO.offices.map((office, idx) => ({
+    city: office.name.toUpperCase().replace('HEAD OFFICE', 'HEAD OFFICE'),
+    address: office.address,
+    mobile: office.mobile,
+    mapLink: office.mapLink
+  }));
+
+  const branches = CONTACT_INFO.branches.map((branch, idx) => ({
+    city: branch.name.toUpperCase(),
+    address: branch.address,
+    mobile: '',
+    mapLink: branch.mapLink
+  }));
 
   return (
     <div>
@@ -67,7 +103,7 @@ export default function Contact() {
               
               <div className="flex gap-4">
                 <a 
-                  href="mailto:contact@example.com" 
+                  href={`mailto:${CONTACT_INFO.email}`}
                   className="w-10 h-10 rounded-full bg-[#006080] text-white flex items-center justify-center hover:bg-[#004d66] transition-colors"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -98,11 +134,20 @@ export default function Contact() {
               className="bg-white rounded-xl shadow-xl border border-slate-100 p-4 sm:p-6 md:p-8 lg:p-10"
               style={{ fontFamily: 'var(--font-instrument-sans), sans-serif' }}
             >
-              <form className="space-y-4">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
+                {submitMessage && (
+                  <div className={`p-4 rounded-lg text-center ${
+                    submitMessage.type === 'success' ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'
+                  }`}>
+                    {submitMessage.text}
+                  </div>
+                )}
                 <div className="w-full">
                   <input 
                     type="text" 
-                    placeholder="Name :" 
+                    name="name"
+                    placeholder="Name :"
+                    required
                     className="w-full border border-slate-200 rounded-lg p-3 px-5 text-sm outline-none focus:border-[#006080] transition-colors text-slate-700 placeholder:text-slate-400"
                     style={{ fontSize: '16px' }}
                   />
@@ -111,13 +156,17 @@ export default function Contact() {
                 <div className="grid md:grid-cols-2 gap-4">
                   <input 
                     type="email" 
-                    placeholder="Email :" 
+                    name="email"
+                    placeholder="Email :"
+                    required
                     className="w-full border border-slate-200 rounded-lg p-3 px-5 text-sm outline-none focus:border-[#006080] transition-colors text-slate-700 placeholder:text-slate-400"
                     style={{ fontSize: '16px' }}
                   />
                   <input 
                     type="tel" 
-                    placeholder="Mobile No :" 
+                    name="phone"
+                    placeholder="Mobile No :"
+                    required
                     className="w-full border border-slate-200 rounded-lg p-3 px-5 text-sm outline-none focus:border-[#006080] transition-colors text-slate-700 placeholder:text-slate-400"
                     style={{ fontSize: '16px' }}
                   />
@@ -125,13 +174,15 @@ export default function Contact() {
 
                 <div className="relative">
                   <select 
+                    name="service"
+                    required
                     className="w-full border border-slate-200 rounded-lg p-3 px-5 text-sm outline-none focus:border-[#006080] transition-colors text-slate-400 bg-white appearance-none"
                     style={{ fontSize: '16px' }}
                   >
                     <option value="">Service Required</option>
-                    <option value="audit">Audit & Assurance</option>
-                    <option value="tax">Taxation</option>
-                    <option value="advisory">Business Advisory</option>
+                    <option value="Audit & Assurance">Audit & Assurance</option>
+                    <option value="Taxation">Taxation</option>
+                    <option value="Business Advisory">Business Advisory</option>
                   </select>
                   <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -142,8 +193,10 @@ export default function Contact() {
 
                 <div className="w-full">
                   <textarea 
-                    placeholder="Message :" 
+                    name="message"
+                    placeholder="Message :"
                     rows={5}
+                    required
                     className="w-full border border-slate-200 rounded-lg p-5 text-sm outline-none focus:border-[#006080] transition-colors text-slate-700 placeholder:text-slate-400 resize-none"
                     style={{ fontSize: '16px' }}
                   ></textarea>
@@ -160,41 +213,116 @@ export default function Contact() {
                   </div>
 
                   <button 
-                    type="submit" 
-                    className="bg-[#006080] hover:bg-[#004d66] text-white font-bold py-3 px-8 rounded-lg transition-all text-xs tracking-wider uppercase shadow-md active:scale-95"
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="bg-[#006080] hover:bg-[#004d66] disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3 px-8 rounded-lg transition-all text-xs tracking-wider uppercase shadow-md active:scale-95"
                     style={{ fontSize: '16px' }}
                   >
-                    SUBMIT ENQUIRY
+                    {isSubmitting ? 'SUBMITTING...' : 'SUBMIT ENQUIRY'}
                   </button>
                 </div>
               </form>
             </div>
           </div>
 
-          {/* Locations Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
-            {locations.map((loc, idx) => (
-              <div key={idx} className="space-y-3">
-                <h4 
-                  className="text-[#006080] font-semibold tracking-widest"
-                  style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '24px' }}
-                >
-                  {loc.city} :
-                </h4>
-                <p 
-                  className="text-slate-500 leading-relaxed px-4 md:px-0 font-light"
-                  style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '16px' }}
-                >
-                  {loc.address}
-                </p>
-              </div>
-            ))}
+          {/* Head Offices Section */}
+          <div className="space-y-8">
+            <h3 
+              className="text-center text-[#006080] font-bold tracking-widest uppercase"
+              style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '24px' }}
+            >
+              HEAD OFFICES
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-center">
+              {locations.map((loc, idx) => (
+                <div key={idx} className="space-y-3">
+                  <h4 
+                    className="text-[#006080] font-semibold tracking-widest"
+                    style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '24px' }}
+                  >
+                    {loc.city} :
+                  </h4>
+                  <p 
+                    className="text-slate-500 leading-relaxed px-4 md:px-0 font-light"
+                    style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '18px' }}
+                  >
+                    {loc.address}
+                  </p>
+                  {loc.mobile && (
+                    <p 
+                      className="text-slate-600 font-medium"
+                      style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '16px' }}
+                    >
+                      Mobile: {loc.mobile}
+                    </p>
+                  )}
+                  {loc.mapLink && (
+                    <a
+                      href={loc.mapLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-[#006080] hover:text-[#004d66] font-medium transition-colors mt-2"
+                      style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '16px' }}
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      <span>View on Google Maps</span>
+                    </a>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Branches Section */}
+          <div className="space-y-8">
+            <h3 
+              className="text-center text-[#006080] font-bold tracking-widest uppercase"
+              style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '24px' }}
+            >
+              BRANCHES
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              {branches.map((branch, idx) => (
+                <div key={idx} className="space-y-3">
+                  <h4 
+                    className="text-[#006080] font-semibold tracking-widest"
+                    style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '20px' }}
+                  >
+                    {branch.city} :
+                  </h4>
+                  <p 
+                    className="text-slate-500 leading-relaxed px-4 md:px-0 font-light"
+                    style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '16px' }}
+                  >
+                    {branch.address}
+                  </p>
+                  {branch.mapLink && (
+                    <a
+                      href={branch.mapLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-[#006080] hover:text-[#004d66] font-medium transition-colors mt-2"
+                      style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '14px' }}
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      <span>View on Google Maps</span>
+                    </a>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Map Section */}
           <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm h-[400px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.7155099999997!2d72.8776559!3d19.1130139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c6b8b8b8b9%3A0x3b3b3b3b3b3b3b3b!2sQuest%20Technopolis%20Knowledge%20Park%2C%20Mahankali%20Caves%20Road%2C%20Andheri%20East%2C%20Mumbai%2C%20Maharashtra%20400093!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+              src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.5!2d73.7898!3d19.9975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDU5JzUxLjAiTiA3M8KwNDcnMjMuMSJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin&q=${encodeURIComponent(CONTACT_INFO.offices[0].address)}`}
               width="100%"
               height="100%"
               style={{ border: 0 }}

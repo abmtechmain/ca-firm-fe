@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Facebook, Github, Twitter, Chrome as Google } from 'lucide-react';
+import { CONTACT_INFO } from '../constants';
 
 const SocialIcon: React.FC<{ icon: React.ReactNode }> = ({ icon }) => (
   <a href="#" className="w-9 h-9 border border-[#F37920] rounded-full flex items-center justify-center text-[#F37920] hover:bg-[#F37920] hover:text-white transition-all duration-300">
@@ -63,9 +64,9 @@ const Footer: React.FC = () => {
               Connect With Us
             </h4>
             <address className="not-italic space-y-4 text-sm text-gray-500 leading-relaxed font-medium">
-              <p>Office: xyz, 123, mumbai,<br />maharashtra</p>
-              <p>+91 654 356 6589</p>
-              <p className="hover:text-[#F37920] cursor-pointer">samarthkale33@gmail.com</p>
+              <p>{CONTACT_INFO.offices[0].address}</p>
+              <p>{CONTACT_INFO.landline}</p>
+              <p className="hover:text-[#F37920] cursor-pointer">{CONTACT_INFO.email}</p>
             </address>
           </div>
 
@@ -86,12 +87,12 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-gray-100 pt-8 flex flex-col items-center">
-          <div className="flex gap-4 mb-6">
+          {/* <div className="flex gap-4 mb-6">
             <SocialIcon icon={<Facebook size={18} />} />
             <SocialIcon icon={<Github size={18} />} />
             <SocialIcon icon={<Twitter size={18} />} />
             <SocialIcon icon={<Google size={18} />} />
-          </div>
+          </div> */}
           <p className="text-gray-400 text-xs font-medium">© 2026 All Right Reserved.</p>
         </div>
       </div>

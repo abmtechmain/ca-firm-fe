@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import ServiceCard from './components/ServiceCard';
 import ContactSection from './components/ContactSection';
 
@@ -28,14 +29,15 @@ export default function Home() {
             >
               Providing reliable accounting, taxation, audit, and advisory services to individuals, startups, and growing businesses with accuracy and integrity.
             </p>
-            <button 
-              className="px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold text-white hover:opacity-90 transition-opacity text-sm sm:text-base w-full sm:w-fit"
+            <Link 
+              href="/contact"
+              className="px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold text-white hover:opacity-90 transition-opacity text-sm sm:text-base w-full sm:w-fit cursor-pointer inline-block text-center"
               style={{ 
                 backgroundColor: '#F37920'
               }}
             >
               CALL US NOW
-            </button>
+            </Link>
           </div>
 
           {/* Right Section - 30% */}
@@ -241,14 +243,15 @@ export default function Home() {
       <section className="w-full px-4 sm:px-6 lg:px-18 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center">
-            <button 
-              className="bg-white rounded-lg border-[1px] px-8 py-4 flex items-center gap-3 hover:opacity-90 transition-opacity border-gray-400"
+            <Link 
+              href="/about-us"
+              className="bg-white rounded-lg border-[1px] px-8 py-4 flex items-center gap-3 hover:opacity-90 transition-opacity border-gray-400 cursor-pointer"
             >
               <span className="text-[16px] text-[#F37920]">MEET OUR TEAM MEMBERS</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: '#F37920' }}>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -497,7 +500,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Numbers That Speak Section */}
+      {/* Why We Section */}
       <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-12 md:py-16 relative overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
@@ -523,7 +526,7 @@ export default function Home() {
                   lineHeight: '1.3'
                 }}
               >
-                NUMBERS THAT SPEAK TO WHAT<br className="hidden sm:block" />WE'VE BUILT OVER THE YEARS
+                NUMBERS THAT SPEAK TO WHAT<br />WE'VE BUILT OVER THE YEARS
               </h2>
             </div>
 
@@ -543,37 +546,39 @@ export default function Home() {
 
           {/* Data Cards Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {/* Row 1 */}
+            {/* Experience */}
             <div className="backdrop-blur-sm rounded-xl border border-white px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
               <div 
                 className="text-white font-bold mb-2 md:mb-3"
                 style={{ fontSize: '36px' }}
               >
-                15+
+                30+
               </div>
               <div 
                 className="text-white uppercase text-xs sm:text-sm md:text-base"
                 style={{ fontSize: '14px' }}
               >
-                YEARS IN THE FIELD
+                EXPERIENCE
               </div>
             </div>
 
-              <div className="backdrop-blur-sm rounded-xl border border-white px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
+            {/* Client */}
+            <div className="backdrop-blur-sm rounded-xl border border-white px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
               <div 
                 className="text-white font-bold mb-2 md:mb-3"
                 style={{ fontSize: '36px' }}
               >
-                800+
+                1000+
               </div>
               <div 
                 className="text-white uppercase text-xs sm:text-sm md:text-base"
                 style={{ fontSize: '14px' }}
               >
-                CLIENTS SERVED
+                CLIENT
               </div>
             </div>
 
+            {/* Industry Covered */}
             <div className="backdrop-blur-sm rounded-xl border border-white px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
               <div 
                 className="text-white font-bold mb-2 md:mb-3"
@@ -585,53 +590,55 @@ export default function Home() {
                 className="text-white uppercase text-xs sm:text-sm md:text-base"
                 style={{ fontSize: '14px' }}
               >
-                INDUSTRIES COVERED
+                INDUSTRY COVERED
               </div>
             </div>
 
-            {/* Row 2 */}
+            {/* Branches */}
             <div className="backdrop-blur-sm rounded-xl border border-white px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
               <div 
                 className="text-white font-bold mb-2 md:mb-3"
                 style={{ fontSize: '36px' }}
               >
-                5000+
+                5+
               </div>
               <div 
                 className="text-white uppercase text-xs sm:text-sm md:text-base"
                 style={{ fontSize: '14px' }}
               >
-                RETURNS FILED
+                BRANCHES
               </div>
             </div>
 
+            {/* Experts */}
             <div className="backdrop-blur-sm rounded-xl border border-white px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
               <div 
                 className="text-white font-bold mb-2 md:mb-3"
                 style={{ fontSize: '36px' }}
               >
-                98%
+                5+
               </div>
               <div 
                 className="text-white uppercase text-xs sm:text-sm md:text-base"
                 style={{ fontSize: '14px' }}
               >
-                CLIENT SATISFACTION
+                EXPERTS
               </div>
             </div>
 
+            {/* Team */}
             <div className="backdrop-blur-sm rounded-xl border border-white px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
               <div 
                 className="text-white font-bold mb-2 md:mb-3"
                 style={{ fontSize: '36px' }}
               >
-                24/7
+                20+
               </div>
               <div 
                 className="text-white uppercase text-xs sm:text-sm md:text-base"
                 style={{ fontSize: '14px' }}
               >
-                SUPPORT AVAILABLE
+                TEAM
               </div>
             </div>
           </div>

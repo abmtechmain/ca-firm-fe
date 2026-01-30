@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Mail, Phone, Clock, MapPin } from 'lucide-react';
+import { CONTACT_INFO } from '../constants';
 
 interface ContactItemProps {
   icon: React.ReactNode;
@@ -51,13 +52,13 @@ const ContactSection: React.FC = () => {
       icon: <Mail size={32} />,
       title: "EMAIL",
       description: "Send us a message and we'll respond within hours.",
-      value: "samarthkale33@gmail.com"
+      value: CONTACT_INFO.email
     },
     {
       icon: <Phone size={32} />,
       title: "PHONE",
       description: "Prefer to talk? We're here to take your call.",
-      value: "+91 654 356 6589"
+      value: CONTACT_INFO.landline
     },
     {
       icon: <Clock size={32} />,
@@ -67,26 +68,12 @@ const ContactSection: React.FC = () => {
     }
   ];
 
-  const locations = [
-    {
-      icon: <MapPin size={32} />,
-      title: "OFFICE",
-      description: "Visit us or find us on the map below.",
-      value: "Office: xyz, 123, mumbai, maharashtra"
-    },
-    {
-      icon: <MapPin size={32} />,
-      title: "OFFICE",
-      description: "Visit us or find us on the map below.",
-      value: "Office: xyz, 123, mumbai, maharashtra"
-    },
-    {
-      icon: <MapPin size={32} />,
-      title: "OFFICE",
-      description: "Visit us or find us on the map below.",
-      value: "Office: xyz, 123, mumbai, maharashtra"
-    }
-  ];
+  const locations = CONTACT_INFO.offices.map((office) => ({
+    icon: <MapPin size={32} />,
+    title: office.name.toUpperCase(),
+    description: "Visit us or find us on the map below.",
+    value: `${office.address} | Mobile: ${office.mobile}`
+  }));
 
   return (
     <div className="border-2 border-gray-100 rounded-2xl p-8 md:p-16 mx-auto" style={{ backgroundColor: 'rgba(5, 99, 133, 0.02)' }}>

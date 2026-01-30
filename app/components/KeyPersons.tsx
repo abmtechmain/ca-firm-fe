@@ -39,19 +39,47 @@ export const KeyPersons: React.FC = () => {
               </a>
             </div>
 
-            <div className="flex items-center space-x-2">
-              <span 
-                className="text-xs md:text-[18px] font-extrabold uppercase tracking-wide"
-                style={{ color: BRAND_COLORS.accent }}
-              >
-                EDUCATION QUALIFICATION : {person.qualification}
-              </span>
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                <div className="flex flex-col gap-2">
+                  <span 
+                    className="text-xs md:text-[18px] font-extrabold uppercase tracking-wide"
+                    style={{ color: BRAND_COLORS.accent }}
+                  >
+                    EDUCATION QUALIFICATION : {person.qualification}
+                  </span>
+                  {person.certification && (
+                    <span 
+                      className="text-xs md:text-base font-bold uppercase tracking-wide"
+                      style={{ color: BRAND_COLORS.primary }}
+                    >
+                      CERTIFICATION COURSE OF ICAI : {person.certification}
+                    </span>
+                  )}
+                </div>
+                <a 
+                  href={`mailto:${person.email}`}
+                  className="flex items-center space-x-2 text-sm md:text-base font-medium transition-opacity hover:opacity-80 flex-shrink-0"
+                  style={{ color: BRAND_COLORS.primary }}
+                >
+                  <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <span className="break-all">{person.email}</span>
+                </a>
+              </div>
             </div>
 
             <div className="space-y-4 pt-4">
+              <span 
+                className="text-xs md:text-[18px] font-extrabold uppercase tracking-wide block mb-2"
+                style={{ color: BRAND_COLORS.accent }}
+              >
+                EXPERIENCE :
+              </span>
               {person.description.map((text, idx) => (
                 <p key={idx} className="text-[11px] md:text-[16px] text-gray-400 leading-relaxed font-medium">
-                  {text}
+                  {text.startsWith('•') ? text : `• ${text}`}
                 </p>
               ))}
             </div>

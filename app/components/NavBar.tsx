@@ -24,7 +24,10 @@ export default function NavBar() {
                 width={200}
                 height={45}
                 className="h-[35px] md:h-[45px] w-auto"
+                quality={100}
                 priority
+                unoptimized
+                style={{ objectFit: 'contain' }}
               />
             </div>
 

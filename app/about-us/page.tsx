@@ -1,4 +1,5 @@
 import Hero from '../components/Hero';
+import { FirmOverview } from '../components/FirmOverview';
 import { WhoWeAre } from '../components/WhoWeAre';
 import { VisionMission } from '../components/VisionMission';
 import { FounderSection } from '../components/FounderSection';
@@ -16,6 +17,11 @@ export default function AboutUs() {
         title="A Professional Chartered Accountancy Firm Built on Trust & Compliance"
         subtext="We provide reliable accounting, taxation, audit, and advisory services with a practical, client-focused approach."
       />
+      
+      {/* Firm Overview Section */}
+      <section className="w-full px-4 sm:px-6 lg:px-18 py-12 md:py-16 lg:py-20 bg-white">
+        <FirmOverview />
+      </section>
       
       {/* Who We Are Section */}
       <section className="w-full px-4 sm:px-6 lg:px-18 py-12 md:py-16 lg:py-20 bg-white">

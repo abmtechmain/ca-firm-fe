@@ -1,7 +1,20 @@
 import React from 'react';
+import { Metadata } from 'next';
 import Hero from '../components/Hero';
 import ConsultationForm from '../components/ConsultationForm';
 import { BRAND_COLORS, SERVICES_OFFERED } from '../constants';
+
+export const metadata: Metadata = {
+  title: 'Services',
+  description: 'Comprehensive CA services including Audit & Assurance, Taxation, Advisory, Accounting & Bookkeeping, and Corporate Services. Expert Chartered Accountant services in Nashik, Maharashtra.',
+  keywords: ['CA Services', 'Audit Services', 'Tax Services', 'GST Services', 'Accounting Services', 'Corporate Services', 'Advisory Services', 'CA Services Nashik', 'Tax Consultant', 'Financial Services'],
+  openGraph: {
+    title: 'Services | SKMRD & Associates',
+    description: 'Comprehensive CA services including Audit & Assurance, Taxation, Advisory, Accounting & Bookkeeping, and Corporate Services.',
+    url: '/services',
+    images: ['/images/footer-logoo.png'],
+  },
+};
 
 const ServiceCard = ({ title, description, icon }: { title: string, description: string, icon: React.ReactNode }) => (
   <div className="bg-white border border-[#a0c4d1] rounded-lg overflow-hidden flex flex-col items-center p-6 text-center hover:shadow-lg transition-shadow">

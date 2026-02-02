@@ -1,10 +1,23 @@
 import React from 'react';
+import { Metadata } from 'next';
 import Hero from '../components/Hero';
 import { BlogCard } from '../components/BlogCard';
 import { DownloadCard } from '../components/DownloadCard';
 import { SectionHeader } from '../components/SectionHeader';
 import { CaseStudySection } from '../components/CaseStudySection';
 import { BLOG_POSTS, DOWNLOAD_ITEMS, CURRENT_CASE_STUDY, BRAND_COLORS } from '../constants';
+
+export const metadata: Metadata = {
+  title: 'Resources',
+  description: 'Access valuable resources including blogs, case studies, downloads, GST calendars, compliance checklists, and tax forms. Stay updated with latest tax and compliance information.',
+  keywords: ['CA Resources', 'Tax Resources', 'GST Calendar', 'Compliance Checklist', 'Tax Forms', 'Business Resources', 'Financial Resources', 'CA Blog'],
+  openGraph: {
+    title: 'Resources | SKMRD & Associates',
+    description: 'Access valuable resources including blogs, case studies, downloads, GST calendars, and compliance checklists.',
+    url: '/resources',
+    images: ['/images/footer-logoo.png'],
+  },
+};
 
 export default function Resources() {
   return (

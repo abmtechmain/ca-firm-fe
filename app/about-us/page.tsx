@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Hero from '../components/Hero';
 import { FirmOverview } from '../components/FirmOverview';
 import { WhoWeAre } from '../components/WhoWeAre';
@@ -7,6 +8,18 @@ import { KeyPersons } from '../components/KeyPersons';
 import { TeamSection } from '../components/TeamSection';
 import { KeyStrengths } from '../components/KeyStrengths';
 import { BRAND_COLORS } from '../constants';
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Learn about SKMRD & Associates - A multi-state CA firm established in 1989 with head office in Nashik. Meet our experienced team of Chartered Accountants, partners, and professionals dedicated to excellence.',
+  keywords: ['About CA Firm', 'CA Firm History', 'Chartered Accountants Team', 'CA Partners', 'CA Firm Nashik', 'Professional Team', 'CA Firm Experience'],
+  openGraph: {
+    title: 'About Us | SKMRD & Associates',
+    description: 'Learn about SKMRD & Associates - A multi-state CA firm established in 1989 with experienced team of Chartered Accountants.',
+    url: '/about-us',
+    images: ['/images/footer-logoo.png'],
+  },
+};
 
 export default function AboutUs() {
   return (

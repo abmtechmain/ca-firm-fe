@@ -1,8 +1,21 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import ServiceCard from './components/ServiceCard';
 import ContactSection from './components/ContactSection';
 import HeroCarousel from './components/HeroCarousel';
+
+export const metadata: Metadata = {
+  title: 'Home',
+  description: 'SKMRD & Associates - Trusted Chartered Accountants in Nashik providing expert tax, GST, audit, and compliance services. Over 35 years of professional excellence serving businesses across India.',
+  keywords: ['Chartered Accountants Nashik', 'CA Firm Nashik', 'Tax Services', 'GST Services', 'Audit Services', 'Accounting Services', 'Financial Advisory', 'Tax Consultant Nashik'],
+  openGraph: {
+    title: 'SKMRD & Associates | Chartered Accountants | Nashik',
+    description: 'Trusted Chartered Accountants in Nashik providing expert tax, GST, audit, and compliance services. Over 35 years of professional excellence.',
+    url: '/',
+    images: ['/images/footer-logoo.png'],
+  },
+};
 
 export default function Home() {
   return (

@@ -226,94 +226,161 @@ export default function Contact() {
           </div>
 
           {/* Head Offices Section */}
-          <div className="space-y-8">
-            <h3 
-              className="text-center text-[#006080] font-bold tracking-widest uppercase"
-              style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '24px' }}
-            >
-              HEAD OFFICES
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-center">
+          <div className="space-y-10">
+            <div className="relative text-center">
+              <h3 
+                className="text-[#006080] font-bold tracking-widest uppercase inline-block relative"
+                style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '28px' }}
+              >
+                HEAD OFFICES
+              </h3>
+              <div 
+                className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-1"
+                style={{ backgroundColor: BRAND_COLORS.primary }}
+              ></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
               {locations.map((loc, idx) => (
-                <div key={idx} className="space-y-3">
-                  <h4 
-                    className="text-[#006080] font-semibold tracking-widest"
-                    style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '24px' }}
-                  >
-                    {loc.city} :
-                  </h4>
-                  <p 
-                    className="text-slate-500 leading-relaxed px-4 md:px-0 font-light"
-                    style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '18px' }}
-                  >
-                    {loc.address}
-                  </p>
-                  {loc.mobile && (
-                    <p 
-                      className="text-slate-600 font-medium"
-                      style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '16px' }}
-                    >
-                      Mobile: {loc.mobile}
-                    </p>
-                  )}
-                  {loc.mapLink && (
-                    <a
-                      href={loc.mapLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-[#006080] hover:text-[#004d66] font-medium transition-colors mt-2"
-                      style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '16px' }}
-                    >
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                      <span>View on Google Maps</span>
-                    </a>
-                  )}
+                <div 
+                  key={idx} 
+                  className="bg-gradient-to-br from-white to-slate-50 rounded-xl border-2 border-slate-200 p-6 lg:p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:border-[#006080] group"
+                >
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div 
+                        className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                        style={{ backgroundColor: BRAND_COLORS.primary + '15' }}
+                      >
+                        <svg className="w-6 h-6" style={{ color: BRAND_COLORS.primary }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                      </div>
+                      <h4 
+                        className="text-[#006080] font-bold tracking-wide"
+                        style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '22px' }}
+                      >
+                        {loc.city}
+                      </h4>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <svg className="w-5 h-5 text-slate-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <p 
+                          className="text-slate-600 leading-relaxed text-left flex-1"
+                          style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '16px' }}
+                        >
+                          {loc.address}
+                        </p>
+                      </div>
+                      
+                      {loc.mobile && (
+                        <div className="flex items-center gap-3">
+                          <svg className="w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                          </svg>
+                          <a 
+                            href={`tel:${loc.mobile}`}
+                            className="text-slate-700 hover:text-[#006080] font-medium transition-colors"
+                            style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '16px' }}
+                          >
+                            {loc.mobile}
+                          </a>
+                        </div>
+                      )}
+                      
+                      {loc.mapLink && (
+                        <a
+                          href={loc.mapLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-[#006080] hover:text-[#004d66] font-semibold transition-all duration-200 group-hover:gap-3 mt-4"
+                          style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '15px' }}
+                        >
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                          <span>View on Google Maps</span>
+                        </a>
+                      )}
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Branches Section */}
-          <div className="space-y-8">
-            <h3 
-              className="text-center text-[#006080] font-bold tracking-widest uppercase"
-              style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '24px' }}
-            >
-              BRANCHES
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="space-y-10">
+            <div className="relative text-center">
+              <h3 
+                className="text-[#006080] font-bold tracking-widest uppercase inline-block relative"
+                style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '28px' }}
+              >
+                BRANCHES
+              </h3>
+              <div 
+                className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-1"
+                style={{ backgroundColor: BRAND_COLORS.primary }}
+              ></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {branches.map((branch, idx) => (
-                <div key={idx} className="space-y-3">
-                  <h4 
-                    className="text-[#006080] font-semibold tracking-widest"
-                    style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '20px' }}
-                  >
-                    {branch.city} :
-                  </h4>
-                  <p 
-                    className="text-slate-500 leading-relaxed px-4 md:px-0 font-light"
-                    style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '16px' }}
-                  >
-                    {branch.address}
-                  </p>
-                  {branch.mapLink && (
-                    <a
-                      href={branch.mapLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-[#006080] hover:text-[#004d66] font-medium transition-colors mt-2"
-                      style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '14px' }}
-                    >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                      <span>View on Google Maps</span>
-                    </a>
-                  )}
+                <div 
+                  key={idx} 
+                  className="bg-gradient-to-br from-white to-slate-50 rounded-xl border-2 border-slate-200 p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:border-[#006080] group"
+                >
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div 
+                        className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+                        style={{ backgroundColor: BRAND_COLORS.primary + '15' }}
+                      >
+                        <svg className="w-5 h-5" style={{ color: BRAND_COLORS.primary }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                      </div>
+                      <h4 
+                        className="text-[#006080] font-bold tracking-wide"
+                        style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '18px' }}
+                      >
+                        {branch.city}
+                      </h4>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <svg className="w-5 h-5 text-slate-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <p 
+                          className="text-slate-600 leading-relaxed text-left flex-1"
+                          style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '15px' }}
+                        >
+                          {branch.address}
+                        </p>
+                      </div>
+                      
+                      {branch.mapLink && (
+                        <a
+                          href={branch.mapLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-[#006080] hover:text-[#004d66] font-semibold transition-all duration-200 group-hover:gap-3 mt-4"
+                          style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '14px' }}
+                        >
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                          <span>View on Google Maps</span>
+                        </a>
+                      )}
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>

@@ -1,17 +1,17 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+// import ReCAPTCHA from 'react-google-recaptcha';
 import Hero from '../components/Hero';
 import { BRAND_COLORS, CONTACT_INFO } from '../constants';
 
 export default function Careers() {
   const [fileName, setFileName] = useState<string>('');
   const [resumeFile, setResumeFile] = useState<File | null>(null);
-  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
+  // const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  // const recaptchaRef = useRef<ReCAPTCHA>(null);
   const formRef = useRef<HTMLFormElement>(null);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -22,17 +22,17 @@ export default function Careers() {
     }
   };
 
-  const handleRecaptchaChange = (value: string | null) => {
-    setRecaptchaValue(value);
-  };
+  // const handleRecaptchaChange = (value: string | null) => {
+  //   setRecaptchaValue(value);
+  // };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
-    if (!recaptchaValue) {
-      setSubmitMessage({ type: 'error', text: 'Please complete the reCAPTCHA verification' });
-      return;
-    }
+    // if (!recaptchaValue) {
+    //   setSubmitMessage({ type: 'error', text: 'Please complete the reCAPTCHA verification' });
+    //   return;
+    // }
 
     setIsSubmitting(true);
     setSubmitMessage(null);
@@ -62,7 +62,7 @@ export default function Careers() {
         formRef.current?.reset();
         setFileName('');
         setResumeFile(null);
-        recaptchaRef.current?.reset();
+        // recaptchaRef.current?.reset();
       }
     } catch (error) {
       setSubmitMessage({ type: 'error', text: 'An error occurred. Please try again.' });
@@ -367,13 +367,13 @@ export default function Careers() {
                     </div>
                   </div>
 
-                  <div className="flex justify-center py-2">
+                  {/* <div className="flex justify-center py-2">
                     <ReCAPTCHA
                       ref={recaptchaRef}
                       sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'}
                       onChange={handleRecaptchaChange}
                     />
-                  </div>
+                  </div> */}
 
                   <div className="flex justify-center">
                     <button 

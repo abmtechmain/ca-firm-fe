@@ -24,8 +24,14 @@ const Footer: React.FC = () => {
               alt="SKMRD & ASSOCIATES"
               width={300}
               height={200}
-              className="w-full max-w-[280px] sm:max-w-[300px] md:max-w-[350px] h-auto object-contain"
+              className="w-full max-w-[280px] sm:max-w-[300px] md:max-w-[350px] h-auto object-contain mb-4"
             />
+            <p 
+              className="text-gray-600 text-sm leading-relaxed max-w-[350px] font-medium text-justify"
+              style={{ fontSize: '14px', lineHeight: '1.6' }}
+            >
+              A professionally managed Chartered Accountancy firm providing comprehensive accounting, taxation, audit, and compliance services with accuracy, integrity, and ethical standards.
+            </p>
           </div>
 
           {/* Useful Links */}

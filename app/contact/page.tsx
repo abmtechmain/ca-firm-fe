@@ -1,29 +1,29 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+// import ReCAPTCHA from 'react-google-recaptcha';
 import Hero from '../components/Hero';
 import { BRAND_COLORS, CONTACT_INFO } from '../constants';
 import { sendEmail } from '../utils/emailService';
 
 export default function Contact() {
-  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
+  // const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  // const recaptchaRef = useRef<ReCAPTCHA>(null);
   const formRef = useRef<HTMLFormElement>(null);
 
-  const handleRecaptchaChange = (value: string | null) => {
-    setRecaptchaValue(value);
-  };
+  // const handleRecaptchaChange = (value: string | null) => {
+  //   setRecaptchaValue(value);
+  // };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
-    if (!recaptchaValue) {
-      setSubmitMessage({ type: 'error', text: 'Please complete the reCAPTCHA verification' });
-      return;
-    }
+    // if (!recaptchaValue) {
+    //   setSubmitMessage({ type: 'error', text: 'Please complete the reCAPTCHA verification' });
+    //   return;
+    // }
 
     setIsSubmitting(true);
     setSubmitMessage(null);
@@ -43,7 +43,7 @@ export default function Contact() {
       if (result.success) {
         setSubmitMessage({ type: 'success', text: 'Thank you! Your enquiry has been submitted successfully.' });
         formRef.current?.reset();
-        recaptchaRef.current?.reset();
+        // recaptchaRef.current?.reset();
       } else {
         setSubmitMessage({ type: 'error', text: result.error || 'Failed to submit enquiry. Please try again.' });
       }
@@ -204,13 +204,13 @@ export default function Contact() {
 
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-4">
                   {/* reCAPTCHA */}
-                  <div className="flex justify-center">
+                  {/* <div className="flex justify-center">
                     <ReCAPTCHA
                       ref={recaptchaRef}
                       sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'}
                       onChange={handleRecaptchaChange}
                     />
-                  </div>
+                  </div> */}
 
                   <button 
                     type="submit"

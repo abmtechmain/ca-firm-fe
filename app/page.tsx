@@ -212,9 +212,9 @@ export default function Home() {
       </section>
 
       {/* Key Services Section */}
-      <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-12 md:py-16 bg-white relative overflow-hidden">
-        {/* Background Logo with 20% opacity */}
-        <div className="absolute inset-0 pointer-events-none" >
+      <section className="w-full px-4 sm:px-6 lg:px-18 py-12 sm:py-16 md:py-20 lg:py-24 bg-white relative overflow-hidden">
+        {/* Background Logo with reduced opacity */}
+        <div className="absolute inset-0 pointer-events-none opacity-5" >
           <Image
             src="/images/footer-logo.png"
             alt="Background Logo"
@@ -225,52 +225,30 @@ export default function Home() {
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-              {/* Heading */}
-              <div className="text-center mb-12">
-                <div className="inline-block relative mb-6">
-                  <h2 
-                    className="font-extrabold tracking-tight uppercase"
-                    style={{ 
-                      fontSize: '24px', 
-                      color: '#FF541F'
-                    }}
-                  >
-                    KEY SERVICES
-                  </h2>
-                  <div 
-                    className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
-                    style={{ backgroundColor: '#056385' }}
-                  ></div>
-                </div>
-              </div>
+          {/* Heading */}
+          <div className="text-center mb-12 md:mb-16 lg:mb-20">
+            <div className="inline-block relative mb-6 md:mb-8">
+              <h2 
+                className="font-extrabold tracking-tight uppercase"
+                style={{ 
+                  fontSize: '24px', 
+                  color: '#FF541F'
+                }}
+              >
+                KEY SERVICES
+              </h2>
+              <div 
+                className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                style={{ backgroundColor: '#056385' }}
+              ></div>
+            </div>
+          </div>
 
           {/* Service Cards */}
-          <div className="flex flex-col gap-6 sm:gap-8 md:gap-12 max-w-5xl mx-auto">
+          <div className="flex flex-col gap-8 md:gap-10 lg:gap-12 max-w-6xl mx-auto">
             {/* Top Row - 3 Cards */}
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center items-stretch gap-4 sm:gap-6 md:gap-8 lg:gap-12">
-              {/* Card 1: Advisory */}
-              <ServiceCard
-                icon={
-                  <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                }
-                title="ADVISORY"
-                description="Practical Business And Compliance Advisory To Help Organizations Make Informed Decisions, Manage Risks, And Stay Legally Compliant."
-              />
-
-              {/* Card 2: Income Tax */}
-              <ServiceCard
-                icon={
-                  <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                }
-                title="INCOME TAX"
-                description="Personal And Business Income Tax Planning, Return Filing, And Assessments With A Focus On Compliance And Tax Efficiency."
-              />
-
-              {/* Card 3: Audit & Assurance */}
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center items-stretch gap-6 md:gap-8 lg:gap-10">
+              {/* Card 1: Audit & Assurance */}
               <ServiceCard
                 icon={
                   <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -280,30 +258,52 @@ export default function Home() {
                 title="AUDIT & ASSURANCE"
                 description="Statutory, Internal, And Tax Audits Conducted With Professional Rigor To Ensure Transparency, Accuracy, And Regulatory Compliance."
               />
+
+              {/* Card 2: Advisory */}
+              <ServiceCard
+                icon={
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                }
+                title="ADVISORY"
+                description="Business Consulting, Financial Restructuring, Strategic Planning, And Risk Advisory To Help Organizations Make Informed Decisions."
+              />
+
+              {/* Card 3: Taxation */}
+              <ServiceCard
+                icon={
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                }
+                title="TAXATION"
+                description="Corporate Tax Planning, Personal Tax Services, Indirect Tax (GST/VAT) Advisory, And Comprehensive Tax Compliance Solutions."
+              />
             </div>
 
             {/* Bottom Row - 2 Cards */}
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center items-stretch gap-4 sm:gap-6 md:gap-8 lg:gap-12">
-              {/* Card 4: GST */}
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center items-stretch gap-6 md:gap-8 lg:gap-10">
+              {/* Card 4: Accounting & Bookkeeping */}
               <ServiceCard
                 icon={
                   <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 }
-                title="GST"
-                description="GST Registration, Return Filing, Compliance, And Advisory Services To Help Businesses Navigate GST Regulations Effectively."
+                title="ACCOUNTING & BOOKKEEPING"
+                description="Financial Statement Preparation, Payroll Services, Management Accounting, And Virtual CFO Services For Comprehensive Financial Management."
               />
 
-              {/* Card 5: Company Law */}
+              {/* Card 5: Corporate Services */}
               <ServiceCard
                 icon={
                   <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 }
-                title="COMPANY LAW"
-                description="Incorporation, Compliance, Secretarial Services, And Corporate Governance Support For Companies And LLPs."
+                title="CORPORATE SERVICES"
+                description="Company Formation, Secretarial Services, Corporate Governance, And Regulatory Compliance Support For Companies And LLPs."
               />
             </div>
           </div>
@@ -344,7 +344,7 @@ export default function Home() {
           {/* Main Content Area - 3x2 Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
             {/* Top Row: Text | Image | Text */}
-            {/* Consultation - Top Left */}
+            {/* Know Your Business - Top Left */}
             <div className="text-center order-2 md:order-1">
               <h3 
                 className="font-bold mb-3 uppercase"
@@ -354,7 +354,7 @@ export default function Home() {
                   lineHeight: '1.3'
                 }}
               >
-                CONSULTATION
+                KNOW YOUR BUSINESS
               </h3>
               <p 
                 style={{ 
@@ -363,7 +363,7 @@ export default function Home() {
                   lineHeight: '1.6'
                 }}
               >
-                We Begin By Understanding Your Requirements, Business Structure, And Compliance Needs Through A Detailed Discussion.
+                We Begin By Understanding Your Business Structure, Operations, And Specific Requirements Through Detailed Discussions.
               </p>
             </div>
 
@@ -378,7 +378,7 @@ export default function Home() {
               />
             </div>
 
-            {/* Execution - Top Right */}
+            {/* Consulting - Top Right */}
             <div className="text-center order-3 md:order-3">
               <h3 
                 className="font-bold mb-3 uppercase"
@@ -388,7 +388,7 @@ export default function Home() {
                   lineHeight: '1.3'
                 }}
               >
-                EXECUTION
+                CONSULTING
               </h3>
               <p 
                 style={{ 
@@ -397,12 +397,12 @@ export default function Home() {
                   lineHeight: '1.6'
                 }}
               >
-                We Handle All Filings, Documentation, And Regulatory Procedures With Accuracy And Timely Execution.
+                Our Expert Team Provides Professional Advice And Guidance Tailored To Your Business Needs And Compliance Requirements.
               </p>
             </div>
 
             {/* Bottom Row: Text | Text | Text */}
-            {/* Analysis - Bottom Left */}
+            {/* Planning and Execution - Bottom Left */}
             <div className="text-center order-4">
               <h3 
                 className="font-bold mb-3 uppercase"
@@ -412,7 +412,7 @@ export default function Home() {
                   lineHeight: '1.3'
                 }}
               >
-                ANALYSIS
+                PLANNING AND EXECUTION
               </h3>
               <p 
                 style={{ 
@@ -421,11 +421,12 @@ export default function Home() {
                   lineHeight: '1.6'
                 }}
               >
-                Our Team Reviews Your Financial And Regulatory Position To Identify Risks, Obligations, And Opportunities.
+                We Develop Strategic Plans And Execute All Filings, Documentation, And Regulatory Procedures With Accuracy And Timeliness.
               </p>
             </div>
 
-                        <div className="text-center order-4">
+            {/* Analysis and Reporting - Bottom Center */}
+            <div className="text-center order-5">
               <h3 
                 className="font-bold mb-3 uppercase"
                 style={{ 
@@ -434,7 +435,7 @@ export default function Home() {
                   lineHeight: '1.3'
                 }}
               >
-                ANALYSIS
+                ANALYSIS AND REPORTING
               </h3>
               <p 
                 style={{ 
@@ -443,12 +444,12 @@ export default function Home() {
                   lineHeight: '1.6'
                 }}
               >
-                Our Team Reviews Your Financial And Regulatory Position To Identify Risks, Obligations, And Opportunities.
+                Our Team Reviews Your Financial Position, Identifies Risks And Opportunities, And Provides Comprehensive Reports.
               </p>
             </div>
 
-            {/* Ongoing Support - Bottom Center */}
-            <div className="text-center order-5">
+            {/* Ongoing Support - Bottom Right */}
+            <div className="text-center order-6">
               <h3 
                 className="font-bold mb-3 uppercase"
                 style={{ 
@@ -468,11 +469,6 @@ export default function Home() {
               >
                 Continuous Assistance, Updates, And Advisory Support To Ensure Ongoing Compliance And Informed Decision-Making.
               </p>
-            </div>
-
-            {/* Empty or additional text - Bottom Right */}
-            <div className="text-center order-6">
-              {/* You can add another text block here if needed, or leave empty */}
             </div>
           </div>
         </div>

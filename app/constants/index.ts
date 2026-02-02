@@ -111,7 +111,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'SAYALI',
     role: 'Administration & Management',
     description: 'Specializes in administration and management services with expertise in organizational operations and efficiency.',
-    imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600'
+    imageUrl: '/images/team/Sayali Mandlik.jpeg'
   },
   {
     id: '2',
@@ -172,7 +172,7 @@ export const FOUNDER_DATA: Founder = {
     'Late CA Sampat Kachu Mandlik (FCA, M.Com) was the pioneer and most senior partner of the firm. With more than three decades of professional excellence, he advised public limited companies, large corporates, high-net-worth individuals, and eminent professionals.',
     'His mastery in taxation, audits, and regulatory matters, along with his calm handling of challenging cases, earned him immense respect. His values, ethics, and commitment continue to inspire the firm.'
   ],
-  imageUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800'
+  imageUrl: '/images/team/CA S K Mandlik.jpg'
 };
 
 export const KEY_PERSONS: KeyPerson[] = [
@@ -183,7 +183,7 @@ export const KEY_PERSONS: KeyPerson[] = [
     email: 'ca.rashmi@skmrd.com',
     qualification: 'FCA, M. Com, DISA',
     certification: 'FAFD, Concurrent Audit of Banks (appear), AI (appear)',
-    imageUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600',
+    imageUrl: '/images/team/CA Rashmi Mandlik.jpeg',
     description: [
       'Qualified since 2018.',
       'Senior partner of the firm.',
@@ -199,7 +199,7 @@ export const KEY_PERSONS: KeyPerson[] = [
     email: 'ca.sangita@skmrd.com',
     qualification: 'FCA, M. Com, DISA',
     certification: 'Concurrent Audit of Banks (appear), AI (appear)',
-    imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600',
+    imageUrl: '/images/team/CA Sangeeta Kadam.jpeg',
     description: [
       'Qualified since 2016.',
       'Senior partner of the firm.',
@@ -218,7 +218,7 @@ export const KEY_PERSONS: KeyPerson[] = [
     email: 'ca.nivrutti@skmrd.com',
     qualification: 'FCA, M. Com, DISA',
     certification: 'Concurrent Audit of Banks (appear), Ind AS (appear)',
-    imageUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=600',
+    imageUrl: '/images/team/CA Nivrutti Shinde.jpeg',
     description: [
       'Qualified Since 2018.',
       'Having 8 Years post qualification of experience and 10 & more year of experience in CA field in conducting internal audit & advisory services of various laws with its technical and analytical aspects.',
@@ -235,7 +235,7 @@ export const KEY_PERSONS: KeyPerson[] = [
     email: 'ca.kunwarr@skmrd.com',
     qualification: 'FCA, B. Com',
     certification: 'Concurrent Audit of Banks, FAFD (Appear)',
-    imageUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600',
+    imageUrl: '/images/team/CA Kunwarr Digga.jpeg',
     description: [
       'Qualified since 2019.',
       'Having 6 Years post qualification of experience in CA field in conducting audit & advisory services of various laws related to taxation with its technical and analytical aspects.',

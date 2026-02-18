@@ -19,19 +19,36 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row gap-12 mb-12">
           {/* Logo Section - Bigger */}
           <div className="md:w-2/5">
-            <Image
-              src="/images/footer-logoo.png"
-              alt="SKMRD & ASSOCIATES"
-              width={300}
-              height={200}
-              className="w-full max-w-[280px] sm:max-w-[300px] md:max-w-[350px] h-auto object-contain mb-4"
-            />
+            <div className="mb-4">
+              <Image
+                src="/images/logo-mav.png"
+                alt="SKMRD & ASSOCIATES"
+                width={300}
+                height={80}
+                className="w-full max-w-[280px] h-auto object-contain"
+              />
+            </div>
             <p 
               className="text-gray-600 text-sm leading-relaxed max-w-[350px] font-medium text-justify"
               style={{ fontSize: '14px', lineHeight: '1.6' }}
             >
               A professionally managed Chartered Accountancy firm providing comprehensive accounting, taxation, audit, and compliance services with accuracy, integrity, and ethical standards.
             </p>
+          </div>
+
+          {/* Branches */}
+          <div className="md:w-1/5">
+            <h4 
+              className="font-bold mb-6 text-lg uppercase tracking-wider"
+              style={{ color: '#056385' }}
+            >
+              Branch
+            </h4>
+            <ul className="space-y-3 text-sm text-gray-500 font-medium">
+              <li>Jalgaon branch</li>
+              <li>Assam branch</li>
+              <li>Pune branch</li>
+            </ul>
           </div>
 
           {/* Useful Links */}
@@ -61,22 +78,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Connect 1 */}
-          <div className="md:w-1/5">
-            <h4 
-              className="font-bold mb-6 text-lg uppercase tracking-wider"
-              style={{ color: '#056385' }}
-            >
-              Connect With Us
-            </h4>
-            <address className="not-italic space-y-4 text-sm text-gray-500 leading-relaxed font-medium">
-              <p>{CONTACT_INFO.offices[0].address}</p>
-              <p>{CONTACT_INFO.landline}</p>
-              <p className="hover:text-[#F37920] cursor-pointer">{CONTACT_INFO.email}</p>
-            </address>
-          </div>
-
-          {/* Connect 2 */}
+          {/* Office Time */}
           <div className="md:w-1/5">
             <h4 
               className="font-bold mb-6 text-lg uppercase tracking-wider"
@@ -88,6 +90,8 @@ const Footer: React.FC = () => {
               <p>Monday - Friday</p>
               <p className="font-bold">10:00 to 5:00</p>
               <p className="text-xs">Saturday & Sunday Closed</p>
+              <p className="mt-4">{CONTACT_INFO.landline}</p>
+              <p className="hover:text-[#F37920] cursor-pointer">{CONTACT_INFO.email}</p>
             </address>
           </div>
         </div>

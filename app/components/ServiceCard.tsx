@@ -9,7 +9,7 @@ interface ServiceCardProps {
 export default function ServiceCard({ icon, title, description }: ServiceCardProps) {
   return (
     <div 
-      className="bg-white rounded-xl px-4 sm:px-6 py-8 sm:py-10 md:py-12 border border-gray-400 transition-all duration-300 cursor-pointer group relative overflow-hidden hover:border-white w-full sm:w-[280px] min-h-[280px] sm:min-h-[320px] flex flex-col" 
+      className="bg-white rounded-xl px-4 sm:px-6 py-6 sm:py-8 md:py-10 border border-gray-400 transition-all duration-300 cursor-pointer group relative overflow-hidden hover:border-white" 
     >
       {/* Gradient background on hover */}
       <div 
@@ -28,20 +28,20 @@ export default function ServiceCard({ icon, title, description }: ServiceCardPro
         <div className="absolute w-40 h-40 bg-white rounded-full blur-3xl opacity-80" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}></div>
       </div>
       
-      <div className="mb-4 relative z-10">
-        <div className="text-[#023F55] group-hover:text-white transition-colors duration-300">
+      <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 relative z-10">
+        <div className="text-[#F37920] group-hover:text-white transition-colors duration-300">
           {icon}
         </div>
       </div>
       <h3 
-        className="font-bold mb-3 uppercase transition-colors duration-300 text-[#023F55] group-hover:text-white relative z-10" 
-        style={{ fontSize: '20px' }}
+        className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl transition-colors duration-300 group-hover:text-white relative z-10" 
+        style={{ color: '#023F55' }}
       >
         {title}
       </h3>
       <p 
-        className="transition-colors duration-300 text-[#0000008A] group-hover:text-white relative z-10" 
-        style={{ fontSize: '16px', lineHeight: '1.6' }}
+        className="text-sm sm:text-base md:text-lg transition-colors duration-300 group-hover:text-white relative z-10" 
+        style={{ color: '#0000008A' }}
       >
         {description}
       </p>

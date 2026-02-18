@@ -34,15 +34,15 @@ export default function Home() {
             title: 'Expert Financial Advisory & Strategic Planning Services',
             description: 'Comprehensive financial solutions tailored to your business needs, helping you make informed decisions and achieve your financial goals.',
             image: '/images/07a218b42ba9b47ead7dbb5118c354ba40d191b6.jpg',
-            buttonText: 'GET STARTED',
+            buttonText: 'CALL US NOW',
             buttonLink: '/contact'
           },
           {
             title: 'Professional Audit & Assurance Services You Can Trust',
             description: 'Rigorous audit processes and compliance solutions ensuring your business meets all regulatory requirements with confidence.',
             image: '/images/d7b411f0d5119b394fee184dc05ce3b4caf98d3d.jpg',
-            buttonText: 'LEARN MORE',
-            buttonLink: '/services'
+            buttonText: 'CALL US NOW',
+            buttonLink: '/contact'
           }
         ]}
       />
@@ -83,8 +83,25 @@ export default function Home() {
             {/* Left Side - 2x2 Grid */}
             <div className="w-full lg:w-[50%] grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
               {/* Card 1: Experienced Professionals */}
-              <div className="bg-white rounded-xl px-4 sm:px-6 py-6 sm:py-8 md:py-10 border border-gray-400">
-                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+              <div className="bg-white rounded-xl px-4 sm:px-6 py-6 sm:py-8 md:py-10 border border-gray-400 transition-all duration-300 cursor-pointer group relative overflow-hidden hover:border-white">
+                {/* Gradient background on hover */}
+                <div 
+                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{ 
+                    background: 'linear-gradient(to bottom, #044860, #056385)'
+                  }}
+                ></div>
+                
+                {/* Top Right Circular Blur */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full opacity-0 group-hover:opacity-80 transition-opacity duration-300 blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+                
+                {/* Bottom Middle Circle - Solid center with blurred edges */}
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* Blurred outer circle - behind */}
+                  <div className="absolute w-40 h-40 bg-white rounded-full blur-3xl opacity-80" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}></div>
+                </div>
+
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 relative z-10">
                   <Image
                     src="/images/professional.png"
                     alt="Professional"
@@ -93,17 +110,34 @@ export default function Home() {
                     className="object-contain"
                   />
                 </div>
-                <h3 className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl" style={{ color: '#023F55' }}>
+                <h3 className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl transition-colors duration-300 group-hover:text-white relative z-10" style={{ color: '#023F55' }}>
                   EXPERIENCED PROFESSIONALS
                 </h3>
-                <p className="text-sm sm:text-base md:text-lg" style={{ color: '#0000008A' }}>
+                <p className="text-sm sm:text-base md:text-lg transition-colors duration-300 group-hover:text-white relative z-10" style={{ color: '#0000008A' }}>
                   Qualified Chartered Accountants With Hands-On Experience Across Taxation, Audit, And Regulatory Compliance.
                 </p>
               </div>
 
               {/* Card 2: Timely Compliance */}
-              <div className="bg-white rounded-xl px-4 sm:px-6 py-6 sm:py-8 md:py-10 border border-gray-400">
-                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+              <div className="bg-white rounded-xl px-4 sm:px-6 py-6 sm:py-8 md:py-10 border border-gray-400 transition-all duration-300 cursor-pointer group relative overflow-hidden hover:border-white">
+                {/* Gradient background on hover */}
+                <div 
+                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{ 
+                    background: 'linear-gradient(to bottom, #044860, #056385)'
+                  }}
+                ></div>
+                
+                {/* Top Right Circular Blur */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full opacity-0 group-hover:opacity-80 transition-opacity duration-300 blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+                
+                {/* Bottom Middle Circle - Solid center with blurred edges */}
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* Blurred outer circle - behind */}
+                  <div className="absolute w-40 h-40 bg-white rounded-full blur-3xl opacity-80" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}></div>
+                </div>
+
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 relative z-10">
                   <Image
                     src="/images/timely.png"
                     alt="Timely"
@@ -112,17 +146,34 @@ export default function Home() {
                     className="object-contain"
                   />
                 </div>
-                <h3 className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl" style={{ color: '#023F55' }}>
+                <h3 className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl transition-colors duration-300 group-hover:text-white relative z-10" style={{ color: '#023F55' }}>
                   TIMELY COMPLIANCE
                 </h3>
-                <p className="text-sm sm:text-base md:text-lg" style={{ color: '#0000008A' }}>
+                <p className="text-sm sm:text-base md:text-lg transition-colors duration-300 group-hover:text-white relative z-10" style={{ color: '#0000008A' }}>
                   Structured Processes And Proactive Reminders Ensure All Statutory Filings And Deadlines Are Met Without Last-Minute Stress.
                 </p>
               </div>
 
               {/* Card 3: Practical Solutions */}
-              <div className="bg-white rounded-xl px-4 sm:px-6 py-6 sm:py-8 md:py-10 border border-gray-400">
-                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+              <div className="bg-white rounded-xl px-4 sm:px-6 py-6 sm:py-8 md:py-10 border border-gray-400 transition-all duration-300 cursor-pointer group relative overflow-hidden hover:border-white">
+                {/* Gradient background on hover */}
+                <div 
+                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{ 
+                    background: 'linear-gradient(to bottom, #044860, #056385)'
+                  }}
+                ></div>
+                
+                {/* Top Right Circular Blur */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full opacity-0 group-hover:opacity-80 transition-opacity duration-300 blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+                
+                {/* Bottom Middle Circle - Solid center with blurred edges */}
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* Blurred outer circle - behind */}
+                  <div className="absolute w-40 h-40 bg-white rounded-full blur-3xl opacity-80" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}></div>
+                </div>
+
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 relative z-10">
                   <Image
                     src="/images/Group.png"
                     alt="Practical Solutions"
@@ -131,17 +182,34 @@ export default function Home() {
                     className="object-contain"
                   />
                 </div>
-                <h3 className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl" style={{ color: '#023F55' }}>
+                <h3 className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl transition-colors duration-300 group-hover:text-white relative z-10" style={{ color: '#023F55' }}>
                   PRACTICAL SOLUTIONS
                 </h3>
-                <p className="text-sm sm:text-base md:text-lg" style={{ color: '#0000008A' }}>
+                <p className="text-sm sm:text-base md:text-lg transition-colors duration-300 group-hover:text-white relative z-10" style={{ color: '#0000008A' }}>
                   Advice That Is Clear, Actionable, And Aligned With Your Business Realities – Not Just Theoretical Interpretations.
                 </p>
               </div>
 
               {/* Card 4: Client-Focused Approach */}
-              <div className="bg-white rounded-xl px-4 sm:px-6 py-6 sm:py-8 md:py-10 border border-gray-400">
-                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+              <div className="bg-white rounded-xl px-4 sm:px-6 py-6 sm:py-8 md:py-10 border border-gray-400 transition-all duration-300 cursor-pointer group relative overflow-hidden hover:border-white">
+                {/* Gradient background on hover */}
+                <div 
+                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{ 
+                    background: 'linear-gradient(to bottom, #044860, #056385)'
+                  }}
+                ></div>
+                
+                {/* Top Right Circular Blur */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full opacity-0 group-hover:opacity-80 transition-opacity duration-300 blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+                
+                {/* Bottom Middle Circle - Solid center with blurred edges */}
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* Blurred outer circle - behind */}
+                  <div className="absolute w-40 h-40 bg-white rounded-full blur-3xl opacity-80" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}></div>
+                </div>
+
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 relative z-10">
                   <Image
                     src="/images/Vector.png"
                     alt="Client-Focused Approach"
@@ -150,10 +218,10 @@ export default function Home() {
                     className="object-contain"
                   />
                 </div>
-                <h3 className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl" style={{ color: '#023F55' }}>
+                <h3 className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl transition-colors duration-300 group-hover:text-white relative z-10" style={{ color: '#023F55' }}>
                   CLIENT-FOCUSED APPROACH
                 </h3>
-                <p className="text-sm sm:text-base md:text-lg" style={{ color: '#0000008A' }}>
+                <p className="text-sm sm:text-base md:text-lg transition-colors duration-300 group-hover:text-white relative z-10" style={{ color: '#0000008A' }}>
                   Personalized Attention, Transparent Communication, And Solutions Tailored To Your Specific Requirements.
                 </p>
               </div>
@@ -208,16 +276,26 @@ export default function Home() {
       </section>
 
       {/* Meet Our Team Button Section */}
-      <section className="w-full px-4 sm:px-6 lg:px-18 bg-white">
+      <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center">
             <Link 
               href="/about-us"
-              className="bg-white rounded-lg border-[1px] px-8 py-4 flex items-center gap-3 hover:opacity-90 transition-opacity border-gray-400 cursor-pointer"
+              className="rounded-lg px-8 sm:px-10 py-4 sm:py-5 flex items-center gap-3 transition-all duration-300 group cursor-pointer shadow-lg hover:shadow-xl"
+              style={{ 
+                background: 'linear-gradient(135deg, #F37920 0%, #FF8C42 100%)',
+              }}
             >
-              <span className="text-[16px] text-[#F37920]">MEET OUR TEAM MEMBERS</span>
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: '#F37920' }}>
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <span className="text-white font-semibold text-sm sm:text-base md:text-lg uppercase">
+                MEET OUR TEAM MEMBERS
+              </span>
+              <svg 
+                className="w-5 h-5 sm:w-6 sm:h-6 text-white transition-transform duration-300 group-hover:translate-x-1" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
           </div>
@@ -227,7 +305,7 @@ export default function Home() {
       {/* Key Services Section */}
       <section className="w-full px-4 sm:px-6 lg:px-18 py-12 sm:py-16 md:py-20 lg:py-24 bg-white relative overflow-hidden">
         {/* Background Logo with reduced opacity */}
-        <div className="absolute inset-0 pointer-events-none opacity-5" >
+        <div className="absolute inset-0 pointer-events-none opacity-5">
           <Image
             src="/images/footer-logo.png"
             alt="Background Logo"
@@ -236,43 +314,84 @@ export default function Home() {
             style={{ objectPosition: 'left center' }}
           />
         </div>
-        
+
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Heading */}
           <div className="text-center mb-12 md:mb-16 lg:mb-20">
             <div className="inline-block relative mb-6 md:mb-8">
-              <h2 
+              <h2
                 className="font-extrabold tracking-tight uppercase"
-                style={{ 
-                  fontSize: '24px', 
-                  color: '#FF541F'
+                style={{
+                  fontSize: '24px',
+                  color: '#FF541F',
                 }}
               >
                 KEY SERVICES
               </h2>
-              <div 
+              <div
                 className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
                 style={{ backgroundColor: '#056385' }}
               ></div>
             </div>
           </div>
 
-          {/* Service Cards */}
-          <div className="flex flex-col gap-8 md:gap-10 lg:gap-12 max-w-6xl mx-auto">
-            {/* Top Row - 3 Cards */}
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center items-stretch gap-6 md:gap-8 lg:gap-10">
-              {/* Card 1: Audit & Assurance */}
-              <ServiceCard
-                icon={
-                  <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                  </svg>
-                }
-                title="AUDIT & ASSURANCE"
-                description="Statutory, Internal, And Tax Audits Conducted With Professional Rigor To Ensure Transparency, Accuracy, And Regulatory Compliance."
-              />
+          {/* Service Cards Layout */}
+          <div className="flex flex-col lg:flex-row gap-6 md:gap-8 mt-8 md:mt-12 items-stretch">
+            {/* Left Side - Large Card for Audit & Assurance */}
+            <div className="w-full lg:w-[50%] flex">
+              <div className="bg-white rounded-xl border border-gray-400 overflow-hidden w-full flex flex-col">
+                {/* Image */}
+                <div className="w-full h-1/2 relative">
+                  <Image
+                    src="/images/d7b411f0d5119b394fee184dc05ce3b4caf98d3d.jpg"
+                    alt="Audit & Assurance Services"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                
+                <div className="p-8">
+                  <p 
+                    className="uppercase mb-2"
+                    style={{ 
+                      fontSize: '18px', 
+                      color: '#F37920',
+                    }}
+                  >
+                    PROFESSIONAL AUDIT SERVICES
+                  </p>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="text-[#F37920]">
+                      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <h3 
+                      className="font-bold"
+                      style={{ 
+                        fontSize: '32px', 
+                        color: '#023F55'
+                      }}
+                    >
+                      AUDIT & ASSURANCE
+                    </h3>
+                  </div>
+                  <p 
+                    className="leading-relaxed"
+                    style={{ 
+                      fontSize: '18px', 
+                      color: '#0000008A'
+                    }}
+                  >
+                    Statutory, Internal, And Tax Audits Conducted With Professional Rigor To Ensure Transparency, Accuracy, And Regulatory Compliance For Your Business Operations.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-              {/* Card 2: Advisory */}
+            {/* Right Side - 2x2 Grid for Other Services */}
+            <div className="w-full lg:w-[50%] grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+              {/* Card 1: Advisory */}
               <ServiceCard
                 icon={
                   <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -283,7 +402,7 @@ export default function Home() {
                 description="Business Consulting, Financial Restructuring, Strategic Planning, And Risk Advisory To Help Organizations Make Informed Decisions."
               />
 
-              {/* Card 3: Taxation */}
+              {/* Card 2: Taxation */}
               <ServiceCard
                 icon={
                   <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -293,11 +412,8 @@ export default function Home() {
                 title="TAXATION"
                 description="Corporate Tax Planning, Personal Tax Services, Indirect Tax (GST/VAT) Advisory, And Comprehensive Tax Compliance Solutions."
               />
-            </div>
 
-            {/* Bottom Row - 2 Cards */}
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center items-stretch gap-6 md:gap-8 lg:gap-10">
-              {/* Card 4: Accounting & Bookkeeping */}
+              {/* Card 3: Accounting & Bookkeeping */}
               <ServiceCard
                 icon={
                   <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -308,7 +424,7 @@ export default function Home() {
                 description="Financial Statement Preparation, Payroll Services, Management Accounting, And Virtual CFO Services For Comprehensive Financial Management."
               />
 
-              {/* Card 5: Corporate Services */}
+              {/* Card 4: Corporate Services */}
               <ServiceCard
                 icon={
                   <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -358,12 +474,17 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
             {/* Top Row: Text | Image | Text */}
             {/* Know Your Business - Top Left */}
-            <div className="text-center order-2 md:order-1">
+            <div className="bg-white rounded-xl px-6 py-6 border border-gray-400 text-center order-2 md:order-1 transition-all duration-300 hover:shadow-lg">
+              <div className="flex justify-center mb-4">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#F37920' }}>
+                  <span className="text-white font-bold text-xl">1</span>
+                </div>
+              </div>
               <h3 
                 className="font-bold mb-3 uppercase"
                 style={{ 
-                  color: '#056385', 
-                  fontSize: '20px',
+                  color: '#023F55', 
+                  fontSize: '18px',
                   lineHeight: '1.3'
                 }}
               >
@@ -372,7 +493,7 @@ export default function Home() {
               <p 
                 style={{ 
                   color: '#0000008A', 
-                  fontSize: '16px',
+                  fontSize: '15px',
                   lineHeight: '1.6'
                 }}
               >
@@ -392,12 +513,17 @@ export default function Home() {
             </div>
 
             {/* Consulting - Top Right */}
-            <div className="text-center order-3 md:order-3">
+            <div className="bg-white rounded-xl px-6 py-6 border border-gray-400 text-center order-3 md:order-3 transition-all duration-300 hover:shadow-lg">
+              <div className="flex justify-center mb-4">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#F37920' }}>
+                  <span className="text-white font-bold text-xl">2</span>
+                </div>
+              </div>
               <h3 
                 className="font-bold mb-3 uppercase"
                 style={{ 
-                  color: '#056385', 
-                  fontSize: '20px',
+                  color: '#023F55', 
+                  fontSize: '18px',
                   lineHeight: '1.3'
                 }}
               >
@@ -406,7 +532,7 @@ export default function Home() {
               <p 
                 style={{ 
                   color: '#0000008A', 
-                  fontSize: '16px',
+                  fontSize: '15px',
                   lineHeight: '1.6'
                 }}
               >
@@ -416,12 +542,17 @@ export default function Home() {
 
             {/* Bottom Row: Text | Text | Text */}
             {/* Planning and Execution - Bottom Left */}
-            <div className="text-center order-4">
+            <div className="bg-white rounded-xl px-6 py-6 border border-gray-400 text-center order-4 transition-all duration-300 hover:shadow-lg">
+              <div className="flex justify-center mb-4">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#F37920' }}>
+                  <span className="text-white font-bold text-xl">3</span>
+                </div>
+              </div>
               <h3 
                 className="font-bold mb-3 uppercase"
                 style={{ 
-                  color: '#056385', 
-                  fontSize: '20px',
+                  color: '#023F55', 
+                  fontSize: '18px',
                   lineHeight: '1.3'
                 }}
               >
@@ -430,7 +561,7 @@ export default function Home() {
               <p 
                 style={{ 
                   color: '#0000008A', 
-                  fontSize: '16px',
+                  fontSize: '15px',
                   lineHeight: '1.6'
                 }}
               >
@@ -439,12 +570,17 @@ export default function Home() {
             </div>
 
             {/* Analysis and Reporting - Bottom Center */}
-            <div className="text-center order-5">
+            <div className="bg-white rounded-xl px-6 py-6 border border-gray-400 text-center order-5 transition-all duration-300 hover:shadow-lg">
+              <div className="flex justify-center mb-4">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#F37920' }}>
+                  <span className="text-white font-bold text-xl">4</span>
+                </div>
+              </div>
               <h3 
                 className="font-bold mb-3 uppercase"
                 style={{ 
-                  color: '#056385', 
-                  fontSize: '20px',
+                  color: '#023F55', 
+                  fontSize: '18px',
                   lineHeight: '1.3'
                 }}
               >
@@ -453,7 +589,7 @@ export default function Home() {
               <p 
                 style={{ 
                   color: '#0000008A', 
-                  fontSize: '16px',
+                  fontSize: '15px',
                   lineHeight: '1.6'
                 }}
               >
@@ -462,12 +598,17 @@ export default function Home() {
             </div>
 
             {/* Ongoing Support - Bottom Right */}
-            <div className="text-center order-6">
+            <div className="bg-white rounded-xl px-6 py-6 border border-gray-400 text-center order-6 transition-all duration-300 hover:shadow-lg">
+              <div className="flex justify-center mb-4">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#F37920' }}>
+                  <span className="text-white font-bold text-xl">5</span>
+                </div>
+              </div>
               <h3 
                 className="font-bold mb-3 uppercase"
                 style={{ 
-                  color: '#056385', 
-                  fontSize: '20px',
+                  color: '#023F55', 
+                  fontSize: '18px',
                   lineHeight: '1.3'
                 }}
               >
@@ -476,7 +617,7 @@ export default function Home() {
               <p 
                 style={{ 
                   color: '#0000008A', 
-                  fontSize: '16px',
+                  fontSize: '15px',
                   lineHeight: '1.6'
                 }}
               >

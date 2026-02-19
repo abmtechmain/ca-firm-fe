@@ -1,62 +1,111 @@
-import React from 'react';
-import { FOUNDER_DATA, BRAND_COLORS } from '../constants';
+"use client";
+import { FOUNDER_DATA } from '../constants';
 
-export const FounderSection: React.FC = () => {
+export const FounderSection = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-12 lg:gap-20 items-start">
-        {/* Left: Founder Image */}
-        <div className="rounded-2xl overflow-hidden shadow-lg aspect-[4/5] lg:aspect-[1/1.2]">
-          <img 
-            src={FOUNDER_DATA.imageUrl} 
-            alt={FOUNDER_DATA.name} 
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        {/* Right: Founder Details */}
-        <div className="flex flex-col space-y-6 lg:pt-4">
-          <div className="space-y-2">
-            <span 
-              className="text-xs md:text-sm font-extrabold tracking-widest uppercase"
-              style={{ color: BRAND_COLORS.accent }}
-            >
-              {FOUNDER_DATA.tag}
-            </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold flex flex-wrap items-baseline gap-x-3">
-              <span style={{ color: BRAND_COLORS.primary }}>{FOUNDER_DATA.name}</span>
-              <span className="text-base md:text-lg font-bold" style={{ color: BRAND_COLORS.primary }}>
-                {FOUNDER_DATA.role}
-              </span>
-            </h2>
-          </div>
-
-          <div className="space-y-4">
-            {FOUNDER_DATA.description.map((para, idx) => (
-              <p key={idx} className="text-gray-400 text-sm md:text-base leading-relaxed">
-                {para}
-              </p>
-            ))}
-          </div>
-
-          <div className="pt-6">
-            <button className="flex items-center space-x-3 text-xs md:text-sm font-bold tracking-widest uppercase border border-gray-300 rounded-lg px-8 py-3.5 text-gray-500 transition-all hover:bg-gray-50 hover:border-gray-400">
-              <span>KNOW MORE</span>
-              <svg 
-                className="w-4 h-4" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2.5" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
+    <>
+      {/* Section Title - Above everything */}
+      <div className="bg-white py-12">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center">
+            <div className="inline-block relative mb-6">
+              <h2 
+                className="font-extrabold tracking-tight uppercase"
+                style={{ color: '#FF541F', fontSize: '24px' }}
               >
-                <path d="M9 18l6-6-6-6" />
-              </svg>
-            </button>
+                MEET OUR FOUNDER
+              </h2>
+              <div 
+                className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                style={{ backgroundColor: '#056385' }}
+              ></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      {/* Founder Content Section */}
+      <section className="bg-[#F7F9FC]">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-[40%_1px_60%] gap-0">
+            {/* Left - Large Image (40%) */}
+            <div className="relative min-h-[600px] lg:min-h-[700px]">
+              <img 
+                src={FOUNDER_DATA.imageUrl} 
+                alt={FOUNDER_DATA.name} 
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Thin Vertical Divider */}
+            <div className="bg-gray-300"></div>
+
+            {/* Right - Text Content (60%) */}
+            <div className="px-12 py-20 lg:px-16 lg:py-24 flex flex-col justify-center">
+            {/* FOUNDER Label */}
+            <p 
+              className="uppercase font-semibold mb-4"
+              style={{ 
+                color: '#FF541F',
+                fontSize: '13px',
+                letterSpacing: '2px'
+              }}
+            >
+              {FOUNDER_DATA.tag}
+            </p>
+
+            {/* Name (Big Heading) */}
+            <h2 
+              className="font-bold mb-4"
+              style={{ 
+                color: '#056385',
+                fontSize: '34px',
+                lineHeight: '1.2'
+              }}
+            >
+              {FOUNDER_DATA.name}
+            </h2>
+
+            {/* Short Orange Divider */}
+            <div 
+              className="mb-6"
+              style={{ 
+                width: '60px',
+                height: '3px',
+                backgroundColor: '#FF541F'
+              }}
+            ></div>
+
+            {/* Role */}
+            <p 
+              className="font-medium mb-6"
+              style={{ 
+                color: '#056385',
+                fontSize: '18px'
+              }}
+            >
+              {FOUNDER_DATA.role}
+            </p>
+
+            {/* Bio Text */}
+            <div className="space-y-4">
+              {FOUNDER_DATA.description.map((para, idx) => (
+                <p 
+                  key={idx}
+                  style={{ 
+                    color: '#555555',
+                    fontSize: '17px',
+                    lineHeight: '1.8'
+                  }}
+                >
+                  {para}
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+    </>
   );
 };

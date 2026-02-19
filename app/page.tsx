@@ -110,10 +110,10 @@ export default function Home() {
                     className="object-contain"
                   />
                 </div>
-                <h3 className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl transition-colors duration-300 group-hover:text-white relative z-10" style={{ color: '#023F55' }}>
+                <h3 className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl text-[#023F55] group-hover:!text-white transition-colors duration-300 relative z-10">
                   EXPERIENCED PROFESSIONALS
                 </h3>
-                <p className="text-sm sm:text-base md:text-lg transition-colors duration-300 group-hover:text-white relative z-10" style={{ color: '#0000008A' }}>
+                <p className="text-sm sm:text-base md:text-lg text-[#0000008A] group-hover:!text-white transition-colors duration-300 relative z-10">
                   Qualified Chartered Accountants With Hands-On Experience Across Taxation, Audit, And Regulatory Compliance.
                 </p>
               </div>
@@ -146,10 +146,10 @@ export default function Home() {
                     className="object-contain"
                   />
                 </div>
-                <h3 className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl transition-colors duration-300 group-hover:text-white relative z-10" style={{ color: '#023F55' }}>
+                <h3 className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl text-[#023F55] group-hover:!text-white transition-colors duration-300 relative z-10">
                   TIMELY COMPLIANCE
                 </h3>
-                <p className="text-sm sm:text-base md:text-lg transition-colors duration-300 group-hover:text-white relative z-10" style={{ color: '#0000008A' }}>
+                <p className="text-sm sm:text-base md:text-lg text-[#0000008A] group-hover:!text-white transition-colors duration-300 relative z-10">
                   Structured Processes And Proactive Reminders Ensure All Statutory Filings And Deadlines Are Met Without Last-Minute Stress.
                 </p>
               </div>
@@ -182,10 +182,10 @@ export default function Home() {
                     className="object-contain"
                   />
                 </div>
-                <h3 className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl transition-colors duration-300 group-hover:text-white relative z-10" style={{ color: '#023F55' }}>
+                <h3 className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl text-[#023F55] group-hover:!text-white transition-colors duration-300 relative z-10">
                   PRACTICAL SOLUTIONS
                 </h3>
-                <p className="text-sm sm:text-base md:text-lg transition-colors duration-300 group-hover:text-white relative z-10" style={{ color: '#0000008A' }}>
+                <p className="text-sm sm:text-base md:text-lg text-[#0000008A] group-hover:!text-white transition-colors duration-300 relative z-10">
                   Advice That Is Clear, Actionable, And Aligned With Your Business Realities – Not Just Theoretical Interpretations.
                 </p>
               </div>
@@ -218,10 +218,10 @@ export default function Home() {
                     className="object-contain"
                   />
                 </div>
-                <h3 className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl transition-colors duration-300 group-hover:text-white relative z-10" style={{ color: '#023F55' }}>
+                <h3 className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl text-[#023F55] group-hover:!text-white transition-colors duration-300 relative z-10">
                   CLIENT-FOCUSED APPROACH
                 </h3>
-                <p className="text-sm sm:text-base md:text-lg transition-colors duration-300 group-hover:text-white relative z-10" style={{ color: '#0000008A' }}>
+                <p className="text-sm sm:text-base md:text-lg text-[#0000008A] group-hover:!text-white transition-colors duration-300 relative z-10">
                   Personalized Attention, Transparent Communication, And Solutions Tailored To Your Specific Requirements.
                 </p>
               </div>
@@ -343,7 +343,7 @@ export default function Home() {
                 {/* Image */}
                 <div className="w-full h-1/2 relative">
                   <Image
-                    src="/images/d7b411f0d5119b394fee184dc05ce3b4caf98d3d.jpg"
+                    src="/images/key-services.jpeg"
                     alt="Audit & Assurance Services"
                     fill
                     className="object-cover"
@@ -504,7 +504,7 @@ export default function Home() {
             {/* Image - Top Center */}
             <div className="w-full flex justify-center order-1 md:order-2">
               <Image
-                src="/images/024d546ae1f8a1e7f688d26bf57ae6a52b6c5d37.jpg"
+                src="/images/how-we-work.jpeg"
                 alt="How We Work"
                 width={400}
                 height={200}

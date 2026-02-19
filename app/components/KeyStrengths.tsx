@@ -50,16 +50,30 @@ export const KeyStrengths: React.FC = () => {
           {STRENGTHS_GRID.map((item, index) => (
             <div 
               key={index} 
-              className="p-8 border rounded-2xl bg-white shadow-sm flex flex-col justify-start space-y-4"
-              style={{ borderColor: BRAND_COLORS.primary }}
+              className="p-8 border border-gray-400 rounded-2xl bg-white transition-all duration-300 cursor-pointer group relative overflow-hidden hover:border-white flex flex-col justify-start space-y-4"
             >
+              {/* Gradient background on hover */}
+              <div 
+                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{ 
+                  background: 'linear-gradient(to bottom, #044860, #056385)'
+                }}
+              ></div>
+              
+              {/* Top Right Circular Blur */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full opacity-0 group-hover:opacity-80 transition-opacity duration-300 blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+              
+              {/* Bottom Middle Circle */}
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute w-40 h-40 bg-white rounded-full blur-3xl opacity-80" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}></div>
+              </div>
+
               <h4 
-                className="text-lg font-bold tracking-tight uppercase"
-                style={{ color: BRAND_COLORS.accent }}
+                className="text-lg font-bold tracking-tight uppercase text-[#F37920] group-hover:!text-white transition-colors duration-300 relative z-10"
               >
                 {item.title}
               </h4>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-400 text-sm leading-relaxed group-hover:!text-white transition-colors duration-300 relative z-10">
                 {item.description}
               </p>
             </div>

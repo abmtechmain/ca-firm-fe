@@ -30,7 +30,37 @@ export default function Resources() {
       
       <div className="min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          {/* Header Section */}
+          {/* Important Events and Links Section */}
+          <div className="mb-24">
+            <div className="text-center mb-16 space-y-6">
+              <div className="inline-block relative">
+                <h1 
+                  className="font-extrabold tracking-tight uppercase"
+                  style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
+                >
+                  Important Events and Links
+                </h1>
+                <div 
+                  className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                  style={{ backgroundColor: BRAND_COLORS.primary }}
+                ></div>
+              </div>
+              
+              {/* <p className="max-w-2xl mx-auto text-gray-500 text-sm md:text-base leading-relaxed">
+                Our articles cover important developments, regulatory updates, and practical guidance on taxation, 
+                compliance, and business matters.
+              </p> */}
+            </div>
+
+            {/* Events Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+              {BLOG_POSTS.map((post) => (
+                <BlogCard key={post.id} post={post} />
+              ))}
+            </div>
+          </div>
+
+          {/* Blogs & Articles Section */}
           <div className="text-center mb-16 space-y-6">
             <div className="inline-block relative">
               <h1 
@@ -66,7 +96,7 @@ export default function Resources() {
       </div>
 
       {/* Useful Downloads Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      {/* <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <SectionHeader 
           title="Useful Downloads" 
           description="Access commonly required compliance tools, calendars, and checklists to help manage statutory obligations effectively."
@@ -76,16 +106,16 @@ export default function Resources() {
             <DownloadCard key={item.id} item={item} />
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Case Study Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      {/* <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <SectionHeader 
           title="Case Study" 
           description="Explore real-world examples of how we've helped businesses achieve compliance and operational excellence."
         />
         <CaseStudySection caseStudy={CURRENT_CASE_STUDY} />
-      </section>
+      </section> */}
     </div>
   );
 }

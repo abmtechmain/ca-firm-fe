@@ -76,7 +76,7 @@ export default function Services() {
       <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-10 md:py-12 bg-white">
         <div className="max-w-7xl mx-auto space-y-12">
           {/* Header */}
-          <div className="text-center space-y-6 mb-12">
+          {/* <div className="text-center space-y-6 mb-12">
             <div className="inline-block relative">
               <h2 
                 className="font-extrabold tracking-tight uppercase"
@@ -95,10 +95,9 @@ export default function Services() {
             >
               Our services cover essential taxation, audit, compliance, and advisory requirements for individuals, startups, and growing businesses.
             </p>
-          </div>
+          </div> */}
 
-          <div className="grid lg:grid-cols-[1fr_0.65fr] gap-6 md:gap-8">
-            {/* Services Grid */}
+          {/* <div className="grid lg:grid-cols-[1fr_0.65fr] gap-6 md:gap-8">
             <div className="grid md:grid-cols-2 gap-4 md:gap-6">
               <ServiceCard 
                 title="GST REGISTRATION & FILING"
@@ -170,39 +169,215 @@ export default function Services() {
                   </div>
                 }
               />
-            </div>
+            </div> */}
 
-            {/* Industries Served Sidebar */}
             <div 
-              className="bg-white border border-[#a0c4d1] rounded-lg p-8 h-full"
+              className="bg-white rounded-lg p-8 py-12"
               style={{ fontFamily: 'var(--font-instrument-sans), sans-serif' }}
             >
-              <div className="inline-block relative mb-8">
-                <h3 
-                  className="font-extrabold tracking-tight uppercase"
-                  style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
-                >
-                  INDUSTRIES SERVED
-                </h3>
-                <div 
-                  className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
-                  style={{ backgroundColor: BRAND_COLORS.primary }}
-                ></div>
-              </div>
-              <ul className="space-y-4">
-                {industries.map((item, index) => (
-                  <li 
-                    key={index} 
-                    className="flex items-center gap-3 text-[#006080] font-bold tracking-tight"
-                    style={{ fontSize: '20px', lineHeight: '1.8' }}
+              <div className="text-center mb-12">
+                <div className="inline-block relative">
+                  <h3 
+                    className="font-extrabold tracking-tight uppercase"
+                    style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
                   >
-                    <span className="w-1 h-1 bg-[#006080] rounded-full"></span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+                    INDUSTRIES SERVED
+                  </h3>
+                  <div 
+                    className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                    style={{ backgroundColor: BRAND_COLORS.primary }}
+                  ></div>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                {industries.map((item, index) => {
+                  // Function to get icon based on industry
+                  const getIndustryIcon = (industry: string) => {
+                    if (industry.includes('MANUFACTURING')) {
+                      // Manufacturing - Custom image
+                      return (
+                        <img 
+                          src="/images/manufacturing.png" 
+                          alt="Manufacturing" 
+                          className="w-full h-full object-contain scale-[3]"
+                        />
+                      );
+                    }
+                    if (industry.includes('REAL ESTATE AND CONSTRUCTION')) {
+                      // Real Estate and Construction - Custom image
+                      return (
+                        <img 
+                          src="/images/real-estate-construction.png" 
+                          alt="Real Estate and Construction" 
+                          className="w-full h-full object-contain scale-[2.5]"
+                        />
+                      );
+                    }
+                    if (industry.includes('INFORMATION TECHNOLOGY')) {
+                      // Information Technology - Custom image
+                      return (
+                        <img 
+                          src="/images/information-technology.png" 
+                          alt="Information Technology" 
+                          className="w-full h-full object-contain scale-[2.5]"
+                        />
+                      );
+                    }
+                    if (industry.includes('FINANCIAL INSTITUTION')) {
+                      // Financial Institution - Custom image
+                      return (
+                        <img 
+                          src="/images/finance.png" 
+                          alt="Financial Institution" 
+                          className="w-full h-full object-contain scale-[2.5]"
+                        />
+                      );
+                    }
+                    if (industry.includes('HEALTHCARE')) {
+                      // Healthcare - Custom image
+                      return (
+                        <img 
+                          src="/images/healthcare.png" 
+                          alt="Healthcare" 
+                          className="w-full h-full object-contain scale-[1.3]"
+                        />
+                      );
+                    }
+                    if (industry.includes('RETAIL AND CONSUMER GOODS')) {
+                      // Retail and Consumer Goods - Custom image
+                      return (
+                        <img 
+                          src="/images/retail.png" 
+                          alt="Retail and Consumer Goods" 
+                          className="w-full h-full object-contain scale-[1.4]"
+                        />
+                      );
+                    }
+                    if (industry.includes('HOSPITALITY')) {
+                      // Hospitality - Custom image
+                      return (
+                        <img 
+                          src="/images/hospitality.png" 
+                          alt="Hospitality" 
+                          className="w-full h-full object-contain scale-[2.8]"
+                        />
+                      );
+                    }
+                    if (industry.includes('TRANSPORTATION AND LOGISTICS')) {
+                      // Transportation and Logistics - Custom image
+                      return (
+                        <img 
+                          src="/images/transport.png" 
+                          alt="Transportation and Logistics" 
+                          className="w-full h-full object-contain scale-[1.9]"
+                        />
+                      );
+                    }
+                    if (industry.includes('TEXTILE INDUSTRY')) {
+                      // Textile Industry - Custom image
+                      return (
+                        <img 
+                          src="/images/textile.png" 
+                          alt="Textile Industry" 
+                          className="w-full h-full object-contain scale-[1.5]"
+                        />
+                      );
+                    }
+                    if (industry.includes('AGRO BASED INDUSTRIES')) {
+                      // Agro Based Industries - Custom image
+                      return (
+                        <img 
+                          src="/images/agro.png" 
+                          alt="Agro Based Industries" 
+                          className="w-full h-full object-contain scale-[2.2]"
+                        />
+                      );
+                    }
+                    if (industry.includes('AUTOMOBILE INDUSTRY')) {
+                      // Automobile Industry - Custom image
+                      return (
+                        <img 
+                          src="/images/automobile.png" 
+                          alt="Automobile Industry" 
+                          className="w-full h-full object-contain scale-[1.8]"
+                        />
+                      );
+                    }
+                    if (industry.includes('PHARMA INDUSTRY')) {
+                      // Pharma Industry - Custom image
+                      return (
+                        <img 
+                          src="/images/pharma.png" 
+                          alt="Pharma Industry" 
+                          className="w-full h-full object-contain scale-[2]"
+                        />
+                      );
+                    }
+                    if (industry.includes('CO OPERATIVE SOCIETY')) {
+                      // Co-operative Society - Custom image
+                      return (
+                        <img 
+                          src="/images/cooprative.png" 
+                          alt="Co-operative Society" 
+                          className="w-full h-full object-contain scale-[2.2]"
+                        />
+                      );
+                    }
+                    if (industry.includes('GOVERNMENT')) {
+                      // Government - Custom image
+                      return (
+                        <img 
+                          src="/images/government.png" 
+                          alt="Government" 
+                          className="w-full h-full object-contain scale-[2.3]"
+                        />
+                      );
+                    }
+                    if (industry.includes('TRUST / NGO / NPO')) {
+                      // Trust / NGO / NPO - Custom image
+                      return (
+                        <img 
+                          src="/images/ngo.png" 
+                          alt="Trust / NGO / NPO" 
+                          className="w-full h-full object-contain scale-[1.8]"
+                        />
+                      );
+                    }
+                    // Default building icon for others
+                    return (
+                      <svg className="w-8 h-8" stroke="#006080" fill="none" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                      </svg>
+                    );
+                  };
+
+                  return (
+                    <div 
+                      key={index} 
+                      className="flex flex-col items-center text-center gap-4 group cursor-pointer"
+                    >
+                      {/* Icon */}
+                      <div 
+                        className="w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+                        style={{ backgroundColor: 'white' }}
+                      >
+                        {getIndustryIcon(item)}
+                      </div>
+                      
+                      {/* Industry Name */}
+                      <p 
+                        className="text-[#006080] font-bold tracking-tight transition-colors duration-300 group-hover:text-[#FF541F]"
+                        style={{ fontSize: '14px', lineHeight: '1.4' }}
+                      >
+                        {item}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-          </div>
+          {/* </div> */}
 
           {/* Detailed Services Section */}
           <div className="space-y-12">

@@ -34,14 +34,12 @@ export default function ServiceCard({ icon, title, description }: ServiceCardPro
         </div>
       </div>
       <h3 
-        className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl transition-colors duration-300 group-hover:text-white relative z-10" 
-        style={{ color: '#023F55' }}
+        className="font-bold mb-2 uppercase text-lg sm:text-xl md:text-2xl text-[#023F55] group-hover:!text-white transition-colors duration-300 relative z-10"
       >
         {title}
       </h3>
       <p 
-        className="text-sm sm:text-base md:text-lg transition-colors duration-300 group-hover:text-white relative z-10" 
-        style={{ color: '#0000008A' }}
+        className="text-sm sm:text-base md:text-lg text-[#0000008A] group-hover:!text-white transition-colors duration-300 relative z-10"
       >
         {description}
       </p>

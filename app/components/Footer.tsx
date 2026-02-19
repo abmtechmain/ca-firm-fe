@@ -28,11 +28,22 @@ const Footer: React.FC = () => {
                 className="w-full max-w-[280px] h-auto object-contain"
               />
             </div>
-            <p 
+            {/* <p 
               className="text-gray-600 text-sm leading-relaxed max-w-[350px] font-medium text-justify"
               style={{ fontSize: '14px', lineHeight: '1.6' }}
             >
               A professionally managed Chartered Accountancy firm providing comprehensive accounting, taxation, audit, and compliance services with accuracy, integrity, and ethical standards.
+            </p> */}
+            <p 
+              className="text-gray-600 text-sm leading-relaxed max-w-[350px] font-medium"
+              style={{ fontSize: '14px', lineHeight: '1.6' }}
+            >
+              <strong>HEAD OFFICE 1</strong><br />
+              A-1/2 Ashtavinayak Apt. Behind Dholya Ganapati Mandir, Ashok Stambh, Nashik- 422002<br />
+              9511840438<br /><br />
+              <strong>HEAD OFFICE 2</strong><br />
+              Flat No. 1/2, Saee Apartment, Madhav Colony, Pournima Bus Stop, Nashik Pune Road, Dwarka, Nashik- 422011<br />
+              9822656851
             </p>
           </div>
 
@@ -49,6 +60,23 @@ const Footer: React.FC = () => {
               <li>Assam branch</li>
               <li>Pune branch</li>
             </ul>
+          </div>
+
+          {/* Office Time */}
+          <div className="md:w-1/5">
+            <h4 
+              className="font-bold mb-6 text-lg uppercase tracking-wider"
+              style={{ color: '#056385' }}
+            >
+              Office Time
+            </h4>
+            <address className="not-italic space-y-4 text-sm text-gray-500 leading-relaxed font-medium">
+              <p>Monday - Saturday</p>
+              <p className="font-bold">10:00 to 6:00</p>
+              {/* <p className="text-xs">Sunday Closed</p> */}
+              <p className="mt-4">{CONTACT_INFO.landline}</p>
+              <p className="hover:text-[#F37920] cursor-pointer">{CONTACT_INFO.email}</p>
+            </address>
           </div>
 
           {/* Useful Links */}
@@ -76,23 +104,6 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Office Time */}
-          <div className="md:w-1/5">
-            <h4 
-              className="font-bold mb-6 text-lg uppercase tracking-wider"
-              style={{ color: '#056385' }}
-            >
-              Office Time
-            </h4>
-            <address className="not-italic space-y-4 text-sm text-gray-500 leading-relaxed font-medium">
-              <p>Monday - Friday</p>
-              <p className="font-bold">10:00 to 5:00</p>
-              <p className="text-xs">Saturday & Sunday Closed</p>
-              <p className="mt-4">{CONTACT_INFO.landline}</p>
-              <p className="hover:text-[#F37920] cursor-pointer">{CONTACT_INFO.email}</p>
-            </address>
           </div>
         </div>
 

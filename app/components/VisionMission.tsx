@@ -6,7 +6,7 @@ export const VisionMission: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Mission Card */}
-        <div className="relative overflow-hidden rounded-2xl border border-blue-200 bg-white p-8 lg:p-10 flex flex-col justify-center min-h-[200px]">
+        <div className="relative overflow-hidden rounded-2xl border border-blue-200 bg-white p-6 lg:p-8 flex flex-col justify-center min-h-[180px]">
           {/* Faded Background Image */}
           <div 
             className="absolute inset-0 opacity-[0.07] pointer-events-none"
@@ -16,21 +16,21 @@ export const VisionMission: React.FC = () => {
               backgroundPosition: 'center'
             }}
           />
-          <div className="relative z-10 space-y-4">
+          <div className="relative z-10 space-y-3">
             <h3 
-              className="text-3xl md:text-4xl font-extrabold tracking-tight"
+              className="text-2xl md:text-3xl font-extrabold tracking-tight"
               style={{ color: BRAND_COLORS.primary }}
             >
               {VISION_MISSION.mission.title}
             </h3>
-            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+            <p className="text-gray-500 text-sm leading-relaxed">
               {VISION_MISSION.mission.description}
             </p>
           </div>
         </div>
 
         {/* Vision Card */}
-        <div className="relative overflow-hidden rounded-2xl border border-blue-200 bg-white p-8 lg:p-10 flex flex-col justify-center min-h-[200px]">
+        <div className="relative overflow-hidden rounded-2xl border border-blue-200 bg-white p-6 lg:p-8 flex flex-col justify-center min-h-[180px]">
           {/* Faded Background Image */}
           <div 
             className="absolute inset-0 opacity-[0.07] pointer-events-none"
@@ -40,14 +40,14 @@ export const VisionMission: React.FC = () => {
               backgroundPosition: 'center'
             }}
           />
-          <div className="relative z-10 space-y-4">
+          <div className="relative z-10 space-y-3">
             <h3 
-              className="text-3xl md:text-4xl font-extrabold tracking-tight"
+              className="text-2xl md:text-3xl font-extrabold tracking-tight"
               style={{ color: BRAND_COLORS.primary }}
             >
               {VISION_MISSION.vision.title}
             </h3>
-            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+            <p className="text-gray-500 text-sm leading-relaxed">
               {VISION_MISSION.vision.description}
             </p>
           </div>

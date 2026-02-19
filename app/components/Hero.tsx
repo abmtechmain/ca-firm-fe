@@ -14,7 +14,7 @@ const Hero: React.FC<HeroProps> = ({
   text
 }) => {
   return (
-    <section className="relative h-[400px] w-full flex items-center overflow-hidden">
+    <section className="relative h-[400px] w-full flex items-center overflow-hidden mt-4 sm:mt-6 md:mt-8">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 z-0"

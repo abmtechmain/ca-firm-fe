@@ -50,7 +50,7 @@ export const KeyStrengths: React.FC = () => {
           {STRENGTHS_GRID.map((item, index) => (
             <div 
               key={index} 
-              className="p-8 border border-gray-400 rounded-2xl bg-white transition-all duration-300 cursor-pointer group relative overflow-hidden hover:border-white flex flex-col justify-start space-y-4"
+              className="p-8 rounded-2xl bg-white transition-shadow duration-300 cursor-pointer group relative overflow-hidden ring-1 ring-gray-200 hover:ring-white flex flex-col justify-start space-y-4"
             >
               {/* Gradient background on hover */}
               <div 

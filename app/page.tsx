@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import ServiceCard from './components/ServiceCard';
+import KeyServicesCards from './components/KeyServicesCards';
+import AuditIcon from './components/AuditIcon';
 import ContactSection from './components/ContactSection';
 import HeroCarousel from './components/HeroCarousel';
 
@@ -361,10 +362,8 @@ export default function Home() {
                     PROFESSIONAL AUDIT SERVICES
                   </p>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="text-[#F37920]">
-                      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
+                  <div className="text-[#F37920]">
+                      <AuditIcon />
                     </div>
                     <h3 
                       className="font-bold"
@@ -390,51 +389,7 @@ export default function Home() {
             </div>
 
             {/* Right Side - 2x2 Grid for Other Services */}
-            <div className="w-full lg:w-[50%] grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-              {/* Card 1: Advisory */}
-              <ServiceCard
-                icon={
-                  <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                }
-                title="ADVISORY"
-                description="Business Consulting, Financial Restructuring, Strategic Planning, And Risk Advisory To Help Organizations Make Informed Decisions."
-              />
-
-              {/* Card 2: Taxation */}
-              <ServiceCard
-                icon={
-                  <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                }
-                title="TAXATION"
-                description="Corporate Tax Planning, Personal Tax Services, Indirect Tax (GST/VAT) Advisory, And Comprehensive Tax Compliance Solutions."
-              />
-
-              {/* Card 3: Accounting & Bookkeeping */}
-              <ServiceCard
-                icon={
-                  <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                  </svg>
-                }
-                title="ACCOUNTING & BOOKKEEPING"
-                description="Financial Statement Preparation, Payroll Services, Management Accounting, And Virtual CFO Services For Comprehensive Financial Management."
-              />
-
-              {/* Card 4: Corporate Services */}
-              <ServiceCard
-                icon={
-                  <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
-                }
-                title="CORPORATE SERVICES"
-                description="Company Formation, Secretarial Services, Corporate Governance, And Regulatory Compliance Support For Companies And LLPs."
-              />
-            </div>
+            <KeyServicesCards />
           </div>
         </div>
       </section>

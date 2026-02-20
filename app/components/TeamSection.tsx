@@ -29,14 +29,8 @@ export const TeamSection: React.FC = () => {
               </p>
             </div>
 
-            {/* Description */}
-            <p className="text-[11px] md:text-xs text-gray-400 leading-relaxed max-w-[180px]">
-              {member.description}
-            </p>
-
-            {/* Social Icons */}
-            <div className="flex items-center space-x-3 pt-1">
-              {/* LinkedIn Icon */}
+            {/* Social Icons - Commented Out */}
+            {/* <div className="flex items-center space-x-3 pt-1">
               <a href="#" className="transition-opacity hover:opacity-80">
                 <div 
                   className="w-6 h-6 flex items-center justify-center rounded-[4px]"
@@ -47,7 +41,6 @@ export const TeamSection: React.FC = () => {
                   </svg>
                 </div>
               </a>
-              {/* Email Icon */}
               <a href="#" className="transition-opacity hover:opacity-80">
                 <div 
                   className="w-6 h-6 flex items-center justify-center rounded-[4px] border"
@@ -58,7 +51,7 @@ export const TeamSection: React.FC = () => {
                   </svg>
                 </div>
               </a>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>

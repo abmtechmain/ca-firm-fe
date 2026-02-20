@@ -14,7 +14,7 @@ const Hero: React.FC<HeroProps> = ({
   text
 }) => {
   return (
-    <section className="relative h-[400px] w-full flex items-center overflow-hidden">
+    <section className="relative h-[400px] w-full flex items-center overflow-hidden mt-4 sm:mt-6 md:mt-8">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 z-0"
@@ -35,7 +35,7 @@ const Hero: React.FC<HeroProps> = ({
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid md:grid-cols-2 gap-6 md:gap-8 items-center">
         <div>
           <h1 
-            className="font-extrabold text-white leading-tight uppercase tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-[40px]"
+            className="font-extrabold text-white leading-tight uppercase tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-[34px] xl:text-[38px] max-w-xl text-balance"
           >
             {title}
           </h1>

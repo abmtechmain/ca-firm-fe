@@ -90,7 +90,7 @@ export default function HeroCarousel({ slides }: HeroCarouselProps) {
           {/* Right Section - 30% */}
           <div className="w-full lg:w-[30%] relative lg:ml-auto">
             {/* Carousel Container */}
-            <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: '5/7' }}>
+            <div className="relative w-full overflow-hidden rounded-lg aspect-[4/5] sm:aspect-[5/6] md:aspect-[5/7] lg:aspect-[4/5] xl:aspect-[5/7]">
               {slides.map((slide, index) => (
                 <div
                   key={index}
@@ -101,10 +101,10 @@ export default function HeroCarousel({ slides }: HeroCarouselProps) {
                   <Image
                     src={slide.image}
                     alt={slide.title}
-                    width={500}
-                    height={700}
-                    className="w-full h-full object-cover object-right rounded-lg"
+                    fill
+                    className="object-cover object-center rounded-lg"
                     priority={index === 0}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 30vw"
                   />
                 </div>
               ))}

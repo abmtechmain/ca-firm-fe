@@ -1,62 +1,97 @@
-import React from 'react';
-import { FOUNDER_DATA, BRAND_COLORS } from '../constants';
+import { BRAND_COLORS, FOUNDER_DATA } from '../constants';
 
-export const FounderSection: React.FC = () => {
+export const FounderSection = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-12 lg:gap-20 items-start">
-        {/* Left: Founder Image */}
-        <div className="rounded-2xl overflow-hidden shadow-lg aspect-[4/5] lg:aspect-[1/1.2]">
-          <img 
-            src={FOUNDER_DATA.imageUrl} 
-            alt={FOUNDER_DATA.name} 
-            className="w-full h-full object-cover"
-          />
+    <section className="relative overflow-hidden bg-[#F7F9FC] py-12 md:py-16 lg:py-20">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-10 md:mb-14">
+          <div className="inline-block relative">
+            <h2
+              className="font-extrabold tracking-tight uppercase"
+              style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
+            >
+              MEET OUR FOUNDER
+            </h2>
+            <div
+              className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+              style={{ backgroundColor: BRAND_COLORS.primary }}
+            ></div>
+          </div>
         </div>
 
-        {/* Right: Founder Details */}
-        <div className="flex flex-col space-y-6 lg:pt-4">
-          <div className="space-y-2">
-            <span 
-              className="text-xs md:text-sm font-extrabold tracking-widest uppercase"
-              style={{ color: BRAND_COLORS.accent }}
+        <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-10 lg:gap-16 items-center">
+          <div className="relative">
+            <div
+              className="absolute -inset-4 rounded-3xl border"
+              style={{ borderColor: `${BRAND_COLORS.primary}22` }}
+            ></div>
+            <div className="relative overflow-hidden rounded-3xl transition-shadow duration-300 hover:shadow-[0_30px_80px_rgba(14,109,138,0.2)]">
+              <img
+                src={FOUNDER_DATA.imageUrl}
+                alt={FOUNDER_DATA.name}
+                className="w-full h-[560px] md:h-[640px] lg:h-[700px] object-cover object-top"
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-center">
+            <p
+              className="uppercase font-semibold tracking-[0.28em] mb-4"
+              style={{ color: BRAND_COLORS.accent, fontSize: '12px' }}
             >
               {FOUNDER_DATA.tag}
-            </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold flex flex-wrap items-baseline gap-x-3">
-              <span style={{ color: BRAND_COLORS.primary }}>{FOUNDER_DATA.name}</span>
-              <span className="text-base md:text-lg font-bold" style={{ color: BRAND_COLORS.primary }}>
-                {FOUNDER_DATA.role}
-              </span>
-            </h2>
-          </div>
+            </p>
 
-          <div className="space-y-4">
-            {FOUNDER_DATA.description.map((para, idx) => (
-              <p key={idx} className="text-gray-400 text-sm md:text-base leading-relaxed">
-                {para}
-              </p>
-            ))}
-          </div>
+            <h3
+              className="font-bold mb-4"
+              style={{
+                color: BRAND_COLORS.primary,
+                fontSize: '36px',
+                lineHeight: '1.15'
+              }}
+            >
+              {FOUNDER_DATA.name}
+            </h3>
 
-          <div className="pt-6">
-            <button className="flex items-center space-x-3 text-xs md:text-sm font-bold tracking-widest uppercase border border-gray-300 rounded-lg px-8 py-3.5 text-gray-500 transition-all hover:bg-gray-50 hover:border-gray-400">
-              <span>KNOW MORE</span>
-              <svg 
-                className="w-4 h-4" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2.5" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-              >
-                <path d="M9 18l6-6-6-6" />
-              </svg>
-            </button>
+            <div
+              className="mb-6"
+              style={{
+                width: '72px',
+                height: '3px',
+                backgroundColor: BRAND_COLORS.accent
+              }}
+            ></div>
+
+            <p
+              className="font-medium mb-6"
+              style={{
+                color: BRAND_COLORS.primary,
+                fontSize: '18px'
+              }}
+            >
+              {FOUNDER_DATA.role}
+            </p>
+
+            <div
+              className="space-y-4 border-l-2 pl-6"
+              style={{ borderColor: `${BRAND_COLORS.accent}55` }}
+            >
+              {FOUNDER_DATA.description.map((para, idx) => (
+                <p
+                  key={idx}
+                  style={{
+                    color: '#4b5563',
+                    fontSize: '17px',
+                    lineHeight: '1.8'
+                  }}
+                >
+                  {para}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

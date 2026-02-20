@@ -76,62 +76,71 @@ export default function Contact() {
         subtext="Connect with us for professional guidance on taxation, compliance, and advisory matters."
       />
       
-      <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-10 md:py-12 bg-white">
-        <div className="max-w-7xl mx-auto space-y-12 md:space-y-16 lg:space-y-24">
+      <section className="w-full px-4 sm:px-6 lg:px-18 py-10 sm:py-12 md:py-16 bg-[#F7F9FC]">
+        <div className="max-w-7xl mx-auto space-y-12 md:space-y-16 lg:space-y-20">
           {/* Consultation Section */}
-          <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-6 md:gap-8 lg:gap-12 items-start">
+          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-6 md:gap-8 lg:gap-12 items-start">
             {/* Left Side: Text & Socials */}
-            <div className="space-y-4 md:space-y-6 lg:space-y-8">
-              <div className="relative inline-block">
+            <div className="space-y-5 md:space-y-6 lg:space-y-8">
+              <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em]"
+                style={{ color: BRAND_COLORS.primary, backgroundColor: `${BRAND_COLORS.primary}10` }}
+              >
+                Contact
+              </div>
+              <div>
                 <h2 
-                  className="font-extrabold tracking-tight uppercase block"
+                  className="font-extrabold tracking-tight uppercase"
                   style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
                 >
-                  REQUEST A CONSULTATION
+                  Request A Consultation
                 </h2>
                 <div 
-                  className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                  className="mt-3 h-1 w-28"
                   style={{ backgroundColor: BRAND_COLORS.primary }}
                 ></div>
               </div>
               <p 
-                className="text-slate-500 text-sm leading-relaxed max-w-sm"
+                className="text-slate-600 text-sm leading-relaxed max-w-md"
                 style={{ fontFamily: 'var(--font-instrument-sans), sans-serif' }}
               >
-                Our articles cover important developments, regulatory updates, and practical guidance on taxation, compliance, and business matters.
+                Share your requirements and we’ll recommend the right service path. Our team responds with clear next steps and a practical scope.
               </p>
-              
-              <div className="flex gap-4">
-                <a 
-                  href={`mailto:${CONTACT_INFO.email}`}
-                  className="w-10 h-10 rounded-full bg-[#006080] text-white flex items-center justify-center hover:bg-[#004d66] transition-colors"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </a>
-                <a 
-                  href="https://wa.me/1234567890" 
-                  className="w-10 h-10 rounded-full bg-[#006080] text-white flex items-center justify-center hover:bg-[#004d66] transition-colors"
-                >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                  </svg>
-                </a>
-                <a 
-                  href="https://linkedin.com" 
-                  className="w-10 h-10 rounded-full bg-[#006080] text-white flex items-center justify-center hover:bg-[#004d66] transition-colors"
-                >
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                </a>
+
+              <ul className="space-y-3 text-sm text-slate-600">
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 h-2 w-2 rounded-full" style={{ backgroundColor: BRAND_COLORS.accent }}></span>
+                  Response within 24 business hours
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 h-2 w-2 rounded-full" style={{ backgroundColor: BRAND_COLORS.accent }}></span>
+                  Confidential handling of your information
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 h-2 w-2 rounded-full" style={{ backgroundColor: BRAND_COLORS.accent }}></span>
+                  Clear, actionable guidance
+                </li>
+              </ul>
+
+              <div className="rounded-xl bg-white/70 ring-1 ring-black/5 p-4 sm:p-5">
+                <div className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: BRAND_COLORS.accent }}>
+                  Contact
+                </div>
+                <div className="space-y-2 text-sm">
+                  <div className="flex items-center gap-2 text-slate-700">
+                    <span className="font-semibold">Email:</span>
+                    <a href={`mailto:${CONTACT_INFO.email}`} className="hover:underline">{CONTACT_INFO.email}</a>
+                  </div>
+                  <div className="flex items-center gap-2 text-slate-700">
+                    <span className="font-semibold">Landline:</span>
+                    <span>{CONTACT_INFO.landline}</span>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Right Side: Form Card */}
             <div 
-              className="bg-white rounded-xl shadow-xl border border-slate-100 p-4 sm:p-6 md:p-8 lg:p-10"
+              className="bg-white rounded-2xl shadow-lg border border-slate-100 p-5 sm:p-7 md:p-8 lg:p-10"
               style={{ fontFamily: 'var(--font-instrument-sans), sans-serif' }}
             >
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
@@ -143,48 +152,60 @@ export default function Contact() {
                   </div>
                 )}
                 <div className="w-full">
+                  <label className="block text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2">Full Name</label>
                   <input 
                     type="text" 
                     name="name"
-                    placeholder="Name :"
+                    placeholder="Your full name"
                     required
-                    className="w-full border border-slate-200 rounded-lg p-3 px-5 text-sm outline-none focus:border-[#006080] transition-colors text-slate-700 placeholder:text-slate-400"
+                    className="w-full border border-slate-200 rounded-xl p-3 px-4 text-sm outline-none focus:border-[#006080] focus:ring-2 focus:ring-[#006080]/15 transition-colors text-slate-700 placeholder:text-slate-400 bg-white"
                     style={{ fontSize: '16px' }}
                   />
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4">
-                  <input 
-                    type="email" 
-                    name="email"
-                    placeholder="Email :"
-                    required
-                    className="w-full border border-slate-200 rounded-lg p-3 px-5 text-sm outline-none focus:border-[#006080] transition-colors text-slate-700 placeholder:text-slate-400"
-                    style={{ fontSize: '16px' }}
-                  />
-                  <input 
-                    type="tel" 
-                    name="phone"
-                    placeholder="Mobile No :"
-                    required
-                    className="w-full border border-slate-200 rounded-lg p-3 px-5 text-sm outline-none focus:border-[#006080] transition-colors text-slate-700 placeholder:text-slate-400"
-                    style={{ fontSize: '16px' }}
-                  />
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2">Email</label>
+                    <input 
+                      type="email" 
+                      name="email"
+                      placeholder="name@company.com"
+                      required
+                      className="w-full border border-slate-200 rounded-xl p-3 px-4 text-sm outline-none focus:border-[#006080] focus:ring-2 focus:ring-[#006080]/15 transition-colors text-slate-700 placeholder:text-slate-400 bg-white"
+                      style={{ fontSize: '16px' }}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2">Mobile</label>
+                    <input 
+                      type="tel" 
+                      name="phone"
+                      placeholder="10-digit number"
+                      required
+                      pattern="[0-9]{10}"
+                      title="Please enter a valid 10-digit mobile number"
+                      maxLength={10}
+                      className="w-full border border-slate-200 rounded-xl p-3 px-4 text-sm outline-none focus:border-[#006080] focus:ring-2 focus:ring-[#006080]/15 transition-colors text-slate-700 placeholder:text-slate-400 bg-white"
+                      style={{ fontSize: '16px' }}
+                    />
+                  </div>
                 </div>
 
                 <div className="relative">
+                  <label className="block text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2">Service Required</label>
                   <select 
                     name="service"
                     required
-                    className="w-full border border-slate-200 rounded-lg p-3 px-5 text-sm outline-none focus:border-[#006080] transition-colors text-slate-400 bg-white appearance-none"
+                    className="w-full border border-slate-200 rounded-xl p-3 px-4 text-sm outline-none focus:border-[#006080] focus:ring-2 focus:ring-[#006080]/15 transition-colors text-slate-700 bg-white appearance-none"
                     style={{ fontSize: '16px' }}
                   >
                     <option value="">Service Required</option>
                     <option value="Audit & Assurance">Audit & Assurance</option>
                     <option value="Taxation">Taxation</option>
                     <option value="Business Advisory">Business Advisory</option>
+                    <option value="Other">Other</option>
                   </select>
-                  <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
+                  <div className="absolute right-4 top-[52px] -translate-y-1/2 pointer-events-none text-slate-400">
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
@@ -192,17 +213,18 @@ export default function Contact() {
                 </div>
 
                 <div className="w-full">
+                  <label className="block text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2">Message</label>
                   <textarea 
                     name="message"
-                    placeholder="Message :"
-                    rows={5}
+                    placeholder="Briefly describe your requirement"
+                    rows={4}
                     required
-                    className="w-full border border-slate-200 rounded-lg p-5 text-sm outline-none focus:border-[#006080] transition-colors text-slate-700 placeholder:text-slate-400 resize-none"
+                    className="w-full border border-slate-200 rounded-xl p-4 text-sm outline-none focus:border-[#006080] focus:ring-2 focus:ring-[#006080]/15 transition-colors text-slate-700 placeholder:text-slate-400 resize-none bg-white"
                     style={{ fontSize: '16px' }}
                   ></textarea>
                 </div>
 
-                <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-4">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-2">
                   {/* reCAPTCHA */}
                   {/* <div className="flex justify-center">
                     <ReCAPTCHA
@@ -215,7 +237,7 @@ export default function Contact() {
                   <button 
                     type="submit"
                     disabled={isSubmitting}
-                    className="bg-[#006080] hover:bg-[#004d66] disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3 px-8 rounded-lg transition-all text-xs tracking-wider uppercase shadow-md active:scale-95"
+                    className="bg-[#006080] hover:bg-[#004d66] disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3.5 px-8 rounded-xl transition-all text-xs tracking-wider uppercase shadow-md active:scale-95"
                     style={{ fontSize: '16px' }}
                   >
                     {isSubmitting ? 'SUBMITTING...' : 'SUBMIT ENQUIRY'}
@@ -229,7 +251,7 @@ export default function Contact() {
           <div className="space-y-10">
             <div className="relative text-center">
               <h3 
-                className="text-[#006080] font-bold tracking-widest uppercase inline-block relative"
+                className="text-[#F37920] font-bold tracking-widest uppercase inline-block relative"
                 style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '28px' }}
               >
                 HEAD OFFICES
@@ -293,18 +315,29 @@ export default function Contact() {
                       )}
                       
                       {loc.mapLink && (
-                        <a
-                          href={loc.mapLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-[#006080] hover:text-[#004d66] font-semibold transition-all duration-200 group-hover:gap-3 mt-4"
-                          style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '15px' }}
-                        >
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                          </svg>
-                          <span>View on Google Maps</span>
-                        </a>
+                        <div className="mt-4 rounded-lg overflow-hidden border border-slate-200 h-[250px]">
+                          {idx === 0 ? (
+                            <iframe 
+                              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.9339397322456!2d73.7848116!3d20.007362399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeb002deb7717%3A0x6232df753e3ea58c!2sS%20K%20M%20R%20D%20%26%20Associates%20(%20Chartered%20Accountant)!5e1!3m2!1sen!2sin!4v1771495086717!5m2!1sen!2sin" 
+                              width="100%" 
+                              height="100%" 
+                              style={{ border: 0 }} 
+                              allowFullScreen 
+                              loading="lazy" 
+                              referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                          ) : (
+                            <iframe 
+                              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15839.26944205599!2d73.82801329424905!3d19.972219428514553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeb4d976bb54d%3A0x54861f2d6c9411f9!2sSKMRD%20%26%20Associates%20formally%20Known%20as%20Shinde%20Kadam%20%26%20Associates!5e1!3m2!1sen!2sin!4v1771495141559!5m2!1sen!2sin" 
+                              width="100%" 
+                              height="100%" 
+                              style={{ border: 0 }} 
+                              allowFullScreen 
+                              loading="lazy" 
+                              referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                          )}
+                        </div>
                       )}
                     </div>
                   </div>
@@ -317,7 +350,7 @@ export default function Contact() {
           <div className="space-y-10">
             <div className="relative text-center">
               <h3 
-                className="text-[#006080] font-bold tracking-widest uppercase inline-block relative"
+                className="text-[#F37920] font-bold tracking-widest uppercase inline-block relative"
                 style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '28px' }}
               >
                 BRANCHES
@@ -387,7 +420,7 @@ export default function Contact() {
           </div>
 
           {/* Map Section */}
-          <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm h-[400px]">
+          {/* <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm h-[400px]">
             <iframe
               src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.5!2d73.7898!3d19.9975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDU5JzUxLjAiTiA3M8KwNDcnMjMuMSJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin&q=${encodeURIComponent(CONTACT_INFO.offices[0].address)}`}
               width="100%"
@@ -398,7 +431,7 @@ export default function Contact() {
               referrerPolicy="no-referrer-when-downgrade"
               className="w-full h-full"
             ></iframe>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

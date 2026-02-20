@@ -69,11 +69,11 @@ export default function NavBar() {
             <Link href="/resources" className="text-xs sm:text-sm md:text-base font-medium hover:opacity-80 transition-colors" style={{ color: '#056385' }}>
               RESOURCES
             </Link>
-            <Link href="/contact" className="text-xs sm:text-sm md:text-base font-medium hover:opacity-80 transition-colors" style={{ color: '#056385' }}>
-              CONTACT
-            </Link>
             <Link href="/careers" className="text-xs sm:text-sm md:text-base font-medium hover:opacity-80 transition-colors" style={{ color: '#056385' }}>
               CAREERS
+            </Link>
+            <Link href="/contact" className="text-xs sm:text-sm md:text-base font-medium hover:opacity-80 transition-colors" style={{ color: '#056385' }}>
+              CONTACT
             </Link>
           </div>
 
@@ -117,20 +117,20 @@ export default function NavBar() {
                 RESOURCES
               </Link>
               <Link 
-                href="/contact" 
-                className="text-sm font-medium hover:opacity-80 transition-colors py-2" 
-                style={{ color: '#056385' }}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                CONTACT
-              </Link>
-              <Link 
                 href="/careers" 
                 className="text-sm font-medium hover:opacity-80 transition-colors py-2" 
                 style={{ color: '#056385' }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 CAREERS
+              </Link>
+              <Link 
+                href="/contact" 
+                className="text-sm font-medium hover:opacity-80 transition-colors py-2" 
+                style={{ color: '#056385' }}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                CONTACT
               </Link>
             </div>
           </div>

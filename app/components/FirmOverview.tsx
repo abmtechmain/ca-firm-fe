@@ -15,7 +15,7 @@ export const FirmOverview: React.FC = () => {
             {FIRM_OVERVIEW.title}
           </h2>
           <div 
-            className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+            className="absolute -bottom-3 left-0 w-full h-1"
             style={{ backgroundColor: BRAND_COLORS.primary }}
           ></div>
         </div>

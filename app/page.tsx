@@ -64,7 +64,7 @@ export default function Home() {
                     WHY CHOOSE US
                   </h2>
                   <div 
-                    className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                    className="absolute -bottom-3 left-0 w-full h-1"
                     style={{ backgroundColor: '#056385' }}
                   ></div>
                 </div>
@@ -330,7 +330,7 @@ export default function Home() {
                 KEY SERVICES
               </h2>
               <div
-                className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                className="absolute -bottom-3 left-0 w-full h-1"
                 style={{ backgroundColor: '#056385' }}
               ></div>
             </div>
@@ -410,7 +410,7 @@ export default function Home() {
                 HOW WE WORK
               </h2>
               <div 
-                className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                className="absolute -bottom-3 left-0 w-full h-1"
                 style={{ backgroundColor: '#056385' }}
               ></div>
             </div>

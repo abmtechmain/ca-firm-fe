@@ -85,7 +85,7 @@ export default function Services() {
                 SERVICES OVERVIEW
               </h2>
               <div 
-                className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                className="absolute -bottom-3 left-0 w-full h-1"
                 style={{ backgroundColor: BRAND_COLORS.primary }}
               ></div>
             </div>
@@ -184,7 +184,7 @@ export default function Services() {
                     INDUSTRIES SERVED
                   </h3>
                   <div 
-                    className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                    className="absolute -bottom-3 left-0 w-full h-1"
                     style={{ backgroundColor: BRAND_COLORS.primary }}
                   ></div>
                 </div>
@@ -390,7 +390,7 @@ export default function Services() {
                   SERVICES OFFERED
                 </h2>
                 <div 
-                  className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                  className="absolute -bottom-3 left-0 w-full h-1"
                   style={{ backgroundColor: BRAND_COLORS.primary }}
                 ></div>
               </div>

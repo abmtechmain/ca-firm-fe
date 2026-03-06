@@ -64,7 +64,7 @@ const ContactSection: React.FC = () => {
       icon: <Clock size={32} />,
       title: "OFFICE TIME",
       description: "Prefer to talk? We're here to take your call.",
-      value: "10:00 to 5:00"
+      value: "10:00AM to 6:30PM"
     }
   ];
 

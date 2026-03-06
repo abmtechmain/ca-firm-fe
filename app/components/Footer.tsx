@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
             </h4>
             <address className="not-italic space-y-4 text-sm text-gray-500 leading-relaxed font-medium">
               <p>Monday - Saturday</p>
-              <p className="font-bold">10:00 to 6:00</p>
+              <p className="font-bold">10:00AM to 6:30PM</p>
               {/* <p className="text-xs">Sunday Closed</p> */}
               <p className="mt-4">{CONTACT_INFO.landline}</p>
               <p className="hover:text-[#F37920] cursor-pointer">{CONTACT_INFO.email}</p>

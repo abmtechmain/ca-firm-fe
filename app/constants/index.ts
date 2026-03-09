@@ -359,13 +359,13 @@ export const CONTACT_INFO = {
     {
       name: 'Head Office 1',
       address: 'A-1/2 AshtavinayakApt. Behind Dholya Ganapati Mandir, Ashok Stambh, Nashik- 422002',
-      mobile: '9822656851',
+      mobile: '+91 9822656851',
       mapLink: 'https://maps.app.goo.gl/ApHafWgRTxMdu98s7'
     },
     {
       name: 'Head Office 2',
       address: 'Flat No. 1/2, Saee Apartment, Madhav Colony, Pournima Bus Stop, Nashik Pune Road, Dwarka, Nashik- 422011',
-      mobile: '9511840438',
+      mobile: '+91 9511840438',
       mapLink: 'https://share.google/C6cJt1Uw8fcduqsJo'
     }
   ],
@@ -376,7 +376,7 @@ export const CONTACT_INFO = {
       mapLink: ''
     },
     {
-      name: 'Assam',
+      name: 'Golaghat(Assam)',
       address: 'B. B. Gaon, Dergaon, Golaghat, Golaghat, Assam, India, 785618',
       mapLink: ''
     },

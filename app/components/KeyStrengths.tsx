@@ -8,8 +8,8 @@ export const KeyStrengths: React.FC = () => {
       <div className="text-center mb-12 md:mb-16">
         <div className="inline-block relative w-fit">
           <h2 
-            className="font-extrabold tracking-tight uppercase"
-            style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
+            className="page-headers"
+            style={{ color: BRAND_COLORS.accent }}
           >
             KEY STRENGTHS
           </h2>

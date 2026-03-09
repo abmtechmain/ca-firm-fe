@@ -61,15 +61,16 @@ export default function ConsultationForm() {
         <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-6 md:gap-8 lg:gap-12 items-start">
           {/* Left Side: Text & Socials */}
           <div className="space-y-5 md:space-y-6 lg:space-y-8">
-            <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em]"
+            <div className="flex gap-2  flex-col">
+            <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] w-fit"
               style={{ color: BRAND_COLORS.primary, backgroundColor: `${BRAND_COLORS.primary}10` }}
             >
               Consultation
             </div>
             <div className="inline-block relative w-fit">
               <h2 
-                className="font-extrabold tracking-tight uppercase"
-                style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
+                className="page-headers"
+                style={{ color: BRAND_COLORS.accent }}
               >
                 Request A Consultation
               </h2>
@@ -77,6 +78,7 @@ export default function ConsultationForm() {
                 className="absolute -bottom-3 left-0 w-full h-1"
                 style={{ backgroundColor: BRAND_COLORS.primary }}
               ></div>
+            </div>
             </div>
             <p 
               className="text-slate-600 text-sm leading-relaxed max-w-md"

@@ -85,8 +85,8 @@ export default function Careers() {
           <div className="space-y-6 md:space-y-8 text-center">
             <div className="inline-block relative w-fit">
               <h2 
-                className="font-extrabold tracking-tight uppercase"
-                style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
+                className="page-headers"
+                style={{ color: BRAND_COLORS.accent }}
               >
                 CAREERS AT OUR FIRM
               </h2>
@@ -116,8 +116,8 @@ export default function Careers() {
           <div className="space-y-6 md:space-y-8 text-center">
             <div className="inline-block relative w-fit">
               <h2 
-                className="font-extrabold tracking-tight uppercase"
-                style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
+                className="page-headers"
+                style={{ color: BRAND_COLORS.accent }}
               >
                 WHY JOIN US
               </h2>
@@ -162,8 +162,8 @@ export default function Careers() {
             <div className="space-y-6 md:space-y-8">
               <div className="inline-block relative w-fit">
                 <h2 
-                  className="font-extrabold tracking-tight uppercase"
-                  style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
+                  className="page-headers"
+                  style={{ color: BRAND_COLORS.accent }}
                 >
                   CURRENT OPENINGS
                 </h2>

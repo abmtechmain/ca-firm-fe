@@ -55,11 +55,8 @@ export default function Home() {
               <div className="text-center mb-8">
                 <div className="inline-block relative w-fit mb-6">
                   <h2 
-                    className="font-extrabold tracking-tight uppercase"
-                    style={{ 
-                      fontSize: '24px', 
-                      color: '#FF541F'
-                    }}
+                    className="page-headers"
+                    style={{ color: '#FF541F' }}
                   >
                     WHY CHOOSE US
                   </h2>
@@ -304,7 +301,7 @@ export default function Home() {
       </section>
 
       {/* Key Services Section */}
-      <section className="w-full px-4 sm:px-6 lg:px-18 py-12 sm:py-16 md:py-20 lg:py-24 bg-white relative overflow-hidden">
+      <section className="w-full px-4 sm:px-6 lg:px-18 pt-0 pb-12 sm:pb-16 md:pb-20 lg:pb-24 bg-white relative overflow-hidden">
         {/* Background Logo with reduced opacity */}
         <div className="absolute inset-0 pointer-events-none opacity-5">
           <Image
@@ -321,11 +318,8 @@ export default function Home() {
           <div className="text-center mb-12 md:mb-16 lg:mb-20">
             <div className="inline-block relative w-fit mb-6 md:mb-8">
               <h2
-                className="font-extrabold tracking-tight uppercase"
-                style={{
-                  fontSize: '24px',
-                  color: '#FF541F',
-                }}
+                className="page-headers"
+                style={{ color: '#FF541F' }}
               >
                 KEY SERVICES
               </h2>
@@ -395,17 +389,14 @@ export default function Home() {
       </section>
 
       {/* How We Work Section */}
-      <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-12 md:py-16 bg-white">
+      <section className="w-full px-4 sm:px-6 lg:px-18 pt-0 pb-8 sm:pb-12 md:pb-16 bg-white">
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-12 md:mb-16">
             <div className="inline-block relative w-fit mb-6">
               <h2 
-                className="font-extrabold tracking-tight uppercase"
-                style={{ 
-                  fontSize: '24px', 
-                  color: '#FF541F'
-                }}
+                className="page-headers"
+                style={{ color: '#FF541F' }}
               >
                 HOW WE WORK
               </h2>

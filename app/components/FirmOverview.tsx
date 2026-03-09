@@ -9,8 +9,8 @@ export const FirmOverview: React.FC = () => {
       <div className="text-center mb-10 md:mb-14">
         <div className="inline-block relative w-fit mb-6">
           <h2 
-            className="font-extrabold tracking-tight uppercase"
-            style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
+            className="page-headers"
+            style={{ color: BRAND_COLORS.accent }}
           >
             {FIRM_OVERVIEW.title}
           </h2>

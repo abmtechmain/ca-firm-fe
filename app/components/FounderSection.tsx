@@ -4,11 +4,11 @@ export const FounderSection = () => {
   return (
     <section className="relative overflow-hidden bg-[#F7F9FC] py-12 md:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-10 md:mb-14">
+        <div className="text-center mb-4 md:mb-6">
           <div className="inline-block relative w-fit">
             <h2
-              className="font-extrabold tracking-tight uppercase"
-              style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
+              className="page-headers"
+              style={{ color: BRAND_COLORS.accent }}
             >
               MEET OUR FOUNDER
             </h2>
@@ -19,17 +19,13 @@ export const FounderSection = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-10 lg:gap-16 items-center">
-          <div className="relative">
-            <div
-              className="absolute -inset-4 rounded-3xl border"
-              style={{ borderColor: `${BRAND_COLORS.primary}22` }}
-            ></div>
-            <div className="relative overflow-hidden rounded-3xl transition-shadow duration-300 hover:shadow-[0_30px_80px_rgba(14,109,138,0.2)]">
+        <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-10 lg:gap-16 items-stretch">
+          <div className="relative flex justify-center min-h-0">
+            <div className="relative overflow-hidden rounded-3xl transition-shadow duration-300 hover:shadow-[0_30px_80px_rgba(14,109,138,0.2)] h-full w-auto max-w-[280px] md:max-w-[320px] lg:max-w-[380px] aspect-[3/4]">
               <img
                 src={FOUNDER_DATA.imageUrl}
                 alt={FOUNDER_DATA.name}
-                className="w-full h-[560px] md:h-[640px] lg:h-[700px] object-cover object-top"
+                className="w-full h-full object-cover object-top"
               />
             </div>
           </div>

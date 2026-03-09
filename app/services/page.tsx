@@ -79,8 +79,8 @@ export default function Services() {
           {/* <div className="text-center space-y-6 mb-12">
             <div className="inline-block relative w-fit">
               <h2 
-                className="font-extrabold tracking-tight uppercase"
-                style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
+                className="page-headers"
+                style={{ color: BRAND_COLORS.accent }}
               >
                 SERVICES OVERVIEW
               </h2>
@@ -176,8 +176,8 @@ export default function Services() {
             <div className="text-center">
               <div className="inline-block relative w-fit">
                 <h2 
-                  className="font-extrabold tracking-tight uppercase"
-                  style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
+                  className="page-headers"
+                  style={{ color: BRAND_COLORS.accent }}
                 >
                   SERVICES OFFERED
                 </h2>
@@ -272,8 +272,8 @@ export default function Services() {
               <div className="text-center mb-12">
                 <div className="inline-block relative w-fit">
                   <h3 
-                    className="font-extrabold tracking-tight uppercase"
-                    style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
+                    className="page-headers"
+                    style={{ color: BRAND_COLORS.accent }}
                   >
                     INDUSTRIES SERVED
                   </h3>

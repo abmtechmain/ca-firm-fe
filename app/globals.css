@@ -70,3 +70,11 @@ body {
   display: flex;
   width: fit-content;
 }
+
+/* Common page/section headers - use on h2/h3 across the site */
+.page-headers {
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  font-size: 24px;
+}

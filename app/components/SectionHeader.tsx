@@ -11,8 +11,8 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({ title, description
     <div className="text-center mb-16 space-y-6">
       <div className="inline-block relative w-fit">
         <h2 
-          className="font-extrabold tracking-tight uppercase"
-          style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
+          className="page-headers"
+          style={{ color: BRAND_COLORS.accent }}
         >
           {title}
         </h2>

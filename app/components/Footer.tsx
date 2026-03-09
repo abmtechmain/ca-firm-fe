@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-3 text-sm text-gray-500 font-medium">
               <li>Jalgaon</li>
-              <li>Assam</li>
+              <li>Golaghat(Assam)</li>
               <li>Pune</li>
             </ul>
           </div>

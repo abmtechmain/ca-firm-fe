@@ -359,29 +359,29 @@ export const CONTACT_INFO = {
     {
       name: 'Head Office 1',
       address: 'A-1/2 AshtavinayakApt. Behind Dholya Ganapati Mandir, Ashok Stambh, Nashik- 422002',
-      mobile: '9511840438',
+      mobile: '9822656851',
       mapLink: 'https://maps.app.goo.gl/ApHafWgRTxMdu98s7'
     },
     {
       name: 'Head Office 2',
       address: 'Flat No. 1/2, Saee Apartment, Madhav Colony, Pournima Bus Stop, Nashik Pune Road, Dwarka, Nashik- 422011',
-      mobile: '9822656851',
+      mobile: '9511840438',
       mapLink: 'https://share.google/C6cJt1Uw8fcduqsJo'
     }
   ],
   branches: [
     {
-      name: 'Jalgaon Branch',
+      name: 'Jalgaon',
       address: 'R No 6760, Plot No. 25/22, Gadge Baba Bagar, Pachora, Jalgaon, Maharashtra, India, 425001',
       mapLink: ''
     },
     {
-      name: 'Assam Branch',
+      name: 'Assam',
       address: 'B. B. Gaon, Dergaon, Golaghat, Golaghat, Assam, India, 785618',
       mapLink: ''
     },
     {
-      name: 'Pune Branch',
+      name: 'Pune',
       address: 'B 808, Kiran Samruddhi B, Sr No.293/5P,213, Pune City, Pune 411021',
       mapLink: ''
     }

@@ -40,10 +40,10 @@ const Footer: React.FC = () => {
             >
               <strong>HEAD OFFICE 1</strong><br />
               A-1/2 Ashtavinayak Apt. Behind Dholya Ganapati Mandir, Ashok Stambh, Nashik- 422002<br />
-              9511840438<br /><br />
+              +91 9822656851<br /><br />
               <strong>HEAD OFFICE 2</strong><br />
               Flat No. 1/2, Saee Apartment, Madhav Colony, Pournima Bus Stop, Nashik Pune Road, Dwarka, Nashik- 422011<br />
-              9822656851
+              +91 9511840438
             </p>
           </div>
 
@@ -56,9 +56,9 @@ const Footer: React.FC = () => {
               Branch
             </h4>
             <ul className="space-y-3 text-sm text-gray-500 font-medium">
-              <li>Jalgaon branch</li>
-              <li>Assam branch</li>
-              <li>Pune branch</li>
+              <li>Jalgaon</li>
+              <li>Assam</li>
+              <li>Pune</li>
             </ul>
           </div>
 
@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
             </h4>
             <address className="not-italic space-y-4 text-sm text-gray-500 leading-relaxed font-medium">
               <p>Monday - Saturday</p>
-              <p className="font-bold">10:00 to 6:00</p>
+              <p className="font-bold">10:00AM to 6:30PM</p>
               {/* <p className="text-xs">Sunday Closed</p> */}
               <p className="mt-4">{CONTACT_INFO.landline}</p>
               <p className="hover:text-[#F37920] cursor-pointer">{CONTACT_INFO.email}</p>

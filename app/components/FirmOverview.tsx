@@ -7,7 +7,7 @@ export const FirmOverview: React.FC = () => {
     <div className="max-w-7xl mx-auto">
       {/* Section Title */}
       <div className="text-center mb-10 md:mb-14">
-        <div className="inline-block relative mb-6">
+        <div className="inline-block relative w-fit mb-6">
           <h2 
             className="font-extrabold tracking-tight uppercase"
             style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
@@ -15,7 +15,7 @@ export const FirmOverview: React.FC = () => {
             {FIRM_OVERVIEW.title}
           </h2>
           <div 
-            className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+            className="absolute -bottom-3 left-0 w-full h-1"
             style={{ backgroundColor: BRAND_COLORS.primary }}
           ></div>
         </div>

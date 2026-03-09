@@ -75,7 +75,7 @@ export default function StructuredData() {
         'Friday',
       ],
       opens: '10:00',
-      closes: '17:00',
+      closes: '18:30',
     },
   };
 

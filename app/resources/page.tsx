@@ -33,7 +33,7 @@ export default function Resources() {
           {/* Important Events and Links Section */}
           <div className="mb-24">
             <div className="text-center mb-16 space-y-6">
-              <div className="inline-block relative">
+              <div className="inline-block relative w-fit">
                 <h1 
                   className="font-extrabold tracking-tight uppercase"
                   style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
@@ -41,7 +41,7 @@ export default function Resources() {
                   Important Events and Links
                 </h1>
                 <div 
-                  className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                  className="absolute -bottom-3 left-0 w-full h-1"
                   style={{ backgroundColor: BRAND_COLORS.primary }}
                 ></div>
               </div>
@@ -62,7 +62,7 @@ export default function Resources() {
 
           {/* Blogs & Articles Section */}
           <div className="text-center mb-16 space-y-6">
-            <div className="inline-block relative">
+            <div className="inline-block relative w-fit">
               <h1 
                 className="font-extrabold tracking-tight uppercase"
                 style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
@@ -70,7 +70,7 @@ export default function Resources() {
                 Blogs & Articles
               </h1>
               <div 
-                className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                className="absolute -bottom-3 left-0 w-full h-1"
                 style={{ backgroundColor: BRAND_COLORS.primary }}
               ></div>
             </div>

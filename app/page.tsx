@@ -53,7 +53,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
               {/* Heading */}
               <div className="text-center mb-8">
-                <div className="inline-block relative mb-6">
+                <div className="inline-block relative w-fit mb-6">
                   <h2 
                     className="font-extrabold tracking-tight uppercase"
                     style={{ 
@@ -64,7 +64,7 @@ export default function Home() {
                     WHY CHOOSE US
                   </h2>
                   <div 
-                    className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                    className="absolute -bottom-3 left-0 w-full h-1"
                     style={{ backgroundColor: '#056385' }}
                   ></div>
                 </div>
@@ -319,7 +319,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Heading */}
           <div className="text-center mb-12 md:mb-16 lg:mb-20">
-            <div className="inline-block relative mb-6 md:mb-8">
+            <div className="inline-block relative w-fit mb-6 md:mb-8">
               <h2
                 className="font-extrabold tracking-tight uppercase"
                 style={{
@@ -330,7 +330,7 @@ export default function Home() {
                 KEY SERVICES
               </h2>
               <div
-                className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                className="absolute -bottom-3 left-0 w-full h-1"
                 style={{ backgroundColor: '#056385' }}
               ></div>
             </div>
@@ -399,7 +399,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-12 md:mb-16">
-            <div className="inline-block relative mb-6">
+            <div className="inline-block relative w-fit mb-6">
               <h2 
                 className="font-extrabold tracking-tight uppercase"
                 style={{ 
@@ -410,7 +410,7 @@ export default function Home() {
                 HOW WE WORK
               </h2>
               <div 
-                className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                className="absolute -bottom-3 left-0 w-full h-1"
                 style={{ backgroundColor: '#056385' }}
               ></div>
             </div>

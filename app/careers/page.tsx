@@ -83,7 +83,7 @@ export default function Careers() {
         <div className="max-w-7xl mx-auto space-y-12 md:space-y-16">
           {/* Careers at Our Firm Section */}
           <div className="space-y-6 md:space-y-8 text-center">
-            <div className="inline-block relative">
+            <div className="inline-block relative w-fit">
               <h2 
                 className="font-extrabold tracking-tight uppercase"
                 style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
@@ -91,7 +91,7 @@ export default function Careers() {
                 CAREERS AT OUR FIRM
               </h2>
               <div 
-                className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                className="absolute -bottom-3 left-0 w-full h-1"
                 style={{ backgroundColor: BRAND_COLORS.primary }}
               ></div>
             </div>
@@ -114,7 +114,7 @@ export default function Careers() {
 
           {/* Why Join Us Section */}
           <div className="space-y-6 md:space-y-8 text-center">
-            <div className="inline-block relative">
+            <div className="inline-block relative w-fit">
               <h2 
                 className="font-extrabold tracking-tight uppercase"
                 style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
@@ -122,7 +122,7 @@ export default function Careers() {
                 WHY JOIN US
               </h2>
               <div 
-                className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1"
+                className="absolute -bottom-3 left-0 w-full h-1"
                 style={{ backgroundColor: BRAND_COLORS.primary }}
               ></div>
             </div>
@@ -160,7 +160,7 @@ export default function Careers() {
           <div className="grid lg:grid-cols-[50%_50%] gap-6 md:gap-8 lg:gap-12 items-start">
             {/* Left Side: Job Openings */}
             <div className="space-y-6 md:space-y-8">
-              <div className="inline-block relative">
+              <div className="inline-block relative w-fit">
                 <h2 
                   className="font-extrabold tracking-tight uppercase"
                   style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
@@ -168,7 +168,7 @@ export default function Careers() {
                   CURRENT OPENINGS
                 </h2>
                 <div 
-                  className="absolute -bottom-3 left-0 w-32 h-1"
+                  className="absolute -bottom-3 left-0 w-full h-1"
                   style={{ backgroundColor: BRAND_COLORS.primary }}
                 ></div>
               </div>

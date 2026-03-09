@@ -66,7 +66,7 @@ export default function ConsultationForm() {
             >
               Consultation
             </div>
-            <div>
+            <div className="inline-block relative w-fit">
               <h2 
                 className="font-extrabold tracking-tight uppercase"
                 style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
@@ -74,7 +74,7 @@ export default function ConsultationForm() {
                 Request A Consultation
               </h2>
               <div 
-                className="mt-3 h-1 w-28"
+                className="absolute -bottom-3 left-0 w-full h-1"
                 style={{ backgroundColor: BRAND_COLORS.primary }}
               ></div>
             </div>

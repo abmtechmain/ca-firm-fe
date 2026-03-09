@@ -87,7 +87,7 @@ export default function Contact() {
               >
                 Contact
               </div>
-              <div>
+              <div className="inline-block relative w-fit">
                 <h2 
                   className="font-extrabold tracking-tight uppercase"
                   style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
@@ -95,7 +95,7 @@ export default function Contact() {
                   Request A Consultation
                 </h2>
                 <div 
-                  className="mt-3 h-1 w-28"
+                  className="absolute -bottom-3 left-0 w-full h-1"
                   style={{ backgroundColor: BRAND_COLORS.primary }}
                 ></div>
               </div>
@@ -249,17 +249,19 @@ export default function Contact() {
 
           {/* Head Offices Section */}
           <div className="space-y-10">
-            <div className="relative text-center">
-              <h3 
-                className="text-[#F37920] font-bold tracking-widest uppercase inline-block relative"
-                style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '28px' }}
-              >
-                HEAD OFFICES
-              </h3>
-              <div 
-                className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-1"
-                style={{ backgroundColor: BRAND_COLORS.primary }}
-              ></div>
+            <div className="text-center">
+              <div className="inline-block relative w-fit">
+                <h3 
+                  className="text-[#F37920] font-bold tracking-widest uppercase"
+                  style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '28px' }}
+                >
+                  HEAD OFFICES
+                </h3>
+                <div 
+                  className="absolute -bottom-2 left-0 w-full h-1"
+                  style={{ backgroundColor: BRAND_COLORS.primary }}
+                ></div>
+              </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
               {locations.map((loc, idx) => (
@@ -348,17 +350,19 @@ export default function Contact() {
 
           {/* Branches Section */}
           <div className="space-y-10">
-            <div className="relative text-center">
-              <h3 
-                className="text-[#F37920] font-bold tracking-widest uppercase inline-block relative"
-                style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '28px' }}
-              >
-                BRANCHES
-              </h3>
-              <div 
-                className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-1"
-                style={{ backgroundColor: BRAND_COLORS.primary }}
-              ></div>
+            <div className="text-center">
+              <div className="inline-block relative w-fit">
+                <h3 
+                  className="text-[#F37920] font-bold tracking-widest uppercase"
+                  style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '28px' }}
+                >
+                  BRANCHES
+                </h3>
+                <div 
+                  className="absolute -bottom-2 left-0 w-full h-1"
+                  style={{ backgroundColor: BRAND_COLORS.primary }}
+                ></div>
+              </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {branches.map((branch, idx) => (

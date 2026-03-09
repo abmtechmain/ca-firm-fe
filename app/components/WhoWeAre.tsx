@@ -5,7 +5,7 @@ export const WhoWeAre: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-6 text-center">
       {/* Header */}
-      <div className="inline-block relative mb-12">
+      <div className="inline-block relative w-fit mb-12">
         <h2 
           className="text-xl md:text-2xl font-extrabold tracking-widest uppercase"
           style={{ color: BRAND_COLORS.accent }}
@@ -13,7 +13,7 @@ export const WhoWeAre: React.FC = () => {
           {WHO_WE_ARE_TEXT.title}
         </h2>
         <div 
-          className="absolute -bottom-3 left-0 right-0 h-[3px]"
+          className="absolute -bottom-3 left-0 w-full h-[3px]"
           style={{ backgroundColor: BRAND_COLORS.primary }}
         ></div>
       </div>

@@ -3,9 +3,21 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === '/') return pathname === '/';
+    return pathname === href || pathname.startsWith(href + '/');
+  };
+
+  const linkClass = (href: string) =>
+    `text-xs sm:text-sm md:text-base font-medium hover:opacity-80 transition-colors ${isActive(href) ? 'underline underline-offset-4' : ''}`;
+  const mobileLinkClass = (href: string) =>
+    `text-sm font-medium hover:opacity-80 transition-colors py-2 ${isActive(href) ? 'underline underline-offset-4' : ''}`;
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -57,22 +69,22 @@ export default function NavBar() {
 
           {/* Navigation items - Desktop */}
           <div className="hidden md:flex items-center justify-center border-2 border-gray-200 gap-2 sm:gap-4 md:gap-8 lg:gap-12 rounded-2xl px-3 sm:px-4 md:px-6 py-2 md:py-3">
-            <Link href="/" className="text-xs sm:text-sm md:text-base font-medium hover:opacity-80 transition-colors" style={{ color: '#056385' }}>
+            <Link href="/" className={linkClass('/')} style={{ color: '#056385' }}>
               HOME
             </Link>
-            <Link href="/about-us" className="text-xs sm:text-sm md:text-base font-medium hover:opacity-80 transition-colors" style={{ color: '#056385' }}>
+            <Link href="/about-us" className={linkClass('/about-us')} style={{ color: '#056385' }}>
               ABOUT US
             </Link>
-            <Link href="/services" className="text-xs sm:text-sm md:text-base font-medium hover:opacity-80 transition-colors" style={{ color: '#056385' }}>
+            <Link href="/services" className={linkClass('/services')} style={{ color: '#056385' }}>
               SERVICES
             </Link>
-            <Link href="/resources" className="text-xs sm:text-sm md:text-base font-medium hover:opacity-80 transition-colors" style={{ color: '#056385' }}>
+            <Link href="/resources" className={linkClass('/resources')} style={{ color: '#056385' }}>
               RESOURCES
             </Link>
-            <Link href="/careers" className="text-xs sm:text-sm md:text-base font-medium hover:opacity-80 transition-colors" style={{ color: '#056385' }}>
+            <Link href="/careers" className={linkClass('/careers')} style={{ color: '#056385' }}>
               CAREERS
             </Link>
-            <Link href="/contact" className="text-xs sm:text-sm md:text-base font-medium hover:opacity-80 transition-colors" style={{ color: '#056385' }}>
+            <Link href="/contact" className={linkClass('/contact')} style={{ color: '#056385' }}>
               CONTACT
             </Link>
           </div>
@@ -86,7 +98,7 @@ export default function NavBar() {
             <div className="flex flex-col border-2 border-gray-200 rounded-2xl px-4 py-4 space-y-3 bg-white">
               <Link 
                 href="/" 
-                className="text-sm font-medium hover:opacity-80 transition-colors py-2" 
+                className={mobileLinkClass('/')} 
                 style={{ color: '#056385' }}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -94,7 +106,7 @@ export default function NavBar() {
               </Link>
               <Link 
                 href="/about-us" 
-                className="text-sm font-medium hover:opacity-80 transition-colors py-2" 
+                className={mobileLinkClass('/about-us')} 
                 style={{ color: '#056385' }}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -102,7 +114,7 @@ export default function NavBar() {
               </Link>
               <Link 
                 href="/services" 
-                className="text-sm font-medium hover:opacity-80 transition-colors py-2" 
+                className={mobileLinkClass('/services')} 
                 style={{ color: '#056385' }}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -110,7 +122,7 @@ export default function NavBar() {
               </Link>
               <Link 
                 href="/resources" 
-                className="text-sm font-medium hover:opacity-80 transition-colors py-2" 
+                className={mobileLinkClass('/resources')} 
                 style={{ color: '#056385' }}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -118,7 +130,7 @@ export default function NavBar() {
               </Link>
               <Link 
                 href="/careers" 
-                className="text-sm font-medium hover:opacity-80 transition-colors py-2" 
+                className={mobileLinkClass('/careers')} 
                 style={{ color: '#056385' }}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -126,7 +138,7 @@ export default function NavBar() {
               </Link>
               <Link 
                 href="/contact" 
-                className="text-sm font-medium hover:opacity-80 transition-colors py-2" 
+                className={mobileLinkClass('/contact')} 
                 style={{ color: '#056385' }}
                 onClick={() => setIsMenuOpen(false)}
               >

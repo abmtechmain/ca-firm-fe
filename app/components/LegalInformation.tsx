@@ -3,7 +3,7 @@ import { LEGAL_CONTENT, BRAND_COLORS } from '../constants';
 
 const LegalSection: React.FC<{ data: any }> = ({ data }) => (
   <div className="space-y-8">
-    <div className="inline-block relative">
+    <div className="inline-block relative w-fit">
       <h2 
         className="text-lg md:text-xl font-extrabold tracking-tight uppercase pb-1"
         style={{ color: BRAND_COLORS.primary }}
@@ -11,7 +11,7 @@ const LegalSection: React.FC<{ data: any }> = ({ data }) => (
         {data.title}
       </h2>
       <div 
-        className="absolute bottom-0 left-0 right-0 h-[2.5px]"
+        className="absolute bottom-0 left-0 w-full h-[2.5px]"
         style={{ backgroundColor: BRAND_COLORS.primary }}
       ></div>
     </div>

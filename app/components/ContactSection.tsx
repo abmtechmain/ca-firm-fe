@@ -78,17 +78,19 @@ const ContactSection: React.FC = () => {
   return (
     <div className="border-2 border-gray-100 rounded-2xl p-8 md:p-16 mx-auto" style={{ backgroundColor: 'rgba(5, 99, 133, 0.02)' }}>
       <div className="text-center mb-16">
-        <h2 
-          className="uppercase font-instrument-sans relative inline-block mb-4"
-          style={{ 
-            fontSize: '24px', 
-            color: '#056385',
-            fontWeight: 'bold'
-          }}
-        >
-          CONTACT US
+        <div className="inline-block relative w-fit mb-4">
+          <h2 
+            className="uppercase font-instrument-sans"
+            style={{ 
+              fontSize: '24px', 
+              color: '#056385',
+              fontWeight: 'bold'
+            }}
+          >
+            CONTACT US
+          </h2>
           <span className="absolute -bottom-2 left-0 w-full h-1 bg-[#056385] rounded-full"></span>
-        </h2>
+        </div>
         <p 
           className="mt-6 max-w-2xl mx-auto leading-relaxed"
           style={{ 

@@ -5,7 +5,7 @@ export const FounderSection = () => {
     <section className="relative overflow-hidden bg-[#F7F9FC] py-12 md:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-10 md:mb-14">
-          <div className="inline-block relative">
+          <div className="inline-block relative w-fit">
             <h2
               className="font-extrabold tracking-tight uppercase"
               style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}

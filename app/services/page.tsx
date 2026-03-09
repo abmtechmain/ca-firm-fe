@@ -77,7 +77,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto space-y-12">
           {/* Header */}
           {/* <div className="text-center space-y-6 mb-12">
-            <div className="inline-block relative">
+            <div className="inline-block relative w-fit">
               <h2 
                 className="font-extrabold tracking-tight uppercase"
                 style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
@@ -171,12 +171,106 @@ export default function Services() {
               />
             </div> */}
 
+            {/* Detailed Services Section - shown first */}
+          <div className="space-y-12">
+            <div className="text-center">
+              <div className="inline-block relative w-fit">
+                <h2 
+                  className="font-extrabold tracking-tight uppercase"
+                  style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
+                >
+                  SERVICES OFFERED
+                </h2>
+                <div 
+                  className="absolute -bottom-3 left-0 w-full h-1"
+                  style={{ backgroundColor: BRAND_COLORS.primary }}
+                ></div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              {SERVICES_OFFERED.map((category, idx) => (
+                <div 
+                  key={idx}
+                  className="bg-white rounded-2xl p-6 md:p-7 transition-all duration-300 cursor-pointer group shadow-sm hover:shadow-md relative overflow-hidden"
+                  style={{ 
+                    fontFamily: 'var(--font-instrument-sans), sans-serif',
+                    ['--brand-primary' as any]: BRAND_COLORS.primary,
+                    ['--brand-accent' as any]: BRAND_COLORS.accent
+                  }}
+                >
+                  {/* Hover gradient background */}
+                  <div 
+                    className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{ 
+                      background: 'linear-gradient(to bottom, #044860, #056385)'
+                    }}
+                  ></div>
+                  
+                  {/* Hover glow accents */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full opacity-0 group-hover:opacity-70 transition-opacity duration-300 blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-90 transition-opacity duration-300">
+                    <div className="absolute w-40 h-40 bg-white rounded-full blur-3xl opacity-80" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}></div>
+                  </div>
+
+                  <h3 
+                    className="font-bold mb-4 uppercase tracking-tight relative z-10 transition-colors duration-300 text-[var(--brand-primary)] group-hover:text-white"
+                    style={{ fontSize: '20px' }}
+                  >
+                    {category.category}
+                  </h3>
+                  <div 
+                    className="mb-4 h-0.5 w-12 relative z-10 transition-colors duration-300 group-hover:bg-white"
+                    style={{ backgroundColor: BRAND_COLORS.accent }}
+                  ></div>
+
+                  <ul className="space-y-3 relative z-10">
+                    {category.services.slice(0, 4).map((service, serviceIdx) => (
+                      <li 
+                        key={serviceIdx}
+                        className="flex items-start gap-3 transition-colors duration-300 text-slate-600 group-hover:text-white"
+                        style={{ fontSize: '15px', lineHeight: '1.6' }}
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 transition-colors duration-300 bg-[var(--brand-primary)] group-hover:bg-white"></span>
+                        <span>{service}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {category.services.length > 4 && (
+                    <details className="group/details mt-4 relative z-10">
+                      <summary 
+                        className="cursor-pointer select-none text-sm font-semibold inline-flex items-center gap-2 transition-colors duration-300 text-[var(--brand-primary)] group-hover:text-white"
+                      >
+                        View all services
+                        <span className="transition-transform duration-200 group-open/details:rotate-180">▾</span>
+                      </summary>
+                      <ul className="mt-3 space-y-3">
+                        {category.services.slice(4).map((service, serviceIdx) => (
+                          <li 
+                            key={serviceIdx}
+                            className="flex items-start gap-3 transition-colors duration-300 text-slate-600 group-hover:text-white"
+                            style={{ fontSize: '15px', lineHeight: '1.6' }}
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 transition-colors duration-300 bg-[var(--brand-accent)] group-hover:bg-white"></span>
+                            <span>{service}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </details>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Industries Served Section - shown second */}
             <div 
               className="bg-white rounded-lg p-8 py-12"
               style={{ fontFamily: 'var(--font-instrument-sans), sans-serif' }}
             >
               <div className="text-center mb-12">
-                <div className="inline-block relative">
+                <div className="inline-block relative w-fit">
                   <h3 
                     className="font-extrabold tracking-tight uppercase"
                     style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
@@ -378,99 +472,6 @@ export default function Services() {
               </div>
             </div>
           {/* </div> */}
-
-          {/* Detailed Services Section */}
-          <div className="space-y-12">
-            <div className="text-center">
-              <div className="inline-block relative">
-                <h2 
-                  className="font-extrabold tracking-tight uppercase"
-                  style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}
-                >
-                  SERVICES OFFERED
-                </h2>
-                <div 
-                  className="absolute -bottom-3 left-0 w-full h-1"
-                  style={{ backgroundColor: BRAND_COLORS.primary }}
-                ></div>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              {SERVICES_OFFERED.map((category, idx) => (
-                <div 
-                  key={idx}
-                  className="bg-white rounded-2xl p-6 md:p-7 transition-all duration-300 cursor-pointer group shadow-sm hover:shadow-md relative overflow-hidden"
-                  style={{ 
-                    fontFamily: 'var(--font-instrument-sans), sans-serif',
-                    ['--brand-primary' as any]: BRAND_COLORS.primary,
-                    ['--brand-accent' as any]: BRAND_COLORS.accent
-                  }}
-                >
-                  {/* Hover gradient background */}
-                  <div 
-                    className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    style={{ 
-                      background: 'linear-gradient(to bottom, #044860, #056385)'
-                    }}
-                  ></div>
-                  
-                  {/* Hover glow accents */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full opacity-0 group-hover:opacity-70 transition-opacity duration-300 blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-90 transition-opacity duration-300">
-                    <div className="absolute w-40 h-40 bg-white rounded-full blur-3xl opacity-80" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}></div>
-                  </div>
-
-                  <h3 
-                    className="font-bold mb-4 uppercase tracking-tight relative z-10 transition-colors duration-300 text-[var(--brand-primary)] group-hover:text-white"
-                    style={{ fontSize: '20px' }}
-                  >
-                    {category.category}
-                  </h3>
-                  <div 
-                    className="mb-4 h-0.5 w-12 relative z-10 transition-colors duration-300 group-hover:bg-white"
-                    style={{ backgroundColor: BRAND_COLORS.accent }}
-                  ></div>
-
-                  <ul className="space-y-3 relative z-10">
-                    {category.services.slice(0, 4).map((service, serviceIdx) => (
-                      <li 
-                        key={serviceIdx}
-                        className="flex items-start gap-3 transition-colors duration-300 text-slate-600 group-hover:text-white"
-                        style={{ fontSize: '15px', lineHeight: '1.6' }}
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 transition-colors duration-300 bg-[var(--brand-primary)] group-hover:bg-white"></span>
-                        <span>{service}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {category.services.length > 4 && (
-                    <details className="group/details mt-4 relative z-10">
-                      <summary 
-                        className="cursor-pointer select-none text-sm font-semibold inline-flex items-center gap-2 transition-colors duration-300 text-[var(--brand-primary)] group-hover:text-white"
-                      >
-                        View all services
-                        <span className="transition-transform duration-200 group-open/details:rotate-180">▾</span>
-                      </summary>
-                      <ul className="mt-3 space-y-3">
-                        {category.services.slice(4).map((service, serviceIdx) => (
-                          <li 
-                            key={serviceIdx}
-                            className="flex items-start gap-3 transition-colors duration-300 text-slate-600 group-hover:text-white"
-                            style={{ fontSize: '15px', lineHeight: '1.6' }}
-                          >
-                            <span className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 transition-colors duration-300 bg-[var(--brand-accent)] group-hover:bg-white"></span>
-                            <span>{service}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </details>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 

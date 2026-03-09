@@ -6,7 +6,7 @@ export const KeyStrengths: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Section Title */}
       <div className="text-center mb-12 md:mb-16">
-        <div className="inline-block relative">
+        <div className="inline-block relative w-fit">
           <h2 
             className="font-extrabold tracking-tight uppercase"
             style={{ color: BRAND_COLORS.accent, fontSize: '24px' }}

@@ -53,7 +53,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
               {/* Heading */}
               <div className="text-center mb-8">
-                <div className="inline-block relative mb-6">
+                <div className="inline-block relative w-fit mb-6">
                   <h2 
                     className="font-extrabold tracking-tight uppercase"
                     style={{ 
@@ -319,7 +319,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Heading */}
           <div className="text-center mb-12 md:mb-16 lg:mb-20">
-            <div className="inline-block relative mb-6 md:mb-8">
+            <div className="inline-block relative w-fit mb-6 md:mb-8">
               <h2
                 className="font-extrabold tracking-tight uppercase"
                 style={{
@@ -399,7 +399,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-12 md:mb-16">
-            <div className="inline-block relative mb-6">
+            <div className="inline-block relative w-fit mb-6">
               <h2 
                 className="font-extrabold tracking-tight uppercase"
                 style={{ 

@@ -5,6 +5,30 @@
   --foreground: #171717;
 }
 
+/* Footer design system — refined editorial */
+footer {
+  --footer-bg: #fafbfc;
+  --footer-border: #e8eaed;
+  --footer-fg: #1a1d21;
+  --footer-muted: #5f6368;
+  --footer-accent: #FF541F;
+  --footer-primary: #0e6d8a;
+  --footer-label-font: 'Poppins', sans-serif;
+  --footer-body-font: var(--font-instrument-sans), sans-serif;
+}
+
+footer .footer-link {
+  color: var(--footer-muted);
+}
+footer .footer-link:hover,
+footer .footer-link:focus-visible {
+  color: var(--footer-accent);
+}
+footer .footer-link:focus-visible {
+  outline: 2px solid var(--footer-primary);
+  outline-offset: 2px;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

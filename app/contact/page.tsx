@@ -255,7 +255,6 @@ export default function Contact() {
               <div className="inline-block relative w-fit">
                 <h3 
                   className="page-headers text-[#F37920]"
-                  style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '28px' }}
                 >
                   HEAD OFFICES
                 </h3>
@@ -356,7 +355,6 @@ export default function Contact() {
               <div className="inline-block relative w-fit">
                 <h3 
                   className="page-headers text-[#F37920]"
-                  style={{ fontFamily: 'var(--font-instrument-sans), sans-serif', fontSize: '28px' }}
                 >
                   BRANCHES
                 </h3>

@@ -1,53 +1,57 @@
-import { BlogPost, DownloadItem, CaseStudy, StrengthItem, StrengthMain, TeamMember, Founder, KeyPerson } from '../types';
+import { BlogPost, DownloadItem, CaseStudy, StrengthItem, StrengthMain, TeamMember, Founder, KeyPerson, ImportantLink } from '../types';
+
+// Government Websites & CA Governance (from cajiteshtelisara.com/ca-firm-in-pune/)
+export const IMPORTANT_LINKS: ImportantLink[] = [
+  // Government Websites
+  { id: '1', name: 'RBI', url: 'https://www.rbi.org.in/', category: 'government' },
+  { id: '2', name: 'Mahavat', url: 'https://mahavat.gov.in/', category: 'government' },
+  { id: '3', name: 'Income Tax Department, India', url: 'https://www.incometax.gov.in/', category: 'government' },
+  { id: '4', name: 'e-Filing of your Income Tax Return', url: 'https://www.incometax.gov.in/iec/foportal/', category: 'government' },
+  { id: '5', name: 'Ministry of Corporate Affairs', url: 'https://www.mca.gov.in/', category: 'government' },
+  { id: '6', name: 'ITAT Online', url: 'https://itat.gov.in/', category: 'government' },
+  { id: '7', name: 'Central Board Of Excise and Customs', url: 'https://www.cbic.gov.in/', category: 'government' },
+  { id: '8', name: 'GST', url: 'https://www.gst.gov.in/', category: 'government' },
+  { id: '9', name: 'Directorate General of Foreign Trade', url: 'https://dgft.gov.in/', category: 'government' },
+  { id: '10', name: 'Maharera', url: 'https://maharera.mahaonline.gov.in/', category: 'government' },
+  { id: '11', name: 'Registration of Firm (ROF)', url: 'https://www.mca.gov.in/', category: 'government' },
+  { id: '12', name: 'MSME', url: 'https://msme.gov.in/', category: 'government' },
+  { id: '13', name: 'Udyog Aadhar Registration', url: 'https://udyamregistration.gov.in/', category: 'government' },
+  { id: '14', name: 'Mahagst', url: 'https://mahagst.gov.in/', category: 'government' },
+  { id: '14b', name: 'GeM (Government e-Marketplace)', url: 'https://gem.gov.in/', category: 'government' },
+  { id: '14c', name: 'DigiLocker', url: 'https://digilocker.gov.in/', category: 'government' },
+  // CA Governance
+  { id: '15', name: 'ICAI', url: 'https://www.icai.org/', category: 'ca' },
+  { id: '16', name: 'PUNE ICAI', url: 'https://puneicai.org/', category: 'ca' },
+  { id: '17', name: 'UDIN', url: 'https://udin.icai.org/', category: 'ca' },
+];
 
 export const BLOG_POSTS: BlogPost[] = [
   {
     id: '1',
     number: '01',
-    date: 'May 14, 2025',
+    date: 'February 19, 2026',
     location: 'Nashik Maharashtra',
-    title: 'Product Launch & Announcements',
-    imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800'
+    title: 'ITR Filing for Salaried Employees',
+    imageUrl: '/images/resources/itr-filing-salaried.png',
+    externalUrl: 'https://www.cajiteshtelisara.com/itr-filing-for-salaried-employees/'
   },
   {
     id: '2',
     number: '02',
-    date: 'May 14, 2025',
+    date: 'February 13, 2026',
     location: 'Nashik Maharashtra',
-    title: 'Market Trends and Global Business Insights',
-    imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800'
+    title: 'Belated Income Tax Return vs Revised Income Tax Return',
+    imageUrl: '/images/resources/belated-vs-revised-itr.png',
+    externalUrl: 'https://www.cajiteshtelisara.com/belated-income-tax-return-vs-revised-income-tax-return/'
   },
   {
     id: '3',
     number: '03',
-    date: 'May 14, 2025',
+    date: 'February 09, 2026',
     location: 'Nashik Maharashtra',
-    title: 'Strategic Tax Planning for Corporates',
-    imageUrl: 'https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?auto=format&fit=crop&q=80&w=800'
-  },
-  {
-    id: '4',
-    number: '04',
-    date: 'May 14, 2025',
-    location: 'Nashik Maharashtra',
-    title: 'Product Launch & Announcements',
-    imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800'
-  },
-  {
-    id: '5',
-    number: '05',
-    date: 'May 14, 2025',
-    location: 'Nashik Maharashtra',
-    title: 'Digital Transformation in Modern Business',
-    imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800'
-  },
-  {
-    id: '6',
-    number: '06',
-    date: 'May 14, 2025',
-    location: 'Nashik Maharashtra',
-    title: 'Product Launch & Announcements',
-    imageUrl: 'https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?auto=format&fit=crop&q=80&w=800'
+    title: 'Income Tax Return (ITR) Due Date FY 2025-26',
+    imageUrl: '/images/resources/itr-due-dates-fy2025-26.png',
+    externalUrl: 'https://www.cajiteshtelisara.com/income-tax-return-itr-due-date-fy-2025-26/'
   }
 ];
 
@@ -83,7 +87,7 @@ export const CURRENT_CASE_STUDY: CaseStudy = {
 export const STRENGTHS_MAIN: StrengthMain = {
   title: 'EXPERIENCE',
   description: 'Over 35 years of proven expertise in the Accounting, Auditing and Finance Industry.',
-  imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop'
+  imageUrl: '/images/key-strengths-office.png'
 };
 
 export const STRENGTHS_GRID: StrengthItem[] = [
@@ -178,18 +182,19 @@ export const FOUNDER_DATA: Founder = {
 export const KEY_PERSONS: KeyPerson[] = [
   {
     id: '1',
-    name: 'CA. Rashmi Sampat Mandlik',
-    phone: '+91 88885 55998',
-    email: 'ca.rashmi@skmrd.com',
+    name: 'CA. Nivrutti Ramesh Shinde',
+    phone: '+91 97623 09538',
+    email: 'ca.nivrutti@skmrd.com',
     qualification: 'FCA, M. Com, DISA',
-    certification: 'FAFD, Concurrent Audit of Banks (appear), AI (appear)',
-    imageUrl: '/images/team/CA Rashmi Mandlik.jpeg',
+    certification: 'Concurrent Audit of Banks (appear), Ind AS (appear)',
+    imageUrl: '/images/team/CA Nivrutti Shinde.jpeg',
     description: [
-      'Qualified since 2018.',
-      'Senior partner of the firm.',
-      'Having 7 Years post qualification of experience in providing the firm\'s core and additional services. She is responsible for the computerization & atomization of several processes, leading to faster response times and increased client satisfaction levels. In recent past, he has also handled assignments in the field of Corporate Restructuring for our key clients and conducting audit & advisory services of various laws related to taxation with its technical and analytical aspects',
-      'Experience of Management & Internal Audit of Limited as well as Listed Companies.',
-      'Experience of work in various laws e.g. Direct Taxes, Indirect Taxes, and Company Law etc.'
+      'Qualified Since 2018.',
+      'Having 8 Years post qualification of experience and 10 & more year of experience in CA field in conducting internal audit & advisory services of various laws with its technical and analytical aspects.',
+      'Having experience in co-operative sector auditing, consultancy, advisory, new society registration.',
+      'Experience in various type of Audit & Assurance Services like - Statutory Audit, Internal & Management Audit, Bank Audit, IS Audit etc.',
+      'Attending Assessments & appeals in front of various Tax Authorities.',
+      'Government Audits.'
     ]
   },
   {
@@ -213,19 +218,18 @@ export const KEY_PERSONS: KeyPerson[] = [
   },
   {
     id: '3',
-    name: 'CA. Nivrutti Ramesh Shinde',
-    phone: '+91 97623 09538',
-    email: 'ca.nivrutti@skmrd.com',
+    name: 'CA. Rashmi Sampat Mandlik',
+    phone: '+91 88885 55998',
+    email: 'ca.rashmi@skmrd.com',
     qualification: 'FCA, M. Com, DISA',
-    certification: 'Concurrent Audit of Banks (appear), Ind AS (appear)',
-    imageUrl: '/images/team/CA Nivrutti Shinde.jpeg',
+    certification: 'FAFD, Concurrent Audit of Banks (appear), AI (appear)',
+    imageUrl: '/images/team/CA Rashmi Mandlik.jpeg',
     description: [
-      'Qualified Since 2018.',
-      'Having 8 Years post qualification of experience and 10 & more year of experience in CA field in conducting internal audit & advisory services of various laws with its technical and analytical aspects.',
-      'Having experience in co-operative sector auditing, consultancy, advisory, new society registration.',
-      'Experience in various type of Audit & Assurance Services like - Statutory Audit, Internal & Management Audit, Bank Audit, IS Audit etc.',
-      'Attending Assessments & appeals in front of various Tax Authorities.',
-      'Government Audits.'
+      'Qualified since 2018.',
+      'Senior partner of the firm.',
+      'Having 7 Years post qualification of experience in providing the firm\'s core and additional services. She is responsible for the computerization & atomization of several processes, leading to faster response times and increased client satisfaction levels. In recent past, he has also handled assignments in the field of Corporate Restructuring for our key clients and conducting audit & advisory services of various laws related to taxation with its technical and analytical aspects',
+      'Experience of Management & Internal Audit of Limited as well as Listed Companies.',
+      'Experience of work in various laws e.g. Direct Taxes, Indirect Taxes, and Company Law etc.'
     ]
   },
   {

@@ -5,6 +5,16 @@ export interface BlogPost {
   imageUrl: string;
   date: string;
   location: string;
+  /** When set, READ button links to this URL (e.g. external article) instead of /blog/[id] */
+  externalUrl?: string;
+}
+
+export interface ImportantLink {
+  id: string;
+  name: string;
+  url: string;
+  /** 'government' | 'ca' for grouping under Important Links */
+  category?: 'government' | 'ca';
 }
 
 export interface DownloadItem {

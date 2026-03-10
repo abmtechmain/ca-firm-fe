@@ -231,8 +231,8 @@ export default function Home() {
                 {/* Image */}
                 <div className="w-full h-1/2 relative">
                   <Image
-                    src="/images/024d546ae1f8a1e7f688d26bf57ae6a52b6c5d37.jpg"
-                    alt="Interlocked Hands - Growth Partners"
+                    src="/images/growth-partners-team.png"
+                    alt="Meet your growth partners - our professional team"
                     fill
                     className="object-cover"
                   />

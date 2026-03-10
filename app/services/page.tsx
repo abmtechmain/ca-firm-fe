@@ -3,6 +3,14 @@ import { Metadata } from 'next';
 import Hero from '../components/Hero';
 import ConsultationForm from '../components/ConsultationForm';
 import { BRAND_COLORS, SERVICES_OFFERED } from '../constants';
+import {
+  ClipboardCheck,
+  Receipt,
+  Lightbulb,
+  BookOpen,
+  Building2,
+  Layers,
+} from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Services',
@@ -189,7 +197,17 @@ export default function Services() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              {SERVICES_OFFERED.map((category, idx) => (
+              {SERVICES_OFFERED.map((category, idx) => {
+                const icons = [
+                  ClipboardCheck,  // AUDIT & ASSURANCE
+                  Receipt,        // TAXATION
+                  Lightbulb,     // ADVISORY
+                  BookOpen,      // ACCOUNTING & BOOKKEEPING
+                  Building2,     // CORPORATE SERVICES
+                  Layers,        // OTHER SERVICES
+                ];
+                const IconComponent = icons[idx] ?? ClipboardCheck;
+                return (
                 <div 
                   key={idx}
                   className="bg-white rounded-2xl p-6 md:p-7 transition-all duration-300 cursor-pointer group shadow-sm hover:shadow-md relative overflow-hidden"
@@ -213,6 +231,12 @@ export default function Services() {
                     <div className="absolute w-40 h-40 bg-white rounded-full blur-3xl opacity-80" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}></div>
                   </div>
 
+                  <div className="relative z-10 mb-4 flex items-center justify-start">
+                    <IconComponent 
+                      className="w-8 h-8 flex-shrink-0 transition-colors duration-300 text-[var(--brand-primary)] group-hover:text-white" 
+                      strokeWidth={1.5}
+                    />
+                  </div>
                   <h3 
                     className="font-bold mb-4 uppercase tracking-tight relative z-10 transition-colors duration-300 text-[var(--brand-primary)] group-hover:text-white"
                     style={{ fontSize: '20px' }}
@@ -260,7 +284,8 @@ export default function Services() {
                     </details>
                   )}
                 </div>
-              ))}
+              );
+              })}
             </div>
           </div>
 

@@ -7,13 +7,13 @@ export const WhoWeAre: React.FC = () => {
       {/* Header */}
       <div className="inline-block relative w-fit mb-12">
         <h2 
-          className="text-xl md:text-2xl font-extrabold tracking-widest uppercase"
+          className="page-headers"
           style={{ color: BRAND_COLORS.accent }}
         >
           {WHO_WE_ARE_TEXT.title}
         </h2>
         <div 
-          className="absolute -bottom-3 left-0 w-full h-[3px]"
+          className="absolute -bottom-3 left-0 w-full h-1"
           style={{ backgroundColor: BRAND_COLORS.primary }}
         ></div>
       </div>

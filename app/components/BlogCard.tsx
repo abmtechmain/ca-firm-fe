@@ -42,25 +42,48 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
             {post.title}
           </h3>
 
-          {/* Action Button */}
-          <Link
-            href={`/blog/${post.id}`}
-            className="flex items-center space-x-2 text-[10px] font-bold tracking-widest uppercase border border-gray-300 rounded-full px-4 py-1.5 transition-colors hover:bg-gray-100 flex-shrink-0"
-            style={{ color: BRAND_COLORS.primary }}
-          >
-            <span>READ</span>
-            <svg 
-              className="w-3 h-3" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="2.5" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
+          {/* Action Button — external link or internal blog */}
+          {post.externalUrl ? (
+            <a
+              href={post.externalUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-[10px] font-bold tracking-widest uppercase border border-gray-300 rounded-full px-4 py-1.5 transition-colors hover:bg-gray-100 flex-shrink-0"
+              style={{ color: BRAND_COLORS.primary }}
             >
-              <path d="M9 18l6-6-6-6" />
-            </svg>
-          </Link>
+              <span>READ</span>
+              <svg 
+                className="w-3 h-3" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2.5" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              >
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </a>
+          ) : (
+            <Link
+              href={`/blog/${post.id}`}
+              className="flex items-center space-x-2 text-[10px] font-bold tracking-widest uppercase border border-gray-300 rounded-full px-4 py-1.5 transition-colors hover:bg-gray-100 flex-shrink-0"
+              style={{ color: BRAND_COLORS.primary }}
+            >
+              <span>READ</span>
+              <svg 
+                className="w-3 h-3" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2.5" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              >
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </Link>
+          )}
         </div>
       </div>
     </div>

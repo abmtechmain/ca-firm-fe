@@ -2,6 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Hero from '../components/Hero';
 import ConsultationForm from '../components/ConsultationForm';
+import AuditIcon from '../components/AuditIcon';
 import { BRAND_COLORS, SERVICES_OFFERED } from '../constants';
 import {
   ShieldCheck,
@@ -199,8 +200,8 @@ export default function Services() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {SERVICES_OFFERED.map((category, idx) => {
                 const icons = [
-                  ShieldCheck,    // AUDIT & ASSURANCE (from Key Services)
-                  IndianRupee,   // TAXATION (from Key Services – rupee icon)
+                  null,           // AUDIT & ASSURANCE — use AuditIcon (same as Key Services)
+                  IndianRupee,   // TAXATION
                   Lightbulb,     // ADVISORY
                   BookOpen,      // ACCOUNTING & BOOKKEEPING
                   Building2,     // CORPORATE SERVICES
@@ -231,11 +232,15 @@ export default function Services() {
                     <div className="absolute w-40 h-40 bg-white rounded-full blur-3xl opacity-80" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}></div>
                   </div>
 
-                  <div className="relative z-10 mb-4 flex items-center justify-start">
-                    <IconComponent 
-                      className="w-8 h-8 flex-shrink-0 transition-colors duration-300 text-[var(--brand-primary)] group-hover:text-white" 
-                      strokeWidth={1.5}
-                    />
+                  <div className="relative z-10 mb-4 flex items-center justify-start transition-colors duration-300 text-[var(--brand-primary)] group-hover:text-white">
+                    {idx === 0 ? (
+                      <AuditIcon />
+                    ) : (
+                      <IconComponent 
+                        className="w-8 h-8 flex-shrink-0 transition-colors duration-300 text-[var(--brand-primary)] group-hover:text-white" 
+                        strokeWidth={1.5}
+                      />
+                    )}
                   </div>
                   <h3 
                     className="font-bold mb-4 uppercase tracking-tight relative z-10 transition-colors duration-300 text-[var(--brand-primary)] group-hover:text-white"

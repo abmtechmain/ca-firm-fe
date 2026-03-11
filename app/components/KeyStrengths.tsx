@@ -47,35 +47,36 @@ export const KeyStrengths: React.FC = () => {
 
         {/* Right Grid of 4 Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
           {STRENGTHS_GRID.map((item, index) => (
             <div 
               key={index} 
-              className="p-8 rounded-2xl bg-white transition-shadow duration-300 cursor-pointer group relative overflow-hidden ring-1 ring-gray-200 hover:ring-white flex flex-col justify-start space-y-4"
+              className="rounded-2xl bg-white border shadow-sm transition-shadow duration-300 cursor-pointer group relative overflow-hidden"
             >
-              {/* Gradient background on hover */}
+              {/* Gradient background on hover - fills entire card */}
               <div 
                 className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 style={{ 
                   background: 'linear-gradient(to bottom, #044860, #056385)'
                 }}
-              ></div>
-              
+              />
               {/* Top Right Circular Blur */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full opacity-0 group-hover:opacity-80 transition-opacity duration-300 blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
-              
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full opacity-0 group-hover:opacity-80 transition-opacity duration-300 blur-3xl transform translate-x-1/2 -translate-y-1/2" />
               {/* Bottom Middle Circle */}
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute w-40 h-40 bg-white rounded-full blur-3xl opacity-80" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}></div>
+                <div className="absolute w-40 h-40 bg-white rounded-full blur-3xl opacity-80" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }} />
               </div>
-
-              <h4 
-                className="text-lg font-bold tracking-tight uppercase text-[#F37920] group-hover:!text-white transition-colors duration-300 relative z-10"
-              >
-                {item.title}
-              </h4>
-              <p className="text-gray-400 text-sm leading-relaxed group-hover:!text-white transition-colors duration-300 relative z-10">
-                {item.description}
-              </p>
+              {/* Content - padded so gradient shows in padding area */}
+              <div className="relative z-10 p-8 flex flex-col justify-start space-y-4">
+                <h4 
+                  className="text-lg font-bold tracking-tight uppercase text-[#F37920] group-hover:!text-white transition-colors duration-300"
+                >
+                  {item.title}
+                </h4>
+                <p className="text-gray-400 text-sm leading-relaxed group-hover:!text-white transition-colors duration-300">
+                  {item.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

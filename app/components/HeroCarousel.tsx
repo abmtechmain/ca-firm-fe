@@ -128,8 +128,9 @@ export default function HeroCarousel({ slides }: HeroCarouselProps) {
             {/* Experience Card on Bottom Left */}
             <div className="hidden md:block absolute bottom-2 md:bottom-4 lg:-bottom-6 left-2 md:left-4 lg:-left-8 xl:-left-12 bg-white rounded-2xl md:rounded-3xl shadow-lg p-2 md:p-3 px-3 md:px-4 lg:px-6 z-10 flex items-center gap-2 md:gap-3 font-poppins border border-gray-200">
               <div className='flex items-center gap-2 md:gap-4'>
-                <div className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-[#056385] rounded-2xl md:rounded-3xl flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-medium text-base md:text-lg lg:text-xl xl:text-[24px]">35</span>
+                <div className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-[#056385] rounded-2xl md:rounded-3xl flex items-center justify-center flex-shrink-0 gap-0.5">
+                  <span className="text-white font-medium text-base md:text-lg lg:text-xl xl:text-[24px]">30</span>
+                  <span className="text-white font-medium text-[10px] md:text-xs lg:text-sm xl:text-base leading-none">+</span>
                 </div>
                 <div>
                   <div className="text-gray-600 text-sm md:text-base lg:text-lg xl:text-[20px]">Years of</div>

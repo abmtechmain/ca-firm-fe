@@ -9,7 +9,7 @@ interface ServiceCardProps {
 export default function ServiceCard({ icon, title, description }: ServiceCardProps) {
   return (
     <div 
-      className="bg-white rounded-2xl px-5 sm:px-7 py-7 sm:py-8 md:py-9 shadow-sm transition-all duration-300 cursor-pointer group relative overflow-hidden hover:shadow-md border border-gray-200" 
+      className="bg-white border rounded-2xl px-5 sm:px-7 py-7 sm:py-8 md:py-9 shadow-sm transition-all duration-300 cursor-pointer group relative overflow-hidden hover:shadow-md" 
     >
       {/* Subtle hover gradient */}
       <div 

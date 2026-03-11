@@ -41,7 +41,7 @@ export default function Home() {
           {
             title: 'Professional Audit & Assurance Services You Can Trust',
             description: 'Rigorous audit processes and compliance solutions ensuring your business meets all regulatory requirements with confidence.',
-            image: '/images/d7b411f0d5119b394fee184dc05ce3b4caf98d3d.jpg',
+            image: '/images/hero-slide-3-signboard.png',
             buttonText: 'CALL US NOW',
             buttonLink: '/contact'
           }
@@ -334,7 +334,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row gap-6 md:gap-8 mt-8 md:mt-12 items-stretch">
             {/* Left Side - Large Card for Audit & Assurance */}
             <div className="w-full lg:w-[50%] flex">
-              <div className="bg-white rounded-xl border border-gray-400 overflow-hidden w-full flex flex-col">
+              <div className="bg-white border rounded-2xl overflow-hidden w-full flex flex-col shadow-sm">
                 {/* Image */}
                 <div className="w-full h-1/2 relative">
                   <Image

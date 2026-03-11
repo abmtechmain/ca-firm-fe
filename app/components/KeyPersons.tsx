@@ -9,19 +9,20 @@ export const KeyPersons: React.FC = () => {
           key={person.id} 
           className="bg-white rounded-2xl overflow-hidden transition-all duration-300 shadow-sm hover:shadow-lg"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-[34%_66%] gap-0">
-            {/* Profile Image */}
-            <div className="relative aspect-[4/5] lg:aspect-auto lg:min-h-[420px] bg-slate-50">
+          {/* Responsive: stacked on mobile, grid on lg so image height = content up to "View full profile" */}
+          <div className="grid grid-cols-1 lg:grid-cols-[34%_1fr] lg:grid-rows-[1fr_auto] lg:items-stretch">
+            {/* Left: Image — row 1 only, stretches to match content height up to "View full profile" */}
+            <div className="relative w-full aspect-[4/5] lg:aspect-auto lg:row-span-1 lg:min-h-0 bg-slate-50 overflow-hidden">
               <img 
                 src={person.imageUrl} 
                 alt={person.name} 
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: person.imagePosition ?? 'top' }}
               />
             </div>
 
-            {/* Details */}
-            <div className="flex flex-col p-6 md:p-8 lg:p-10 space-y-6">
-              {/* Name and Email */}
+            {/* Right top: Name, qualification, email, highlights, bullets, "View full profile" — drives row 1 height */}
+            <div className="flex flex-col flex-1 min-w-0 p-6 md:p-8 lg:p-10 lg:pr-6 space-y-6">
               <div className="flex flex-col gap-3">
                 <h3 
                   className="text-2xl md:text-3xl font-extrabold tracking-tight"
@@ -59,20 +60,8 @@ export const KeyPersons: React.FC = () => {
                   </svg>
                   <span className="break-all">{person.email}</span>
                 </a>
-                {/* Personal phone number hidden by request */}
-                {/* <a 
-                  href={`tel:${person.phone}`}
-                  className="flex items-center gap-2 text-base md:text-lg font-semibold transition-colors hover:opacity-80"
-                  style={{ color: BRAND_COLORS.primary }}
-                >
-                  <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h2.28a1 1 0 01.95.68l1.5 4.49a1 1 0 01-.25 1.02l-1.77 1.77a16 16 0 007.07 7.07l1.77-1.77a1 1 0 011.02-.25l4.49 1.5a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.82 21 3 14.18 3 6V5z" />
-                  </svg>
-                  <span>{person.phone}</span>
-                </a> */}
               </div>
 
-              {/* Highlights + Expand */}
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <span 
@@ -109,27 +98,37 @@ export const KeyPersons: React.FC = () => {
                       View full profile
                       <span className="transition-transform duration-200 group-open:rotate-180">▾</span>
                     </summary>
-                    <div className="mt-3 space-y-3">
-                      {person.description.slice(3).map((text, idx) => (
-                        <p 
-                          key={idx} 
-                          className="leading-relaxed flex items-start gap-2"
-                          style={{ 
-                            color: '#4b5563',
-                            fontSize: '15px',
-                            lineHeight: '1.7'
-                          }}
-                        >
-                          <span className="mt-1 flex-shrink-0" style={{ color: BRAND_COLORS.accent }}>•</span>
-                          <span>{text.startsWith('•') ? text.substring(1).trim() : text}</span>
-                        </p>
-                      ))}
-                    </div>
+                    {/* Expandable content lives in row 2 so image stays aligned to "View full profile" */}
                   </details>
                 )}
               </div>
             </div>
+
+            {/* Right bottom: Expandable details — row 2, so image does not stretch with expanded content */}
+            {person.description.length > 3 && (
+              <div className="hidden lg:block lg:col-start-2 lg:px-6 md:lg:px-8 lg:pb-10 lg:pt-0" aria-hidden>
+                {/* Spacer for grid; actual content is inside <details> above for accessibility */}
+              </div>
+            )}
           </div>
+
+          {/* Expandable content: rendered inside details above; this block is for the extra bullets when expanded */}
+          {person.description.length > 3 && (
+            <div className="lg:hidden px-6 md:px-8 pb-6 md:pb-8 -mt-2">
+              <div className="space-y-3">
+                {person.description.slice(3).map((text, idx) => (
+                  <p 
+                    key={idx} 
+                    className="leading-relaxed flex items-start gap-2"
+                    style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.7' }}
+                  >
+                    <span className="mt-1 flex-shrink-0" style={{ color: BRAND_COLORS.accent }}>•</span>
+                    <span>{text.startsWith('•') ? text.substring(1).trim() : text}</span>
+                  </p>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       ))}
     </div>

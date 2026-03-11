@@ -4,8 +4,8 @@ import Hero from '../components/Hero';
 import ConsultationForm from '../components/ConsultationForm';
 import { BRAND_COLORS, SERVICES_OFFERED } from '../constants';
 import {
-  ClipboardCheck,
-  Receipt,
+  ShieldCheck,
+  IndianRupee,
   Lightbulb,
   BookOpen,
   Building2,
@@ -199,14 +199,14 @@ export default function Services() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {SERVICES_OFFERED.map((category, idx) => {
                 const icons = [
-                  ClipboardCheck,  // AUDIT & ASSURANCE
-                  Receipt,        // TAXATION
+                  ShieldCheck,    // AUDIT & ASSURANCE (from Key Services)
+                  IndianRupee,   // TAXATION (from Key Services – rupee icon)
                   Lightbulb,     // ADVISORY
                   BookOpen,      // ACCOUNTING & BOOKKEEPING
                   Building2,     // CORPORATE SERVICES
                   Layers,        // OTHER SERVICES
                 ];
-                const IconComponent = icons[idx] ?? ClipboardCheck;
+                const IconComponent = icons[idx] ?? ShieldCheck;
                 return (
                 <div 
                   key={idx}

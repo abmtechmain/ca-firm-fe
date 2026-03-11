@@ -22,6 +22,12 @@ const FOOTER_LINKS = [
 
 const BRANCHES = ['Jalgaon', 'Golaghat (Assam)', 'Pune'];
 
+/** Space after logo+nav column. Change to e.g. pl-6, pl-12. */
+const FOOTER_COL_GAP = 'pl-10 lg:pl-12';
+
+/** Space between Office time/Branch and Head office. Adjust freely: e.g. pl-8, pl-12, pl-16, pl-20. */
+const FOOTER_OFFICE_TO_HEAD_GAP = 'pl-10 lg:pl-14';
+
 const Footer: React.FC = () => {
   return (
     <footer
@@ -37,12 +43,12 @@ const Footer: React.FC = () => {
         style={{ backgroundColor: 'var(--footer-accent)' }}
       />
 
-      <div className="container mx-auto px-4 max-w-7xl">
+      <div className="container mx-auto px-4 pl-6 md:pl-10 max-w-7xl">
         {/* Main grid — asymmetric: logo+nav dominant, then equal columns */}
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-y-8 md:gap-x-0 lg:gap-y-12 mb-14">
-          {/* Logo + navigation — spans 5 cols on desktop */}
-          <div className="md:col-span-5">
-            <div className="mb-8">
+          {/* Logo + navigation — spans 5 cols on desktop, side by side */}
+          <div className="md:col-span-5 flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-8 lg:gap-10">
+            <div className="flex-shrink-0">
               <Image
                 src="/images/logo-mav.png"
                 alt="SKMRD & ASSOCIATES"
@@ -51,7 +57,7 @@ const Footer: React.FC = () => {
                 className="w-full max-w-[260px] h-auto object-contain"
               />
             </div>
-            <nav aria-label="Footer navigation">
+            <nav aria-label="Footer navigation" className="flex-shrink-0">
               <ul className="space-y-2.5">
                 {FOOTER_LINKS.map((link) => (
                   <li key={link.name}>
@@ -68,32 +74,8 @@ const Footer: React.FC = () => {
             </nav>
           </div>
 
-          {/* Branch — 2 cols */}
-          <div className="md:col-span-2">
-            <h4
-              className="mb-5 text-xs font-bold uppercase tracking-[0.2em]"
-              style={{
-                color: 'var(--footer-primary)',
-                fontFamily: 'var(--footer-label-font)',
-              }}
-            >
-              Branch
-            </h4>
-            <ul
-              className="space-y-2.5 text-sm font-medium"
-              style={{
-                color: 'var(--footer-muted)',
-                fontFamily: 'var(--footer-body-font)',
-              }}
-            >
-              {BRANCHES.map((city) => (
-                <li key={city}>{city}</li>
-              ))}
-            </ul>
-          </div>
-
           {/* Office time + contact — 2 cols */}
-          <div className="md:col-span-2">
+          <div className={`md:col-span-2 ${FOOTER_COL_GAP}`}>
             <h4
               className="mb-5 text-xs font-bold uppercase tracking-[0.2em]"
               style={{
@@ -124,10 +106,34 @@ const Footer: React.FC = () => {
                 {CONTACT_INFO.email}
               </a>
             </address>
+          
+            
+          {/* Branch — 2 cols */}
+          <div className="md:col-span-2 mt-8">
+            <h4
+              className="mb-5 text-xs font-bold uppercase tracking-[0.2em]"
+              style={{
+                color: 'var(--footer-primary)',
+                fontFamily: 'var(--footer-label-font)',
+              }}
+            >
+              Branch
+            </h4>
+            <ul
+              className="space-y-2.5 text-sm font-medium"
+              style={{
+                color: 'var(--footer-muted)',
+                fontFamily: 'var(--footer-body-font)',
+              }}
+            >
+              {BRANCHES.map((city) => (
+                <li key={city}>{city}</li>
+              ))}
+            </ul>
           </div>
-
+          </div>
           {/* Head office — 3 cols for readability of addresses */}
-          <div className="md:col-span-3">
+          <div className={`md:col-span-3 ${FOOTER_OFFICE_TO_HEAD_GAP}`}>
             <h4
               className="mb-5 text-xs font-bold uppercase tracking-[0.2em]"
               style={{
@@ -167,17 +173,19 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom bar — restrained */}
-        <div
-          className="border-t border-[var(--footer-border)] pt-8 flex flex-col items-center text-center"
-          style={{ color: 'var(--footer-muted)' }}
-        >
-          <p
-            className="text-xs font-medium"
-            style={{ fontFamily: 'var(--footer-body-font)' }}
+        {/* Bottom bar — line just above copyright */}
+        <div className="mt-20 md:mt-28">
+          <div
+            className="border-t border-[var(--footer-border)] pt-3 flex flex-col items-center text-center"
+            style={{ color: 'var(--footer-muted)' }}
           >
-            © 2026 All rights reserved.
-          </p>
+            <p
+              className="text-xs font-medium"
+              style={{ fontFamily: 'var(--footer-body-font)' }}
+            >
+              © 2026 All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

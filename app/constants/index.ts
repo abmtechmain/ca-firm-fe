@@ -86,7 +86,7 @@ export const CURRENT_CASE_STUDY: CaseStudy = {
 
 export const STRENGTHS_MAIN: StrengthMain = {
   title: 'EXPERIENCE',
-  description: 'Over 35 years of proven expertise in the Accounting, Auditing and Finance Industry.',
+  description: 'Over 30+ years of proven expertise in the Accounting, Auditing and Finance Industry.',
   imageUrl: '/images/key-strengths-office.png'
 };
 
@@ -122,7 +122,8 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'KESHAV',
     role: 'Secretarial & Corporate Services',
     description: 'Specializes in secretarial and corporate services with extensive knowledge of compliance and corporate governance.',
-    imageUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600'
+    imageUrl: '/images/team/Keshav.png',
+    imagePosition: 'top center'
   },
   {
     id: '3',
@@ -136,14 +137,16 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'DEEPAK',
     role: 'Investment Advisory',
     description: 'Specializes in investment advisory services with expertise in financial planning and investment strategies.',
-    imageUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=600'
+    imageUrl: '/images/team/Deepak-Jondhale.png',
+    imagePosition: 'top center'
   },
   {
     id: '5',
-    name: 'AKKASHA',
+    name: 'Akash',
     role: 'Bookkeeping & Accounting',
     description: 'Specializes in bookkeeping and accounting services with expertise in financial record management and reporting.',
-    imageUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=600'
+    imageUrl: '/images/team/Akash.png',
+    imagePosition: 'top center'
   }
 ];
 
@@ -187,7 +190,7 @@ export const KEY_PERSONS: KeyPerson[] = [
     email: 'ca.nivrutti@skmrd.com',
     qualification: 'FCA, M. Com, DISA',
     certification: 'Concurrent Audit of Banks (appear), Ind AS (appear)',
-    imageUrl: '/images/team/CA Nivrutti Shinde.jpeg',
+    imageUrl: '/images/team/CA Nivrutti Shinde.png',
     description: [
       'Qualified Since 2018.',
       'Having 8 Years post qualification of experience and 10 & more year of experience in CA field in conducting internal audit & advisory services of various laws with its technical and analytical aspects.',
@@ -204,7 +207,7 @@ export const KEY_PERSONS: KeyPerson[] = [
     email: 'ca.sangita@skmrd.com',
     qualification: 'FCA, M. Com, DISA',
     certification: 'Concurrent Audit of Banks (appear), AI (appear)',
-    imageUrl: '/images/team/CA Sangeeta Kadam.jpeg',
+    imageUrl: '/images/team/CA-Sangita-Rajendra-Kadam.png',
     description: [
       'Qualified since 2016.',
       'Senior partner of the firm.',
@@ -239,7 +242,8 @@ export const KEY_PERSONS: KeyPerson[] = [
     email: 'ca.kunwarr@skmrd.com',
     qualification: 'FCA, B. Com',
     certification: 'Concurrent Audit of Banks, FAFD (Appear)',
-    imageUrl: '/images/team/CA Kunwarr Digga.jpeg',
+    imageUrl: '/images/team/CA-Kunwarr-Diggaa.png',
+    imagePosition: 'top center',
     description: [
       'Qualified since 2019.',
       'Having 6 Years post qualification of experience in CA field in conducting audit & advisory services of various laws related to taxation with its technical and analytical aspects.',

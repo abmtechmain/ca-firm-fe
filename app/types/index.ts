@@ -49,6 +49,8 @@ export interface TeamMember {
   role: string;
   description: string;
   imageUrl: string;
+  /** Optional object-position for the image (e.g. 'top', 'top center') so face is properly framed */
+  imagePosition?: string;
 }
 
 export interface Founder {
@@ -67,5 +69,7 @@ export interface KeyPerson {
   qualification: string;
   certification?: string;
   imageUrl: string;
+  /** Optional object-position so face is properly framed (e.g. 'top center') */
+  imagePosition?: string;
   description: string[];
 }

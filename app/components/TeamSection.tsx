@@ -13,6 +13,7 @@ export const TeamSection: React.FC = () => {
                 src={member.imageUrl} 
                 alt={member.name} 
                 className="w-full h-full object-cover"
+                style={member.imagePosition ? { objectPosition: member.imagePosition } : undefined}
               />
             </div>
 

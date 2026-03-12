@@ -31,7 +31,7 @@ export default function NavBar() {
           <div className="flex items-center justify-between w-full md:w-auto">
             <div className="flex items-center">
               <Image
-                src="/images/logo-mav.png"
+                src="/images/on-page-logo.png"
                 alt="SKMRD & ASSOCIATES"
                 width={200}
                 height={45}

@@ -52,7 +52,7 @@ export default function HeroCarousel({ slides }: HeroCarouselProps) {
   return (
     <section className="w-full px-4 sm:px-6 lg:px-18 py-8 sm:py-12 md:py-16 relative">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-stretch gap-6 md:gap-8 lg:max-h-[60vh]">
+        <div className="flex flex-col lg:flex-row items-stretch gap-6 md:gap-8">
           {/* Left Section - 70% */}
           <div className="w-full lg:w-[70%] lg:pr-8 flex flex-col justify-between gap-4 md:gap-6">
             <div className="transition-opacity duration-500">
@@ -87,10 +87,10 @@ export default function HeroCarousel({ slides }: HeroCarouselProps) {
             )}
           </div>
 
-          {/* Right Section - 30% */}
+          {/* Right Section - 30% — image ratio 5:9 */}
           <div className="w-full lg:w-[30%] relative lg:ml-auto">
             {/* Carousel Container */}
-            <div className="relative w-full overflow-hidden rounded-lg aspect-[4/5] sm:aspect-[5/6] md:aspect-[5/7] lg:aspect-[4/5] xl:aspect-[5/7]">
+            <div className="relative w-full overflow-hidden rounded-lg aspect-[5/9] h-[70vh]">
               {slides.map((slide, index) => (
                 <div
                   key={index}

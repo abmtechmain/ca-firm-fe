@@ -27,14 +27,14 @@ export default function Home() {
           {
             title: 'Trusted Chartered Accountants for Tax, GST & Compliance Solutions',
             description: 'Providing reliable accounting, taxation, audit, and advisory services to individuals, startups, and growing businesses with accuracy and integrity.',
-            image: '/images/1abb6196e142f17f533a7e3c15ae5ffb09e8fcb1.jpg',
+            image: '/images/hero-slide-1.png',
             buttonText: 'CALL US NOW',
             buttonLink: '/contact'
           },
           {
             title: 'Expert Financial Advisory & Strategic Planning Services',
             description: 'Comprehensive financial solutions tailored to your business needs, helping you make informed decisions and achieve your financial goals.',
-            image: '/images/07a218b42ba9b47ead7dbb5118c354ba40d191b6.jpg',
+            image: '/images/hero-slide-2.png',
             buttonText: 'CALL US NOW',
             buttonLink: '/contact'
           },

@@ -33,7 +33,22 @@ export const BLOG_POSTS: BlogPost[] = [
     location: 'Nashik Maharashtra',
     title: 'ITR Filing for Salaried Employees',
     imageUrl: '/images/resources/itr-filing-salaried.png',
-    externalUrl: 'https://www.cajiteshtelisara.com/itr-filing-for-salaried-employees/'
+    content: `Filing Income Tax Returns (ITR) is a statutory obligation for salaried employees whose income exceeds the basic exemption limit. This article outlines the process, documents required, and key points to remember for salaried individuals.
+
+**Who should file ITR?**
+Salaried employees with gross total income exceeding ₹2,50,000 (₹3,00,000 for senior citizens, ₹5,00,000 for super seniors) in a financial year must file their return. Even if tax is deducted at source (TDS), filing the return helps in claiming refunds and declaring additional income or deductions.
+
+**Documents required**
+You will need Form 16 (from employer), salary slips, bank statements, proof of tax-saving investments (e.g. under Section 80C, 80D), and details of any other income such as interest, rent, or capital gains. Keep Aadhaar and PAN handy for e-filing.
+
+**Choosing the right ITR form**
+Most salaried individuals with income from salary, one house property, and other sources use ITR-1 (Sahaj). If you have capital gains, multiple house properties, or income above ₹50 lakh from specified sources, you may need ITR-2. Ensure you pick the correct form to avoid notices.
+
+**Steps to e-file**
+Register on the Income Tax e-filing portal, add the relevant assessment year, select the appropriate ITR form, and fill in details from Form 16 and other documents. Compute tax and pay any self-assessment tax if due, then submit the return. After submission, verify using EVC, Aadhaar OTP, or by sending a signed ITR-V to CPC within 30 days.
+
+**Key deadlines**
+The due date for filing ITR for individuals (other than those requiring audit) is typically July 31 of the assessment year. Late filing may attract interest and penalty. Filing on time also ensures faster refund processing and avoids last-minute rush.`
   },
   {
     id: '2',
@@ -42,7 +57,19 @@ export const BLOG_POSTS: BlogPost[] = [
     location: 'Nashik Maharashtra',
     title: 'Belated Income Tax Return vs Revised Income Tax Return',
     imageUrl: '/images/resources/belated-vs-revised-itr.png',
-    externalUrl: 'https://www.cajiteshtelisara.com/belated-income-tax-return-vs-revised-income-tax-return/'
+    content: `Understanding the difference between a belated return and a revised return helps you comply with tax laws and avoid unnecessary cost and hassle.
+
+**Belated return**
+A belated return is one filed after the original due date (e.g. after July 31 for individuals). You can file a belated return until the end of the relevant assessment year (e.g. until 31 March 2027 for FY 2025-26). Late filing fees may apply under Section 234F. Interest under Section 234A can be levied for delay. You can still claim refunds and carry forward losses in certain cases, but the option to carry forward loss may be restricted if the return is filed very late.
+
+**Revised return**
+A revised return is filed to correct errors or omissions in an return already filed within the original due date. You can revise under Section 139(5) before the end of the assessment year or before completion of assessment, whichever is earlier. No late fee is applicable for merely revising a return. Use it to correct mistakes in income, deductions, or tax computation.
+
+**When to use which**
+File a belated return if you missed the original due date but want to disclose income and pay tax (or claim a refund). File a revised return only if you had already filed a return in time and need to correct it. You cannot revise a return that was itself belated in certain scenarios beyond the permitted timeline.
+
+**Practical tips**
+Plan to file within the original due date to avoid late fee and interest. If you discover an error after filing, use the revised return option at the earliest. Keep supporting documents ready for any change in income or deductions.`
   },
   {
     id: '3',
@@ -51,7 +78,19 @@ export const BLOG_POSTS: BlogPost[] = [
     location: 'Nashik Maharashtra',
     title: 'Income Tax Return (ITR) Due Date FY 2025-26',
     imageUrl: '/images/resources/itr-due-dates-fy2025-26.png',
-    externalUrl: 'https://www.cajiteshtelisara.com/income-tax-return-itr-due-date-fy-2025-26/'
+    content: `Timely filing of Income Tax Returns ensures compliance, avoids interest and penalties, and facilitates smooth processing of refunds. Here are the key due dates for FY 2025-26 (AY 2026-27).
+
+**General due date (individuals / HUF / others not requiring audit)**
+31 July 2026 – This is the due date for most salaried individuals and those with income from house property, other sources, and capital gains (without audit). File your return and pay any self-assessment tax by this date to avoid interest under Section 234A and late fee under Section 234F.
+
+**Due date for taxpayers requiring audit**
+31 October 2026 – If your accounts are required to be audited (e.g. business turnover above specified limits, or certain professional receipts), the due date for filing the return is 31 October 2026. Ensure the audit is completed and the report is uploaded before filing.
+
+**Due date for transfer pricing**
+30 November 2026 – For assessees covered under transfer pricing (e.g. certain international transactions), the return filing due date is 30 November 2026. This allows time for the transfer pricing report and documentation.
+
+**Consequences of missing the due date**
+Filing after the due date attracts a late fee of up to ₹5,000 (₹1,000 for income up to ₹5 lakh). Interest under Section 234A is levied for the period of delay. Refunds may be delayed, and in some cases carry-forward of losses may be affected. It is advisable to file on or before the due date and pay any tax due in advance to minimise interest.`
   }
 ];
 

@@ -22,8 +22,8 @@ const FOOTER_LINKS = [
 
 const BRANCHES = ['Jalgaon', 'Golaghat (Assam)', 'Pune'];
 
-/** Space after logo+nav column. Change to e.g. pl-6, pl-12. */
-const FOOTER_COL_GAP = 'pl-10 lg:pl-12';
+/** Space after logo+nav column (gap before Office time). Change to e.g. pl-6, pl-12, pl-16. */
+const FOOTER_COL_GAP = 'pl-12 lg:pl-16';
 
 /** Space between Office time/Branch and Head office. Adjust freely: e.g. pl-8, pl-12, pl-16, pl-20. */
 const FOOTER_OFFICE_TO_HEAD_GAP = 'pl-10 lg:pl-14';
@@ -31,7 +31,7 @@ const FOOTER_OFFICE_TO_HEAD_GAP = 'pl-10 lg:pl-14';
 const Footer: React.FC = () => {
   return (
     <footer
-      className="relative border-t border-[var(--footer-border)] py-14 md:py-20"
+      className="relative border-t border-[var(--footer-border)] py-14 md:py-20 pb-20 md:pb-24"
       style={{
         backgroundColor: 'var(--footer-bg)',
         color: 'var(--footer-fg)',
@@ -52,9 +52,9 @@ const Footer: React.FC = () => {
               <Image
                 src="/images/logo-mav.png"
                 alt="SKMRD & ASSOCIATES"
-                width={300}
-                height={80}
-                className="w-full max-w-[260px] h-auto object-contain"
+                width={380}
+                height={100}
+                className="w-full max-w-[340px] md:max-w-[380px] h-auto object-contain"
               />
             </div>
             <nav aria-label="Footer navigation" className="flex-shrink-0">
@@ -132,8 +132,8 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           </div>
-          {/* Head office — 3 cols for readability of addresses */}
-          <div className={`md:col-span-3 ${FOOTER_OFFICE_TO_HEAD_GAP}`}>
+          {/* Head office — 3 cols, aligned to far right */}
+          <div className={`md:col-span-3 md:col-start-10 md:ml-auto ${FOOTER_OFFICE_TO_HEAD_GAP}`}>
             <h4
               className="mb-5 text-xs font-bold uppercase tracking-[0.2em]"
               style={{
@@ -173,8 +173,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom bar — line just above copyright */}
-        <div className="mt-20 md:mt-28">
+        {/* Bottom bar — line just above copyright, pushed to bottom */}
+        <div className="mt-32 md:mt-40">
           <div
             className="border-t border-[var(--footer-border)] pt-3 flex flex-col items-center text-center"
             style={{ color: 'var(--footer-muted)' }}

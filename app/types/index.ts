@@ -5,7 +5,9 @@ export interface BlogPost {
   imageUrl: string;
   date: string;
   location: string;
-  /** When set, READ button links to this URL (e.g. external article) instead of /blog/[id] */
+  /** Full article content shown on the article page. When set, READ goes to /resources/article/[id] and shows this content (no external link). */
+  content?: string;
+  /** When set and no content, READ button links to this URL in new tab. Ignored when content is set. */
   externalUrl?: string;
 }
 

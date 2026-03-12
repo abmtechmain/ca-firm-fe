@@ -9,10 +9,8 @@ export const KeyPersons: React.FC = () => {
           key={person.id} 
           className="bg-white rounded-2xl overflow-hidden transition-all duration-300 shadow-sm hover:shadow-lg"
         >
-          {/* Responsive: stacked on mobile, grid on lg so image height = content up to "View full profile" */}
-          <div className="grid grid-cols-1 lg:grid-cols-[34%_1fr] lg:grid-rows-[1fr_auto] lg:items-stretch">
-            {/* Left: Image — row 1 only, stretches to match content height up to "View full profile" */}
-            <div className="relative w-full aspect-[4/5] lg:aspect-auto lg:row-span-1 lg:min-h-0 bg-slate-50 overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-[34%_1fr] lg:items-stretch">
+            <div className="relative w-full aspect-[4/5] lg:aspect-auto lg:min-h-0 bg-slate-50 overflow-hidden">
               <img 
                 src={person.imageUrl} 
                 alt={person.name} 
@@ -21,7 +19,6 @@ export const KeyPersons: React.FC = () => {
               />
             </div>
 
-            {/* Right top: Name, qualification, email, highlights, bullets, "View full profile" — drives row 1 height */}
             <div className="flex flex-col flex-1 min-w-0 p-6 md:p-8 lg:p-10 lg:pr-6 space-y-6">
               <div className="flex flex-col gap-3">
                 <h3 
@@ -73,7 +70,7 @@ export const KeyPersons: React.FC = () => {
                   <span className="h-px w-16" style={{ backgroundColor: `${BRAND_COLORS.accent}80` }}></span>
                 </div>
                 <div className="space-y-3">
-                  {person.description.slice(0, 3).map((text, idx) => (
+                  {person.description.map((text, idx) => (
                     <p 
                       key={idx} 
                       className="leading-relaxed flex items-start gap-2"
@@ -88,47 +85,9 @@ export const KeyPersons: React.FC = () => {
                     </p>
                   ))}
                 </div>
-
-                {person.description.length > 3 && (
-                  <details className="group">
-                    <summary 
-                      className="cursor-pointer select-none text-sm font-semibold inline-flex items-center gap-2"
-                      style={{ color: BRAND_COLORS.primary }}
-                    >
-                      View full profile
-                      <span className="transition-transform duration-200 group-open:rotate-180">▾</span>
-                    </summary>
-                    {/* Expandable content lives in row 2 so image stays aligned to "View full profile" */}
-                  </details>
-                )}
               </div>
             </div>
-
-            {/* Right bottom: Expandable details — row 2, so image does not stretch with expanded content */}
-            {person.description.length > 3 && (
-              <div className="hidden lg:block lg:col-start-2 lg:px-6 md:lg:px-8 lg:pb-10 lg:pt-0" aria-hidden>
-                {/* Spacer for grid; actual content is inside <details> above for accessibility */}
-              </div>
-            )}
           </div>
-
-          {/* Expandable content: rendered inside details above; this block is for the extra bullets when expanded */}
-          {person.description.length > 3 && (
-            <div className="lg:hidden px-6 md:px-8 pb-6 md:pb-8 -mt-2">
-              <div className="space-y-3">
-                {person.description.slice(3).map((text, idx) => (
-                  <p 
-                    key={idx} 
-                    className="leading-relaxed flex items-start gap-2"
-                    style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.7' }}
-                  >
-                    <span className="mt-1 flex-shrink-0" style={{ color: BRAND_COLORS.accent }}>•</span>
-                    <span>{text.startsWith('•') ? text.substring(1).trim() : text}</span>
-                  </p>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       ))}
     </div>

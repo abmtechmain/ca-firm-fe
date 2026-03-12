@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   description: "Professional Chartered Accountancy firm providing comprehensive accounting, taxation, audit, and compliance services in Nashik, Maharashtra. Expert CA services for individuals, startups, and businesses.",
   icons: {
-    icon: '/images/footer-logoo.png',
+    icon: '/images/favicon-ca-india.png',
   },
   keywords: ["Chartered Accountants", "CA Firm Nashik", "Taxation Services", "Audit Services", "GST Services", "Accounting Services", "CA Firm Maharashtra", "Tax Consultant", "Financial Advisory", "Compliance Services"],
   authors: [{ name: "SKMRD & Associates" }],

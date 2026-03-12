@@ -232,11 +232,9 @@ export const KEY_PERSONS: KeyPerson[] = [
     imageUrl: '/images/team/CA Nivrutti Shinde.png',
     description: [
       'Qualified Since 2018.',
-      'Having 8 Years post qualification of experience and 10 & more year of experience in CA field in conducting internal audit & advisory services of various laws with its technical and analytical aspects.',
-      'Having experience in co-operative sector auditing, consultancy, advisory, new society registration.',
-      'Experience in various type of Audit & Assurance Services like - Statutory Audit, Internal & Management Audit, Bank Audit, IS Audit etc.',
-      'Attending Assessments & appeals in front of various Tax Authorities.',
-      'Government Audits.'
+      'Expertise in Co-operative Sector Auditing and Registration, Bank Audits, Government Audits, Information Systems (IS) Audit, GST Consultancy.',
+      'Representing clients before tax authorities for assessments and appeals.',
+      'Completed Certification Course of Concurrent Audit of Banks, Public Finance and Government Accounting.'
     ]
   },
   {
@@ -249,13 +247,9 @@ export const KEY_PERSONS: KeyPerson[] = [
     imageUrl: '/images/team/CA-Sangita-Rajendra-Kadam.png',
     description: [
       'Qualified since 2016.',
-      'Senior partner of the firm.',
-      'Having 9 Years post qualification of experience and 10 & more year of experience in CA field in conducting audit & advisory services of various laws related to taxation with its technical and analytical aspects',
-      'Experience of Management & Internal Audit of Limited as well as Listed Companies.',
-      'Experience of work in various laws e.g. Direct Taxes, Indirect Taxes, and Company Law etc.',
+      'Expertise in RERA, Bank Audit, Management & Internal Audit, Government Audit & accounting, Direct & Indirect Taxes.',
       'Attending Assessments & appeals in front of various Tax Authorities.',
-      'Bank Audits',
-      'Government Audits.'
+      'Completed Certification Course of Concurrent Audit of Banks, AI (ICAI).'
     ]
   },
   {
@@ -268,10 +262,9 @@ export const KEY_PERSONS: KeyPerson[] = [
     imageUrl: '/images/team/CA Rashmi Mandlik.jpeg',
     description: [
       'Qualified since 2018.',
-      'Senior partner of the firm.',
-      'Having 7 Years post qualification of experience in providing the firm\'s core and additional services. She is responsible for the computerization & atomization of several processes, leading to faster response times and increased client satisfaction levels. In recent past, he has also handled assignments in the field of Corporate Restructuring for our key clients and conducting audit & advisory services of various laws related to taxation with its technical and analytical aspects',
-      'Experience of Management & Internal Audit of Limited as well as Listed Companies.',
-      'Experience of work in various laws e.g. Direct Taxes, Indirect Taxes, and Company Law etc.'
+      'Expertise is Trust / NGO Audits, Internal Controls and Taxations.',
+      'Forensic & System Audit.',
+      'Completed Certification Course of FAFD, Concurrent Audit of Banks, AI (ICAI).'
     ]
   },
   {
@@ -285,13 +278,9 @@ export const KEY_PERSONS: KeyPerson[] = [
     imagePosition: 'top center',
     description: [
       'Qualified since 2019.',
-      'Having 6 Years post qualification of experience in CA field in conducting audit & advisory services of various laws related to taxation with its technical and analytical aspects.',
-      'Experience of Management & Internal Audit of Private as well as Public Companies.',
-      'Experience of work in various laws e.g. Direct & Indirect Taxes, and Company Law etc.',
-      'Attending Assessments & appeals in front of various Tax Authorities.',
-      'Performed comprehensive statutory audits, ensuring compliance with regulatory standards and delivering actionable insights for organizational improvement',
-      'Bank Audits',
-      'Design & monitoring the Internal Controls and SOPs and ensure that they are properly placed & working.'
+      'Expertise is Business Management & Restructuring and Internal Audit.',
+      'Overseas Accounting & Consultancy.',
+      'Completed Certification Course of Concurrent Audit of Banks.'
     ]
   }
 ];

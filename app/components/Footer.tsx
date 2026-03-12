@@ -52,12 +52,21 @@ const Footer: React.FC = () => {
               <Image
                 src="/images/logo-mav.png"
                 alt="SKMRD & ASSOCIATES"
-                width={380}
-                height={100}
-                className="w-full max-w-[340px] md:max-w-[380px] h-auto object-contain"
+                width={480}
+                height={126}
+                className="w-full max-w-[420px] md:max-w-[480px] h-auto object-contain"
               />
             </div>
-            <nav aria-label="Footer navigation" className="flex-shrink-0">
+            <nav aria-label="Footer navigation" className="flex-shrink-0 ml-6 sm:ml-8 lg:ml-10">
+              <h4
+                className="mb-5 text-xs font-bold uppercase tracking-[0.2em]"
+                style={{
+                  color: 'var(--footer-primary)',
+                  fontFamily: 'var(--footer-label-font)',
+                }}
+              >
+                Quick Links
+              </h4>
               <ul className="space-y-2.5">
                 {FOOTER_LINKS.map((link) => (
                   <li key={link.name}>
@@ -183,7 +192,7 @@ const Footer: React.FC = () => {
               className="text-xs font-medium"
               style={{ fontFamily: 'var(--footer-body-font)' }}
             >
-              © 2026 All rights reserved.
+              © 2026 SKMRD & Associates. All rights reserved.
             </p>
           </div>
         </div>

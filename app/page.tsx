@@ -338,8 +338,8 @@ export default function Home() {
                 {/* Image */}
                 <div className="w-full h-1/2 relative">
                   <Image
-                    src="/images/key-services.jpeg"
-                    alt="Audit & Assurance Services"
+                    src="/images/key-services.png"
+                    alt="Accounting and financial services"
                     fill
                     className="object-cover"
                   />
@@ -450,8 +450,8 @@ export default function Home() {
             {/* Image - Top Center */}
             <div className="w-full flex justify-center order-1 md:order-2">
               <Image
-                src="/images/how-we-work.jpeg"
-                alt="How We Work"
+                src="/images/how-we-work.png"
+                alt="Our office and team at work"
                 width={400}
                 height={200}
                 className="rounded-xl object-cover w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px] h-auto aspect-[4/2]"

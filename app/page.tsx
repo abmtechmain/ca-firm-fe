@@ -301,19 +301,8 @@ export default function Home() {
       </section>
 
       {/* Key Services Section */}
-      <section className="w-full px-4 sm:px-6 lg:px-18 pt-0 pb-12 sm:pb-16 md:pb-20 lg:pb-24 bg-white relative overflow-hidden">
-        {/* Background Logo with reduced opacity */}
-        <div className="absolute inset-0 pointer-events-none opacity-5">
-          <Image
-            src="/images/footer-logo.png"
-            alt="Background Logo"
-            fill
-            className="object-cover"
-            style={{ objectPosition: 'left center' }}
-          />
-        </div>
-
-        <div className="max-w-7xl mx-auto relative z-10">
+      <section className="w-full px-4 sm:px-6 lg:px-18 pt-0 pb-12 sm:pb-16 md:pb-20 lg:pb-24 bg-white">
+        <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-12 md:mb-16 lg:mb-20">
             <div className="inline-block relative w-fit mb-6 md:mb-8">

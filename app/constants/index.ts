@@ -228,13 +228,11 @@ export const KEY_PERSONS: KeyPerson[] = [
     phone: '+91 97623 09538',
     email: 'ca.nivrutti@skmrd.com',
     qualification: 'FCA, M. Com, DISA',
-    certification: 'Concurrent Audit of Banks (appear), Ind AS (appear)',
     imageUrl: '/images/team/CA Nivrutti Shinde.png',
     description: [
       'Qualified Since 2018.',
       'Expertise in Co-operative Sector Auditing and Registration, Bank Audits, Government Audits, Information Systems (IS) Audit, GST Consultancy.',
-      'Representing clients before tax authorities for assessments and appeals.',
-      'Completed Certification Course of Concurrent Audit of Banks, Public Finance and Government Accounting.'
+      'Representing clients before tax authorities for assessments and appeals.'
     ]
   },
   {
@@ -243,13 +241,11 @@ export const KEY_PERSONS: KeyPerson[] = [
     phone: '+91 90968 63674',
     email: 'ca.sangita@skmrd.com',
     qualification: 'FCA, M. Com, DISA',
-    certification: 'Concurrent Audit of Banks (appear), AI (appear)',
     imageUrl: '/images/team/CA-Sangita-Rajendra-Kadam.png',
     description: [
       'Qualified since 2016.',
       'Expertise in RERA, Bank Audit, Management & Internal Audit, Government Audit & accounting, Direct & Indirect Taxes.',
-      'Attending Assessments & appeals in front of various Tax Authorities.',
-      'Completed Certification Course of Concurrent Audit of Banks, AI (ICAI).'
+      'Attending Assessments & appeals in front of various Tax Authorities.'
     ]
   },
   {
@@ -258,13 +254,11 @@ export const KEY_PERSONS: KeyPerson[] = [
     phone: '+91 88885 55998',
     email: 'ca.rashmi@skmrd.com',
     qualification: 'FCA, M. Com, DISA',
-    certification: 'FAFD, Concurrent Audit of Banks (appear), AI (appear)',
     imageUrl: '/images/team/CA Rashmi Mandlik.jpeg',
     description: [
       'Qualified since 2018.',
       'Expertise is Trust / NGO Audits, Internal Controls and Taxations.',
-      'Forensic & System Audit.',
-      'Completed Certification Course of FAFD, Concurrent Audit of Banks, AI (ICAI).'
+      'Forensic & System Audit.'
     ]
   },
   {
@@ -273,14 +267,12 @@ export const KEY_PERSONS: KeyPerson[] = [
     phone: '+91 60033 66231',
     email: 'ca.kunwarr@skmrd.com',
     qualification: 'FCA, B. Com',
-    certification: 'Concurrent Audit of Banks, FAFD (Appear)',
     imageUrl: '/images/team/CA-Kunwarr-Diggaa.png',
     imagePosition: 'top center',
     description: [
       'Qualified since 2019.',
       'Expertise is Business Management & Restructuring and Internal Audit.',
-      'Overseas Accounting & Consultancy.',
-      'Completed Certification Course of Concurrent Audit of Banks.'
+      'Overseas Accounting & Consultancy.'
     ]
   }
 ];

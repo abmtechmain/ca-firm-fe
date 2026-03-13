@@ -37,15 +37,17 @@ export const KeyPersons: React.FC = () => {
                   >
                     {person.qualification}
                   </span>
-                  <span 
-                    className="text-xs md:text-sm font-semibold uppercase tracking-wide rounded-full px-3 py-1"
-                    style={{ 
-                      color: BRAND_COLORS.accent,
-                      backgroundColor: `${BRAND_COLORS.accent}14`
-                    }}
-                  >
-                    {person.certification}
-                  </span>
+                  {person.certification && (
+                    <span 
+                      className="text-xs md:text-sm font-semibold uppercase tracking-wide rounded-full px-3 py-1"
+                      style={{ 
+                        color: BRAND_COLORS.accent,
+                        backgroundColor: `${BRAND_COLORS.accent}14`
+                      }}
+                    >
+                      {person.certification}
+                    </span>
+                  )}
                 </div>
                 <a 
                   href={`mailto:${person.email}`}

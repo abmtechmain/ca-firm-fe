@@ -50,8 +50,8 @@ const Footer: React.FC = () => {
           <div className="md:col-span-5 flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-8 lg:gap-10">
             <div className="flex-shrink-0">
               <Image
-                src="/images/logo-mav.png"
-                alt="SKMRD & ASSOCIATES"
+                src="/images/footer-logo.png"
+                alt="CA SKMRD & ASSOCIATES CHARTERED ACCOUNTANTS"
                 width={480}
                 height={126}
                 className="w-full max-w-[420px] md:max-w-[480px] h-auto object-contain"

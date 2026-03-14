@@ -31,7 +31,7 @@ const FOOTER_OFFICE_TO_HEAD_GAP = 'pl-10 lg:pl-14';
 const Footer: React.FC = () => {
   return (
     <footer
-      className="relative border-t border-[var(--footer-border)] py-14 md:py-20 pb-20 md:pb-24"
+      className="relative border-t border-[var(--footer-border)] py-8 md:py-12 pb-6 md:pb-8"
       style={{
         backgroundColor: 'var(--footer-bg)',
         color: 'var(--footer-fg)',
@@ -46,42 +46,44 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 pl-6 md:pl-10 max-w-7xl">
         {/* Main grid — asymmetric: logo+nav dominant, then equal columns */}
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-y-8 md:gap-x-0 lg:gap-y-12 mb-14">
-          {/* Logo + navigation — spans 5 cols on desktop, side by side */}
-          <div className="md:col-span-5 flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-8 lg:gap-10">
-            <div className="flex-shrink-0">
+          {/* Logo — spans 5-6 cols, vertically centered */}
+          <div className="md:col-span-5 lg:col-span-4 flex flex-col items-start md:self-center">
+            <div className="flex-shrink-0 w-full">
               <Image
                 src="/images/footer-logo.png"
                 alt="CA SKMRD & ASSOCIATES CHARTERED ACCOUNTANTS"
-                width={480}
-                height={126}
+                width={650}
+                height={170}
                 className="w-full max-w-[420px] md:max-w-[480px] h-auto object-contain"
               />
             </div>
-            <nav aria-label="Footer navigation" className="flex-shrink-0 ml-6 sm:ml-8 lg:ml-10">
-              <h4
-                className="mb-5 text-xs font-bold uppercase tracking-[0.2em]"
-                style={{
-                  color: 'var(--footer-primary)',
-                  fontFamily: 'var(--footer-label-font)',
-                }}
-              >
-                Quick Links
-              </h4>
-              <ul className="space-y-2.5">
-                {FOOTER_LINKS.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="footer-link inline-block text-sm font-medium transition-colors duration-200 rounded"
-                      style={{ fontFamily: 'var(--footer-body-font)' }}
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
           </div>
+
+          {/* Navigation — spans 2 cols */}
+          <nav aria-label="Footer navigation" className="md:col-span-2 md:pl-12 lg:pl-16">
+            <h4
+              className="mb-5 text-xs font-bold uppercase tracking-[0.2em]"
+              style={{
+                color: 'var(--footer-primary)',
+                fontFamily: 'var(--footer-label-font)',
+              }}
+            >
+              Quick Links
+            </h4>
+            <ul className="space-y-2.5">
+              {FOOTER_LINKS.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="footer-link inline-block text-sm font-medium transition-colors duration-200 rounded"
+                    style={{ fontFamily: 'var(--footer-body-font)' }}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
           {/* Office time + contact — 2 cols */}
           <div className={`md:col-span-2 ${FOOTER_COL_GAP}`}>
@@ -183,9 +185,9 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom bar — line just above copyright, pushed to bottom */}
-        <div className="mt-32 md:mt-40">
+        <div className="mt-6 md:mt-8">
           <div
-            className="border-t border-[var(--footer-border)] pt-3 flex flex-col items-center text-center"
+            className="border-t border-[var(--footer-border)] pt-4 flex flex-col items-center text-center"
             style={{ color: 'var(--footer-muted)' }}
           >
             <p

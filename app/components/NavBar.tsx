@@ -73,7 +73,7 @@ export default function NavBar() {
               HOME
             </Link>
             <Link href="/about-us" className={linkClass('/about-us')} style={{ color: '#056385' }}>
-              ABOUT US
+              ABOUT
             </Link>
             <Link href="/services" className={linkClass('/services')} style={{ color: '#056385' }}>
               SERVICES
@@ -110,7 +110,7 @@ export default function NavBar() {
                 style={{ color: '#056385' }}
                 onClick={() => setIsMenuOpen(false)}
               >
-                ABOUT US
+                ABOUT
               </Link>
               <Link 
                 href="/services" 

@@ -154,7 +154,8 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Sayli Mandlik',
     role: 'Administration & Management',
     description: 'Specializes in administration and management services with expertise in organizational operations and efficiency.',
-    imageUrl: '/images/team/Sayali Mandlik.jpeg'
+    imageUrl: '/images/team/Sayali Mandlik.jpeg',
+    imagePosition: 'center 25%'
   },
   {
     id: '2',

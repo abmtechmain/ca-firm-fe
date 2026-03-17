@@ -28,7 +28,7 @@ export const KeyStrengths: React.FC = () => {
           <div className="p-10 lg:p-16 flex flex-col items-center text-center space-y-6">
             <h3 
               className="text-2xl md:text-3xl font-extrabold tracking-tight"
-              style={{ color: BRAND_COLORS.primary }}
+              style={{ color: BRAND_COLORS.accent }}
             >
               {STRENGTHS_MAIN.title}
             </h3>

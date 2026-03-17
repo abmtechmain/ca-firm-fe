@@ -66,7 +66,7 @@ export const FirmOverview: React.FC = () => {
                 className="text-lg md:text-xl font-bold mb-6 uppercase"
                 style={{ color: BRAND_COLORS.primary }}
               >
-                The firm is duly empanelled with following:
+                Firm is duly empanelled:
               </h3>
               <ul className="space-y-3 md:space-y-4">
                 {FIRM_OVERVIEW.empanelments.map((item, idx) => (

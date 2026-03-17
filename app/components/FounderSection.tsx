@@ -10,7 +10,7 @@ export const FounderSection = () => {
               className="page-headers"
               style={{ color: BRAND_COLORS.accent }}
             >
-              MEET OUR FOUNDER
+              MEET OUR PARTNERS
             </h2>
             <div
               className="absolute -bottom-3 left-0 w-full h-1"
@@ -38,25 +38,22 @@ export const FounderSection = () => {
               {FOUNDER_DATA.tag}
             </p>
 
-            <h3
-              className="font-bold mb-4"
-              style={{
-                color: BRAND_COLORS.primary,
-                fontSize: '36px',
-                lineHeight: '1.15'
-              }}
-            >
-              {FOUNDER_DATA.name}
-            </h3>
-
-            <div
-              className="mb-6"
-              style={{
-                width: '72px',
-                height: '3px',
-                backgroundColor: BRAND_COLORS.accent
-              }}
-            ></div>
+            <div className="inline-block relative w-fit mb-6">
+              <h3
+                className="font-bold"
+                style={{
+                  color: BRAND_COLORS.primary,
+                  fontSize: '36px',
+                  lineHeight: '1.15'
+                }}
+              >
+                {FOUNDER_DATA.name}
+              </h3>
+              <div
+                className="absolute -bottom-2 left-0 w-full h-[3px]"
+                style={{ backgroundColor: BRAND_COLORS.accent }}
+              />
+            </div>
 
             <p
               className="font-medium mb-6"

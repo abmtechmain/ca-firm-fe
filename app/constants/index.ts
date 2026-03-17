@@ -288,7 +288,7 @@ export const BRAND_COLORS = {
 export const FIRM_OVERVIEW = {
   title: 'FIRM OVERVIEW',
   content: [
-    'S K M R D & ASSOCIATES, CHARTERED ACCOUNTANTS is the medium size MULTI STATE CA firm in India with its head office in Nashik (MH) and having 4 branch offices i.e. Golaghat (Assam), Pune (MH), Chandwad (MH) and Jalgaon (MH).',
+    'S K M R D & ASSOCIATES, CHARTERED ACCOUNTANTS is the medium size MULTI STATE CA firm in India with its head office in Nashik (MH) and having 4 branch offices i.e. Golaghat (Assam), Pune (MH), Nashik (MH) and Jalgaon (MH).',
     'We have dedicated team of young, passionate, experienced and energetic professionals for rendering high quality services across a range of verticals at any location within India or abroad. Since our inception in 1989, we had grown into an institution that embodies the highest standards of professional integrity, values & expertise.',
     'With the combination of experience and young team we offer, most cost-effective and high- technology services and facilities to our clients. Owing to our values, we have transparent business dealings and to make comfortable and secured environment for our valuable clients for their confidential data and information.'
   ],

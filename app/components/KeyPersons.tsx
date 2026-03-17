@@ -62,14 +62,13 @@ export const KeyPersons: React.FC = () => {
               </div>
 
               <div className="space-y-4">
-                <div className="flex items-center gap-3">
+                <div>
                   <span 
                     className="text-sm md:text-base font-extrabold uppercase tracking-wide block"
                     style={{ color: BRAND_COLORS.accent }}
                   >
                     Highlights
                   </span>
-                  <span className="h-px w-16" style={{ backgroundColor: `${BRAND_COLORS.accent}80` }}></span>
                 </div>
                 <div className="space-y-3">
                   {person.description.map((text, idx) => (

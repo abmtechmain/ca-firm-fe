@@ -13,11 +13,7 @@ export const TeamSection: React.FC = () => {
                 src={member.imageUrl} 
                 alt={member.name} 
                 className="w-full h-full object-cover"
-                style={{ 
-                  objectPosition: member.imagePosition ?? 'top',
-                  transform: 'scale(1.2)',
-                  transformOrigin: 'top center'
-                }}
+                style={{ objectPosition: member.imagePosition ?? 'top' }}
               />
             </div>
 

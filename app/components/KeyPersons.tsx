@@ -7,10 +7,10 @@ export const KeyPersons: React.FC = () => {
       {KEY_PERSONS.map((person) => (
         <div 
           key={person.id} 
-          className="bg-white rounded-2xl overflow-hidden transition-all duration-300 shadow-sm hover:shadow-lg"
+          className="bg-white rounded-2xl overflow-hidden transition-all duration-300"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-[34%_1fr] lg:items-stretch">
-            <div className="relative w-full aspect-[4/5] lg:aspect-auto lg:min-h-0 bg-slate-50 overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] lg:items-stretch">
+            <div className="relative w-full aspect-[4/5] lg:aspect-auto lg:w-full lg:h-[500px] lg:min-h-0 overflow-hidden px-4 lg:px-6">
               <img 
                 src={person.imageUrl} 
                 alt={person.name} 

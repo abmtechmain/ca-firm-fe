@@ -151,14 +151,14 @@ export const STRENGTHS_GRID: StrengthItem[] = [
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: '1',
-    name: 'SAYALI',
+    name: 'Sayli Mandlik',
     role: 'Administration & Management',
     description: 'Specializes in administration and management services with expertise in organizational operations and efficiency.',
     imageUrl: '/images/team/Sayali Mandlik.jpeg'
   },
   {
     id: '2',
-    name: 'KESHAV',
+    name: 'Keshav Sonwane',
     role: 'Secretarial & Corporate Services',
     description: 'Specializes in secretarial and corporate services with extensive knowledge of compliance and corporate governance.',
     imageUrl: '/images/team/Keshav.png',
@@ -166,14 +166,14 @@ export const TEAM_MEMBERS: TeamMember[] = [
   },
   {
     id: '3',
-    name: 'RESHMA',
+    name: 'Reshma Jadhav',
     role: 'Business & Labour Law',
     description: 'Specializes in business and labour law with expertise in legal compliance and regulatory matters.',
-    imageUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600'
+    imageUrl: '/images/team/reshma-ca-firm.jpeg'
   },
   {
     id: '4',
-    name: 'DEEPAK',
+    name: 'Dipak Jondhale',
     role: 'Investment Advisory',
     description: 'Specializes in investment advisory services with expertise in financial planning and investment strategies.',
     imageUrl: '/images/team/Deepak-Jondhale.png',
@@ -181,7 +181,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
   },
   {
     id: '5',
-    name: 'Akash',
+    name: 'Akash Mate',
     role: 'Bookkeeping & Accounting',
     description: 'Specializes in bookkeeping and accounting services with expertise in financial record management and reporting.',
     imageUrl: '/images/team/Akash.png',

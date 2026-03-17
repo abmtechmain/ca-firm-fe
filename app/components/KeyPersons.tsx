@@ -15,7 +15,11 @@ export const KeyPersons: React.FC = () => {
                 src={person.imageUrl} 
                 alt={person.name} 
                 className="w-full h-full object-cover"
-                style={{ objectPosition: person.imagePosition ?? 'top' }}
+                style={{ 
+                  objectPosition: person.imagePosition ?? 'top',
+                  transform: 'scale(1.2)',
+                  transformOrigin: 'top center'
+                }}
               />
             </div>
 

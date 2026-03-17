@@ -154,7 +154,8 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Sayli Mandlik',
     role: 'Administration & Management',
     description: 'Specializes in administration and management services with expertise in organizational operations and efficiency.',
-    imageUrl: '/images/team/Sayali Mandlik.jpeg'
+    imageUrl: '/images/team/Sayali-Mandlik.png',
+    imagePosition: 'center 20%'
   },
   {
     id: '2',
@@ -169,7 +170,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Reshma Jadhav',
     role: 'Business & Labour Law',
     description: 'Specializes in business and labour law with expertise in legal compliance and regulatory matters.',
-    imageUrl: '/images/team/reshma-ca-firm.jpeg'
+    imageUrl: '/images/team/reshma-jadhav.png'
   },
   {
     id: '4',
@@ -254,7 +255,7 @@ export const KEY_PERSONS: KeyPerson[] = [
     phone: '+91 88885 55998',
     email: 'ca.rashmi@skmrd.com',
     qualification: 'FCA, M. Com, DISA',
-    imageUrl: '/images/team/CA Rashmi Mandlik.jpeg',
+    imageUrl: '/images/team/CA-Rashmi-Mandlik.png',
     description: [
       'Qualified since 2018.',
       'Expertise is Trust / NGO Audits, Internal Controls and Taxations.',

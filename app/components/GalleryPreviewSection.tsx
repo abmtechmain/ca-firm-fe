@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useCallback, useEffect, useState } from 'react';
-import Image from 'next/image';
 import { GALLERY_PREVIEW_IMAGES, BRAND_COLORS } from '../constants';
 
 export const GalleryPreviewSection: React.FC = () => {
@@ -38,39 +37,29 @@ export const GalleryPreviewSection: React.FC = () => {
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
+      {/* Masonry-style columns: each image keeps its natural aspect ratio */}
+      <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 md:gap-6 lg:gap-8 [column-fill:_balance]">
         {GALLERY_PREVIEW_IMAGES.map((item) => (
           <button
             key={item.id}
             type="button"
             onClick={() => setOpenId(item.id)}
-            className="group text-left rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-xl hover:border-[#056385]/30 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#056385] focus-visible:ring-offset-2"
+            className="group relative mb-5 md:mb-6 lg:mb-8 w-full break-inside-avoid overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-[#056385]/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#056385] focus-visible:ring-offset-2 block p-0 text-left"
           >
-            <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
-              <Image
-                src={item.src}
-                alt={item.alt}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                unoptimized={item.src.startsWith('http')}
-              />
-              <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                style={{
-                  background: `linear-gradient(to top, ${BRAND_COLORS.primary}cc 0%, transparent 45%)`,
-                }}
-              />
-              <span className="absolute bottom-3 left-3 right-3 text-white text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow">
-                Click to enlarge
-              </span>
-            </div>
-            <div className="p-4 border-t border-slate-100">
-              <p className="text-sm font-semibold text-slate-800">{item.caption || item.alt}</p>
-              {item.caption ? (
-                <p className="text-xs text-slate-500 mt-1 line-clamp-2">{item.alt}</p>
-              ) : null}
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element -- natural dimensions per photo */}
+            <img
+              src={item.src}
+              alt={item.alt}
+              loading="lazy"
+              decoding="async"
+              className="w-full h-auto align-middle object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+            />
+            <div
+              className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              style={{
+                background: `linear-gradient(to top, ${BRAND_COLORS.primary}66 0%, transparent 55%)`,
+              }}
+            />
           </button>
         ))}
       </div>
@@ -94,22 +83,17 @@ export const GalleryPreviewSection: React.FC = () => {
             </svg>
           </button>
           <div
-            className="relative max-w-5xl max-h-[85vh] w-full flex flex-col items-center gap-4"
+            className="relative max-w-[min(100vw-2rem,1200px)] max-h-[90vh] w-auto flex flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="rounded-xl overflow-hidden shadow-2xl bg-black max-h-[75vh] flex items-center justify-center">
-              {/* eslint-disable-next-line @next/next/no-img-element -- lightbox: arbitrary aspect ratios */}
+            <div className="rounded-xl overflow-hidden shadow-2xl bg-black/90 flex items-center justify-center max-h-[90vh]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={openItem.src}
                 alt={openItem.alt}
-                className="max-w-full max-h-[75vh] w-auto h-auto object-contain"
+                className="max-w-full max-h-[90vh] w-auto h-auto object-contain"
               />
             </div>
-            {(openItem.caption || openItem.alt) && (
-              <p className="text-center text-white text-base sm:text-lg font-medium max-w-2xl px-4">
-                {openItem.caption || openItem.alt}
-              </p>
-            )}
           </div>
         </div>
       )}

@@ -454,7 +454,7 @@ export default function Home() {
             {/* Image - Top Center */}
             <div className="w-full flex justify-center order-1 md:order-2">
               <Image
-                src="/images/how-we-work.jpeg"
+                src="/images/hands-how-we-work.jpg"
                 alt="Our office and team at work"
                 width={400}
                 height={200}

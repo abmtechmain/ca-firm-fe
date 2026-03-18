@@ -4,17 +4,27 @@ interface HeroProps {
   image?: string;
   title: string;
   subtext: string;
+  /** Extra paragraph(s) below subtext */
   text?: string;
+  /** Taller hero with more vertical space when text + subtext are long */
+  expanded?: boolean;
 }
 
-const Hero: React.FC<HeroProps> = ({ 
+const Hero: React.FC<HeroProps> = ({
   image = 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop',
   title,
   subtext,
-  text
+  text,
+  expanded = false,
 }) => {
+  const heightClass = expanded
+    ? 'min-h-[460px] md:min-h-[520px] py-12 md:py-16 h-auto'
+    : 'h-[400px]';
+
   return (
-    <section className="relative h-[400px] w-full flex items-center overflow-hidden mt-4 sm:mt-6 md:mt-8">
+    <section
+      className={`relative w-full flex items-center overflow-hidden mt-4 sm:mt-6 md:mt-8 ${heightClass}`}
+    >
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 z-0"
@@ -40,12 +50,15 @@ const Hero: React.FC<HeroProps> = ({
             {title}
           </h1>
         </div>
-        <div className="md:pl-12">
-          <p 
-            className="text-slate-200 leading-relaxed font-light pl-0 md:pl-6 text-sm sm:text-base md:text-lg"
-          >
+        <div className="md:pl-12 space-y-4 md:space-y-5">
+          <p className="text-slate-200 leading-relaxed font-light pl-0 md:pl-6 text-sm sm:text-base md:text-lg">
             {subtext}
           </p>
+          {text ? (
+            <p className="text-slate-300/95 leading-relaxed pl-0 md:pl-6 text-sm sm:text-base border-t border-white/15 pt-4 md:pt-5">
+              {text}
+            </p>
+          ) : null}
         </div>
       </div>
     </section>

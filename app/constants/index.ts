@@ -21,22 +21,47 @@ export const IMPORTANT_LINKS: ImportantLink[] = [
   { id: '6', name: 'Directorate General of Foreign Trade', url: 'https://www.dgft.gov.in/', category: 'government' },
   { id: '7', name: 'Maha GST', url: 'https://mahagst.gov.in/', category: 'government' },
   { id: '8', name: 'GeM (Government e-Marketplace)', url: 'https://gem.gov.in/', category: 'government' },
-  { id: '9', name: 'ICAI', url: 'https://www.icai.org/', category: 'ca' },
-  { id: '10', name: 'ICAI UDIN', url: 'https://udin.icai.org/', category: 'ca' },
+  {
+    id: '9',
+    name: 'Charity Commissioner',
+    url: 'https://charity.maharashtra.gov.in',
+    category: 'government',
+  },
+  { id: '10', name: 'ICAI', url: 'https://www.icai.org/', category: 'ca' },
+  { id: '11', name: 'ICAI UDIN', url: 'https://udin.icai.org/', category: 'ca' },
 ];
 
 /**
  * Gallery Preview (/gallery-preview)
- * To add photos: save under public/images/gallery/your-name.jpg then add:
- * { id: 'unique', src: '/images/gallery/your-name.jpg', alt: 'Description', caption?: 'Optional label' }
+ * To add photos: { id: 'unique', src: '/images/gallery/file.jpg', alt: 'Short description for accessibility' }
  */
 export const GALLERY_PREVIEW_IMAGES: GalleryPreviewImage[] = [
-  { id: '1', src: '/images/how-we-work.png', alt: 'Our office and team', caption: 'Workspace' },
-  { id: '2', src: '/images/key-strengths-office.png', alt: 'Professional environment', caption: 'Office' },
-  { id: '3', src: '/images/growth-partners-team.png', alt: 'Growth partners', caption: 'Team' },
-  { id: '4', src: '/images/firm-overview.png', alt: 'Firm overview', caption: 'Firm' },
-  { id: '5', src: '/images/hero-slide-1.png', alt: 'Firm presence', caption: 'Nashik' },
-  { id: '6', src: '/images/key-services.png', alt: 'Key services', caption: 'Services' },
+  { id: '1', src: '/images/how-we-work.png', alt: 'Our office and team' },
+  { id: '2', src: '/images/key-strengths-office.png', alt: 'Professional environment' },
+  { id: '3', src: '/images/growth-partners-team.png', alt: 'Growth partners' },
+  { id: '4', src: '/images/firm-overview.png', alt: 'Firm overview' },
+  { id: '5', src: '/images/hero-slide-1.png', alt: 'Firm presence' },
+  { id: '6', src: '/images/key-services.png', alt: 'Key services' },
+  {
+    id: '7',
+    src: '/images/gallery/team-office-dsc00835.png',
+    alt: 'SKMRD & Associates Chartered Accountants — full team at office entrance',
+  },
+  {
+    id: '8',
+    src: '/images/gallery/team-office-dsc00838.png',
+    alt: 'SKMRD & Associates team members in professional office setting',
+  },
+  {
+    id: '9',
+    src: '/images/gallery/office-reception-dsc00803.png',
+    alt: 'SKMRD & Associates modern office interior with reception and workstations',
+  },
+  {
+    id: '10',
+    src: '/images/gallery/office-entrance-dsc00800.png',
+    alt: 'SKMRD & Associates office entrance and firm signage',
+  },
 ];
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -173,7 +198,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
   },
   {
     id: '2',
-    name: 'Keshav Sonwane',
+    name: 'Keshav Sonawane',
     role: 'Secretarial & Corporate Services',
     description: 'Specializes in secretarial and corporate services with extensive knowledge of compliance and corporate governance.',
     imageUrl: '/images/team/Keshav.png',

@@ -20,6 +20,11 @@ export const metadata: Metadata = {
 };
 
 export default function Resources() {
+  const govLinks = IMPORTANT_LINKS.filter((l) => l.category === 'government');
+  const govMid = Math.ceil(govLinks.length / 2);
+  const govLeft = govLinks.slice(0, govMid);
+  const govRight = govLinks.slice(govMid);
+
   return (
     <div>
       <Hero
@@ -81,7 +86,7 @@ export default function Resources() {
               <div className="min-w-0">
                 <h2 className="text-sm font-bold uppercase tracking-wider text-gray-500 mb-4">Government Websites</h2>
                 <ul className="space-y-3 list-none">
-                  {IMPORTANT_LINKS.filter((l) => l.category === 'government').slice(0, 8).map((link) => (
+                  {govLeft.map((link) => (
                     <li key={link.id}>
                       <a
                         href={link.url}
@@ -100,7 +105,7 @@ export default function Resources() {
               {/* Right column: 8 Government links (no heading) */}
               <div className="min-w-0">
                 <ul className="space-y-3 list-none mt-9">
-                  {IMPORTANT_LINKS.filter((l) => l.category === 'government').slice(8, 16).map((link) => (
+                  {govRight.map((link) => (
                     <li key={link.id}>
                       <a
                         href={link.url}

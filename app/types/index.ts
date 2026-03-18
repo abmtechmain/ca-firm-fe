@@ -75,3 +75,13 @@ export interface KeyPerson {
   imagePosition?: string;
   description: string[];
 }
+
+/** Photos for /gallery-preview — add files under public/images/gallery/ and new entries here */
+export interface GalleryPreviewImage {
+  id: string;
+  /** Path from site root, e.g. /images/gallery/office-1.jpg */
+  src: string;
+  alt: string;
+  /** Optional short label under the thumbnail */
+  caption?: string;
+}

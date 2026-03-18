@@ -1,28 +1,42 @@
-import { BlogPost, DownloadItem, CaseStudy, StrengthItem, StrengthMain, TeamMember, Founder, KeyPerson, ImportantLink } from '../types';
+import {
+  BlogPost,
+  DownloadItem,
+  CaseStudy,
+  StrengthItem,
+  StrengthMain,
+  TeamMember,
+  Founder,
+  KeyPerson,
+  ImportantLink,
+  GalleryPreviewImage,
+} from '../types';
 
-// Government Websites & CA Governance (from cajiteshtelisara.com/ca-firm-in-pune/)
+// Government Websites & CA Governance
 export const IMPORTANT_LINKS: ImportantLink[] = [
-  // Government Websites
-  { id: '1', name: 'RBI', url: 'https://www.rbi.org.in/', category: 'government' },
-  { id: '2', name: 'Mahavat', url: 'https://mahavat.gov.in/', category: 'government' },
-  { id: '3', name: 'Income Tax Department, India', url: 'https://www.incometax.gov.in/', category: 'government' },
-  { id: '4', name: 'e-Filing of your Income Tax Return', url: 'https://www.incometax.gov.in/iec/foportal/', category: 'government' },
+  { id: '1', name: 'RBI', url: 'http://rbi.org.in/', category: 'government' },
+  { id: '2', name: 'Income Tax', url: 'https://www.incometax.gov.in/iec/foportal/', category: 'government' },
+  { id: '3', name: 'GST', url: 'https://www.gst.gov.in/', category: 'government' },
+  { id: '4', name: 'Maha Rera', url: 'https://maharera.mahaonline.gov.in/', category: 'government' },
   { id: '5', name: 'Ministry of Corporate Affairs', url: 'https://www.mca.gov.in/', category: 'government' },
-  { id: '6', name: 'ITAT Online', url: 'https://itat.gov.in/', category: 'government' },
-  { id: '7', name: 'Central Board Of Excise and Customs', url: 'https://www.cbic.gov.in/', category: 'government' },
-  { id: '8', name: 'GST', url: 'https://www.gst.gov.in/', category: 'government' },
-  { id: '9', name: 'Directorate General of Foreign Trade', url: 'https://dgft.gov.in/', category: 'government' },
-  { id: '10', name: 'Maharera', url: 'https://maharera.mahaonline.gov.in/', category: 'government' },
-  { id: '11', name: 'Registration of Firm (ROF)', url: 'https://www.mca.gov.in/', category: 'government' },
-  { id: '12', name: 'MSME', url: 'https://msme.gov.in/', category: 'government' },
-  { id: '13', name: 'Udyog Aadhar Registration', url: 'https://udyamregistration.gov.in/', category: 'government' },
-  { id: '14', name: 'Mahagst', url: 'https://mahagst.gov.in/', category: 'government' },
-  { id: '14b', name: 'GeM (Government e-Marketplace)', url: 'https://gem.gov.in/', category: 'government' },
-  { id: '14c', name: 'DigiLocker', url: 'https://digilocker.gov.in/', category: 'government' },
-  // CA Governance
-  { id: '15', name: 'ICAI', url: 'https://www.icai.org/', category: 'ca' },
-  { id: '16', name: 'PUNE ICAI', url: 'https://puneicai.org/', category: 'ca' },
-  { id: '17', name: 'UDIN', url: 'https://udin.icai.org/', category: 'ca' },
+  { id: '6', name: 'Directorate General of Foreign Trade', url: 'https://www.dgft.gov.in/', category: 'government' },
+  { id: '7', name: 'Maha GST', url: 'https://mahagst.gov.in/', category: 'government' },
+  { id: '8', name: 'GeM (Government e-Marketplace)', url: 'https://gem.gov.in/', category: 'government' },
+  { id: '9', name: 'ICAI', url: 'https://www.icai.org/', category: 'ca' },
+  { id: '10', name: 'ICAI UDIN', url: 'https://udin.icai.org/', category: 'ca' },
+];
+
+/**
+ * Gallery Preview (/gallery-preview)
+ * To add photos: save under public/images/gallery/your-name.jpg then add:
+ * { id: 'unique', src: '/images/gallery/your-name.jpg', alt: 'Description', caption?: 'Optional label' }
+ */
+export const GALLERY_PREVIEW_IMAGES: GalleryPreviewImage[] = [
+  { id: '1', src: '/images/how-we-work.png', alt: 'Our office and team', caption: 'Workspace' },
+  { id: '2', src: '/images/key-strengths-office.png', alt: 'Professional environment', caption: 'Office' },
+  { id: '3', src: '/images/growth-partners-team.png', alt: 'Growth partners', caption: 'Team' },
+  { id: '4', src: '/images/firm-overview.png', alt: 'Firm overview', caption: 'Firm' },
+  { id: '5', src: '/images/hero-slide-1.png', alt: 'Firm presence', caption: 'Nashik' },
+  { id: '6', src: '/images/key-services.png', alt: 'Key services', caption: 'Services' },
 ];
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -395,7 +409,8 @@ export const CONTACT_INFO = {
       name: 'Head Office 2',
       address: 'Flat No. 1/2, Saee Apartment, Madhav Colony, Pournima Bus Stop, Nashik Pune Road, Dwarka, Nashik- 422011',
       mobile: '+91 9511840438',
-      mapLink: 'https://share.google/C6cJt1Uw8fcduqsJo'
+      mapLink:
+        "https://www.google.com/maps/place/19%C2%B059'15.9%22N+73%C2%B047'57.3%22E/@19.9877434,73.7966805,818m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d19.9877434!4d73.7992554?hl=en&entry=ttu"
     }
   ],
   branches: [

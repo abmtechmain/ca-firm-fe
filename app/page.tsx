@@ -225,47 +225,62 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Side - Large Card */}
+            {/* Right Side - Large Card (hover on text area only — same as left cards) */}
             <div className="w-full lg:w-[50%] flex">
               <div className="bg-white rounded-xl border border-gray-400 overflow-hidden w-full flex flex-col">
-                {/* Image */}
-                <div className="w-full h-1/2 relative">
+                <div className="relative w-full min-h-[220px] sm:min-h-[260px] aspect-[16/10] sm:aspect-[5/3] shrink-0">
                   <Image
                     src="/images/growth-partners-team.png"
                     alt="Meet your growth partners - our professional team"
                     fill
-                    className="object-cover"
+                    className="object-cover pointer-events-none"
                   />
                 </div>
-                
-                <div className="p-8">
-                  <p 
-                    className="uppercase mb-2"
-                    style={{ 
-                      fontSize: '18px', 
-                      color: '#F37920',
+
+                <div className="group relative overflow-hidden px-6 sm:px-8 py-8 flex-1 transition-all duration-300 cursor-pointer border-t border-gray-200 hover:border-white">
+                  <div
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{
+                      background: 'linear-gradient(to bottom, #044860, #056385)',
                     }}
-                  >
-                    MEET YOUR GROWTH PARTNERS
-                  </p>
-                  <h3 
-                    className="font-bold mb-4"
-                    style={{ 
-                      fontSize: '32px', 
-                      color: '#023F55'
-                    }}
-                  >
-                    GROWTH PARTNERS
-                  </h3>
-                  <p 
-                    className="leading-relaxed"
-                    style={{ 
-                      fontSize: '18px', 
-                      color: '#0000008A'
-                    }}
-                  >
-                    We Believe That Great Financial Advice Is Built On Great Relationships. Our Team Is A Dynamic Mix Of Experienced Veterans And Innovative Young Professionals Who Understand The Pulse Of Modern Business. We Move Beyond Traditional 'compliance-Only' Roles To Act As Your Dedicated Business Partners.
-                  </p>
+                  />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full opacity-0 group-hover:opacity-80 transition-opacity duration-300 blur-3xl transform translate-x-1/2 -translate-y-1/2" />
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                      className="absolute w-40 h-40 bg-white rounded-full blur-3xl opacity-80"
+                      style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}
+                    />
+                  </div>
+
+                  <div className="relative z-10">
+                    <p
+                      className="uppercase mb-2 transition-colors duration-300 group-hover:!text-white"
+                      style={{
+                        fontSize: '18px',
+                        color: '#F37920',
+                      }}
+                    >
+                      MEET YOUR GROWTH PARTNERS
+                    </p>
+                    <h3
+                      className="font-bold mb-4 text-[#023F55] transition-colors duration-300 group-hover:!text-white"
+                      style={{
+                        fontSize: '32px',
+                      }}
+                    >
+                      GROWTH PARTNERS
+                    </h3>
+                    <p
+                      className="leading-relaxed text-[#0000008A] transition-colors duration-300 group-hover:!text-white"
+                      style={{
+                        fontSize: '18px',
+                      }}
+                    >
+                      We Believe That Great Financial Advice Is Built On Great Relationships. Our Team Is A Dynamic Mix Of Experienced Veterans And Innovative Young Professionals Who Understand The Pulse Of Modern Business. {
+                      "We Move Beyond Traditional 'compliance-Only' Roles To Act As Your Dedicated Business Partners."
+                    }
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -323,50 +338,50 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row gap-6 md:gap-8 mt-8 md:mt-12 items-stretch">
             {/* Left Side - Large Card for Audit & Assurance */}
             <div className="w-full lg:w-[50%] flex">
-              <div className="bg-white border rounded-2xl overflow-hidden w-full flex flex-col shadow-sm">
-                {/* Image */}
-                <div className="w-full h-1/2 relative">
+              <div className="bg-white border rounded-2xl overflow-hidden w-full flex flex-col shadow-sm transition-shadow duration-300 hover:shadow-md">
+                <div className="relative w-full min-h-[200px] sm:min-h-[240px] aspect-[16/10] shrink-0">
                   <Image
                     src="/images/key-services.png"
                     alt="Accounting and financial services"
                     fill
-                    className="object-cover"
+                    className="object-cover pointer-events-none"
                   />
                 </div>
-                
-                <div className="p-8">
-                  <p 
-                    className="uppercase mb-2"
-                    style={{ 
-                      fontSize: '18px', 
-                      color: '#F37920',
-                    }}
-                  >
-                    PROFESSIONAL AUDIT SERVICES
-                  </p>
-                  <div className="flex items-center gap-3 mb-4">
-                  <div className="text-[#F37920]">
-                      <AuditIcon />
-                    </div>
-                    <h3 
-                      className="font-bold"
-                      style={{ 
-                        fontSize: '32px', 
-                        color: '#023F55'
+
+                <div className="group relative overflow-hidden px-6 sm:px-8 py-8 flex-1 transition-all duration-300 cursor-pointer border-t border-gray-200 hover:border-white">
+                  <div
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{ background: 'linear-gradient(to bottom, #044860, #056385)' }}
+                  />
+                  <div className="relative z-10">
+                    <p
+                      className="uppercase mb-2 transition-colors duration-300 group-hover:!text-white"
+                      style={{
+                        fontSize: '18px',
+                        color: '#F37920',
                       }}
                     >
-                      AUDIT & ASSURANCE
-                    </h3>
+                      PROFESSIONAL AUDIT SERVICES
+                    </p>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-11 h-11 rounded-xl flex items-center justify-center bg-[#F7F9FC] transition-colors duration-300 group-hover:bg-white/10 shrink-0">
+                        <div className="text-[#F37920] group-hover:text-white transition-colors duration-300 [&_svg]:transition-colors">
+                          <AuditIcon />
+                        </div>
+                      </div>
+                      <h3
+                        className="font-bold uppercase tracking-tight text-[#023F55] transition-colors duration-300 group-hover:!text-white"
+                        style={{
+                          fontSize: '32px',
+                        }}
+                      >
+                        AUDIT & ASSURANCE
+                      </h3>
+                    </div>
+                    <p className="leading-relaxed text-sm sm:text-base text-[#4b5563] transition-colors duration-300 group-hover:!text-white">
+                      Statutory, Internal, And Tax Audits Conducted With Professional Rigor To Ensure Transparency, Accuracy, And Regulatory Compliance For Your Business Operations.
+                    </p>
                   </div>
-                  <p 
-                    className="leading-relaxed"
-                    style={{ 
-                      fontSize: '18px', 
-                      color: '#0000008A'
-                    }}
-                  >
-                    Statutory, Internal, And Tax Audits Conducted With Professional Rigor To Ensure Transparency, Accuracy, And Regulatory Compliance For Your Business Operations.
-                  </p>
                 </div>
               </div>
             </div>
@@ -439,7 +454,7 @@ export default function Home() {
             {/* Image - Top Center */}
             <div className="w-full flex justify-center order-1 md:order-2">
               <Image
-                src="/images/how-we-work.png"
+                src="/images/how-we-work.jpeg"
                 alt="Our office and team at work"
                 width={400}
                 height={200}

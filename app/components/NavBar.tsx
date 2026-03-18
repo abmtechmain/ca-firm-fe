@@ -81,6 +81,9 @@ export default function NavBar() {
             <Link href="/resources" className={linkClass('/resources')} style={{ color: '#056385' }}>
               RESOURCES
             </Link>
+            <Link href="/gallery-preview" className={linkClass('/gallery-preview')} style={{ color: '#056385' }}>
+              GALLERY
+            </Link>
             <Link href="/careers" className={linkClass('/careers')} style={{ color: '#056385' }}>
               CAREERS
             </Link>
@@ -127,6 +130,14 @@ export default function NavBar() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 RESOURCES
+              </Link>
+              <Link
+                href="/gallery-preview"
+                className={mobileLinkClass('/gallery-preview')}
+                style={{ color: '#056385' }}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                GALLERY
               </Link>
               <Link 
                 href="/careers" 

@@ -23,24 +23,39 @@ export const KeyStrengths: React.FC = () => {
       {/* Grid container for the whole section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
         
-        {/* Main Experience Card (Left) */}
-        <div className="flex flex-col border rounded-2xl overflow-hidden bg-white shadow-sm">
-          <div className="p-10 lg:p-16 flex flex-col items-center text-center space-y-6">
-            <h3 
-              className="text-2xl md:text-3xl font-extrabold tracking-tight"
-              style={{ color: BRAND_COLORS.accent }}
-            >
-              {STRENGTHS_MAIN.title}
-            </h3>
-            <p className="text-gray-500 text-sm md:text-base leading-relaxed max-w-md">
-              {STRENGTHS_MAIN.description}
-            </p>
+        {/* Main Experience Card (Left) — hover matches grid cards; image area unchanged */}
+        <div className="flex flex-col border rounded-2xl overflow-hidden bg-white shadow-sm transition-shadow duration-300 hover:shadow-lg">
+          <div className="relative overflow-hidden group cursor-pointer flex-1 min-h-[200px]">
+            <div
+              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style={{
+                background: 'linear-gradient(to bottom, #044860, #056385)',
+              }}
+            />
+            <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full opacity-0 group-hover:opacity-80 transition-opacity duration-300 blur-3xl transform translate-x-1/2 -translate-y-1/2" />
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div
+                className="absolute w-40 h-40 bg-white rounded-full blur-3xl opacity-80"
+                style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}
+              />
+            </div>
+            <div className="relative z-10 p-10 lg:p-16 flex flex-col items-center text-center space-y-6">
+              <h3
+                className="text-2xl md:text-3xl font-extrabold tracking-tight transition-colors duration-300 group-hover:!text-white"
+                style={{ color: BRAND_COLORS.accent }}
+              >
+                {STRENGTHS_MAIN.title}
+              </h3>
+              <p className="text-gray-500 text-sm md:text-base leading-relaxed max-w-md group-hover:!text-white transition-colors duration-300">
+                {STRENGTHS_MAIN.description}
+              </p>
+            </div>
           </div>
-          <div className="mt-auto aspect-video md:aspect-[16/7] lg:aspect-auto h-64 lg:h-80 w-full overflow-hidden">
-            <img 
-              src={STRENGTHS_MAIN.imageUrl} 
-              alt="Experience" 
-              className="w-full h-full object-cover"
+          <div className="aspect-video md:aspect-[16/7] lg:aspect-auto h-64 lg:h-80 w-full overflow-hidden border-t border-slate-100 shrink-0">
+            <img
+              src={STRENGTHS_MAIN.imageUrl}
+              alt="Experience"
+              className="w-full h-full object-cover pointer-events-none"
             />
           </div>
         </div>

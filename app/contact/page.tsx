@@ -318,28 +318,42 @@ export default function Contact() {
                       )}
                       
                       {loc.mapLink && (
-                        <div className="mt-4 rounded-lg overflow-hidden border border-slate-200 h-[250px]">
-                          {idx === 0 ? (
-                            <iframe 
-                              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.9339397322456!2d73.7848116!3d20.007362399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeb002deb7717%3A0x6232df753e3ea58c!2sS%20K%20M%20R%20D%20%26%20Associates%20(%20Chartered%20Accountant)!5e1!3m2!1sen!2sin!4v1771495086717!5m2!1sen!2sin" 
-                              width="100%" 
-                              height="100%" 
-                              style={{ border: 0 }} 
-                              allowFullScreen 
-                              loading="lazy" 
-                              referrerPolicy="no-referrer-when-downgrade"
-                            ></iframe>
-                          ) : (
-                            <iframe 
-                              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15839.26944205599!2d73.82801329424905!3d19.972219428514553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeb4d976bb54d%3A0x54861f2d6c9411f9!2sSKMRD%20%26%20Associates%20formally%20Known%20as%20Shinde%20Kadam%20%26%20Associates!5e1!3m2!1sen!2sin!4v1771495141559!5m2!1sen!2sin" 
-                              width="100%" 
-                              height="100%" 
-                              style={{ border: 0 }} 
-                              allowFullScreen 
-                              loading="lazy" 
-                              referrerPolicy="no-referrer-when-downgrade"
-                            ></iframe>
-                          )}
+                        <div className="mt-4 space-y-3">
+                          <div className="rounded-lg overflow-hidden border border-slate-200 h-[250px]">
+                            {idx === 0 ? (
+                              <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.9339397322456!2d73.7848116!3d20.007362399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeb002deb7717%3A0x6232df753e3ea58c!2sS%20K%20M%20R%20D%20%26%20Associates%20(%20Chartered%20Accountant)!5e1!3m2!1sen!2sin!4v1771495086717!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="100%" 
+                                style={{ border: 0 }} 
+                                allowFullScreen 
+                                loading="lazy" 
+                                referrerPolicy="no-referrer-when-downgrade"
+                              ></iframe>
+                            ) : (
+                              <iframe
+                                title="Head Office 2 on Google Maps"
+                                src="https://maps.google.com/maps?q=19.9877434,73.7992554&z=17&hl=en&output=embed"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                              />
+                            )}
+                          </div>
+                          <a
+                            href={loc.mapLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-[#006080] hover:text-[#004d66] font-semibold text-sm transition-colors"
+                          >
+                            <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                            View on Google Maps
+                          </a>
                         </div>
                       )}
                     </div>

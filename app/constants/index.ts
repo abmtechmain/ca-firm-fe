@@ -39,9 +39,6 @@ export const GALLERY_PREVIEW_IMAGES: GalleryPreviewImage[] = [
   { id: '1', src: '/images/how-we-work.png', alt: 'Our office and team' },
   { id: '2', src: '/images/key-strengths-office.png', alt: 'Professional environment' },
   { id: '3', src: '/images/growth-partners-team.png', alt: 'Growth partners' },
-  { id: '4', src: '/images/firm-overview.png', alt: 'Firm overview' },
-  { id: '5', src: '/images/hero-slide-1.png', alt: 'Firm presence' },
-  { id: '6', src: '/images/key-services.png', alt: 'Key services' },
   {
     id: '7',
     src: '/images/gallery/team-office-dsc00835.png',
@@ -56,11 +53,6 @@ export const GALLERY_PREVIEW_IMAGES: GalleryPreviewImage[] = [
     id: '9',
     src: '/images/gallery/office-reception-dsc00803.png',
     alt: 'SKMRD & Associates modern office interior with reception and workstations',
-  },
-  {
-    id: '10',
-    src: '/images/gallery/office-entrance-dsc00800.png',
-    alt: 'SKMRD & Associates office entrance and firm signage',
   },
 ];
 

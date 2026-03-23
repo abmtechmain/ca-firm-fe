@@ -32,9 +32,9 @@ const FOOTER_OFFICE_TO_HEAD_GAP = 'pl-10 lg:pl-14';
 const Footer: React.FC = () => {
   return (
     <footer
-      className="relative border-t border-[var(--footer-border)] py-8 md:py-12 pb-6 md:pb-8"
+      className="relative bg-white border-t border-[var(--footer-border)] py-8 md:py-12 pb-6 md:pb-8"
       style={{
-        backgroundColor: 'var(--footer-bg)',
+        backgroundColor: '#ffffff',
         color: 'var(--footer-fg)',
       }}
     >

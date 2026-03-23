@@ -70,6 +70,21 @@ export const GALLERY_PREVIEW_IMAGES: GalleryPreviewImage[] = [
     src: '/images/gallery/partner-ca-rashmi-mandlik-desk.png',
     alt: 'CA Rashmi Mandlik, Partner, seated at her office desk with tax and reference books in the background',
   },
+  {
+    id: '19',
+    src: '/images/gallery/ca-nivrutti-shinde-desk-dsc00748.png',
+    alt: 'CA Nivrutti Shinde seated at his office desk in a modern workspace',
+  },
+  {
+    id: '20',
+    src: '/images/gallery/ca-kunwarr-diggaa-desk-dsc00760.png',
+    alt: 'CA Kunwarr Diggaa at his office desk with nameplate and professional setting',
+  },
+  {
+    id: '21',
+    src: '/images/gallery/team-member-desk-dsc00724.png',
+    alt: 'Team member at a modern white desk with reference books and office workspace',
+  },
 ];
 
 export const BLOG_POSTS: BlogPost[] = [

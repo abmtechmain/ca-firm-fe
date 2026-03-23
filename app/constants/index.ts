@@ -40,19 +40,35 @@ export const GALLERY_PREVIEW_IMAGES: GalleryPreviewImage[] = [
   { id: '2', src: '/images/key-strengths-office.png', alt: 'Professional environment' },
   { id: '3', src: '/images/growth-partners-team.png', alt: 'Growth partners' },
   {
-    id: '7',
-    src: '/images/gallery/team-office-dsc00835.png',
-    alt: 'SKMRD & Associates Chartered Accountants — full team at office entrance',
-  },
-  {
-    id: '8',
-    src: '/images/gallery/team-office-dsc00838.png',
-    alt: 'SKMRD & Associates team members in professional office setting',
-  },
-  {
     id: '9',
     src: '/images/gallery/office-reception-dsc00803.png',
     alt: 'SKMRD & Associates modern office interior with reception and workstations',
+  },
+  {
+    id: '10',
+    src: '/images/gallery/office-entrance-dsc00800.png',
+    alt: 'Office entrance and directory listing SKMRD & Associates, Chartered Accountants, and partner firms',
+  },
+
+  {
+    id: '15',
+    src: '/images/gallery/team-shared-desk-dsc00819.png',
+    alt: 'Team of accountants working at a long shared desk with computers in a bright, modern office at SKMRD & Associates',
+  },
+  {
+    id: '16',
+    src: '/images/gallery/team-working-office-dsc00809.png',
+    alt: 'Professional team working at desks in a modern, well-lit office with white workstations and wood cabinetry',
+  },
+  {
+    id: '17',
+    src: '/images/gallery/staff-workstations-dsc00813.png',
+    alt: 'Staff members working at modern computer workstations along a bright, professional office desk',
+  },
+  {
+    id: '18',
+    src: '/images/gallery/partner-ca-rashmi-mandlik-desk.png',
+    alt: 'CA Rashmi Mandlik, Partner, seated at her office desk with tax and reference books in the background',
   },
 ];
 

@@ -27,14 +27,14 @@ export default function Home() {
           {
             title: 'Trusted Chartered Accountants for Tax, GST & Compliance Solutions',
             description: 'Providing reliable accounting, taxation, audit, and advisory services to individuals, startups, and growing businesses with accuracy and integrity.',
-            image: '/images/hero-slide-1.png',
+            image: '/images/hero-home-slide-1.jpeg',
             buttonText: 'CALL US NOW',
             buttonLink: '/contact'
           },
           {
             title: 'Expert Financial Advisory & Strategic Planning Services',
             description: 'Comprehensive financial solutions tailored to your business needs, helping you make informed decisions and achieve your financial goals.',
-            image: '/images/hero-slide-2.png',
+            image: '/images/hero-home-slide-2.jpeg',
             buttonText: 'CALL US NOW',
             buttonLink: '/contact'
           },
@@ -341,7 +341,7 @@ export default function Home() {
               <div className="bg-white border rounded-2xl overflow-hidden w-full flex flex-col shadow-sm transition-shadow duration-300 hover:shadow-md">
                 <div className="relative w-full min-h-[200px] sm:min-h-[240px] aspect-[16/10] shrink-0">
                   <Image
-                    src="/images/key-services.png"
+                    src="/images/key-services-new.jpeg"
                     alt="Accounting and financial services"
                     fill
                     className="object-cover pointer-events-none"
@@ -454,7 +454,7 @@ export default function Home() {
             {/* Image - Top Center */}
             <div className="w-full flex justify-center order-1 md:order-2">
               <Image
-                src="/images/hands-how-we-work.jpg"
+                src="/images/how-we-work-new.jpeg"
                 alt="Our office and team at work"
                 width={400}
                 height={200}

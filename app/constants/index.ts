@@ -187,7 +187,7 @@ export const CURRENT_CASE_STUDY: CaseStudy = {
 export const STRENGTHS_MAIN: StrengthMain = {
   title: 'EXPERIENCE',
   description: 'Over 30+ years of proven expertise in the Accounting, Auditing and Finance Industry.',
-  imageUrl: '/images/key-strengths-office.png'
+  imageUrl: '/images/key-strengths-final.avif'
 };
 
 export const STRENGTHS_GRID: StrengthItem[] = [
@@ -216,7 +216,8 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: 'Administration & Management',
     description: 'Specializes in administration and management services with expertise in organizational operations and efficiency.',
     imageUrl: '/images/team/Sayali Mandlik.jpeg',
-    imagePosition: 'center 25%'
+    imagePosition: 'center 20%',
+    imageTransform: 'scale(1.50) translateY(8%) translateX(-4%)',
   },
   {
     id: '2',
@@ -231,8 +232,10 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Reshma Jadhav',
     role: 'Business & Labour Law',
     description: 'Specializes in business and labour law with expertise in legal compliance and regulatory matters.',
-    imageUrl: '/images/team/reshma-ca-firm.jpeg'
-  },
+    imageUrl: '/images/team/reshma-ca-firm.jpeg',
+    imagePosition: 'center 5%',
+    imageTransform: 'scale(1.50) translateY(12%) translateX(-4%)' 
+   },
   {
     id: '4',
     name: 'Dipak Jondhale',

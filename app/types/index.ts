@@ -53,6 +53,8 @@ export interface TeamMember {
   imageUrl: string;
   /** Optional object-position for the image (e.g. 'top', 'top center') so face is properly framed */
   imagePosition?: string;
+  /** Optional CSS transform (e.g. scale + translateY) when a tighter crop needs nudging */
+  imageTransform?: string;
 }
 
 export interface KeyPerson {

@@ -13,7 +13,15 @@ export const TeamSection: React.FC = () => {
                 src={member.imageUrl} 
                 alt={member.name} 
                 className="w-full h-full object-cover"
-                style={{ objectPosition: member.imagePosition ?? 'top' }}
+                style={{
+                  objectPosition: member.imagePosition ?? 'top',
+                  ...(member.imageTransform
+                    ? {
+                        transform: member.imageTransform,
+                        transformOrigin: 'center center',
+                      }
+                    : {}),
+                }}
               />
             </div>
 

@@ -41,7 +41,7 @@ export default function Home() {
           {
             title: 'Professional Audit & Assurance Services You Can Trust',
             description: 'Rigorous audit processes and compliance solutions ensuring your business meets all regulatory requirements with confidence.',
-            image: '/images/hero-slide-3-signboard.png',
+            image: '/images/hero-slide-new-final.jpeg',
             buttonText: 'CALL US NOW',
             buttonLink: '/contact'
           }
@@ -230,7 +230,7 @@ export default function Home() {
               <div className="bg-white rounded-xl border border-gray-400 overflow-hidden w-full flex flex-col">
                 <div className="relative w-full min-h-[220px] sm:min-h-[260px] aspect-[16/10] sm:aspect-[5/3] shrink-0">
                   <Image
-                    src="/images/growth-partners-team.png"
+                    src="/images/hands.webp"
                     alt="Meet your growth partners - our professional team"
                     fill
                     className="object-cover pointer-events-none"

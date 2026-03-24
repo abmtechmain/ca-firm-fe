@@ -67,7 +67,7 @@ export interface KeyPerson {
   id: string;
   name: string;
   phone: string;
-  email: string;
+  email?: string;
   qualification: string;
   certification?: string;
   imageUrl: string;

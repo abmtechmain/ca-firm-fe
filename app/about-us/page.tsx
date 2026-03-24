@@ -47,9 +47,9 @@ export default function AboutUs() {
       </section>
       
       {/* Founder Section */}
-      <section className="w-full px-4 sm:px-6 lg:px-18 py-12 md:py-16 lg:py-20 bg-white">
+      {/* <section className="w-full px-4 sm:px-6 lg:px-18 py-12 md:py-16 lg:py-20 bg-white">
         <FounderSection />
-      </section>
+      </section> */}
       
       {/* Key Persons Section */}
       <section className="w-full px-4 sm:px-6 lg:px-18 py-12 md:py-16 lg:py-20 bg-white">

@@ -187,7 +187,7 @@ export const CURRENT_CASE_STUDY: CaseStudy = {
 export const STRENGTHS_MAIN: StrengthMain = {
   title: 'EXPERIENCE',
   description: 'Over 30+ years of proven expertise in the Accounting, Auditing and Finance Industry.',
-  imageUrl: '/images/key-strengths-final.avif'
+  imageUrl: '/images/key-strengths-final.jpeg'
 };
 
 export const STRENGTHS_GRID: StrengthItem[] = [

@@ -3,7 +3,6 @@ import Hero from '../components/Hero';
 import { FirmOverview } from '../components/FirmOverview';
 import { WhoWeAre } from '../components/WhoWeAre';
 import { VisionMission } from '../components/VisionMission';
-import { FounderSection } from '../components/FounderSection';
 import { KeyPersons } from '../components/KeyPersons';
 import { TeamSection } from '../components/TeamSection';
 import { KeyStrengths } from '../components/KeyStrengths';
@@ -44,11 +43,6 @@ export default function AboutUs() {
       {/* Vision & Mission Section */}
       <section className="w-full px-4 sm:px-6 lg:px-18 pt-4 md:pt-6 lg:pt-8 pb-12 md:pb-16 lg:pb-20 bg-white">
         <VisionMission />
-      </section>
-      
-      {/* Founder Section */}
-      <section className="w-full px-4 sm:px-6 lg:px-18 py-12 md:py-16 lg:py-20 bg-white">
-        <FounderSection />
       </section>
       
       {/* Key Persons Section */}

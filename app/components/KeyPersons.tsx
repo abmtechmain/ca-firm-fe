@@ -4,9 +4,24 @@ import { KEY_PERSONS, BRAND_COLORS } from '../constants';
 export const KeyPersons: React.FC = () => {
   return (
     <div className="mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div className="text-center mb-12 md:mb-16">
+        <div className="inline-block relative w-fit">
+          <h2
+            className="page-headers"
+            style={{ color: BRAND_COLORS.accent }}
+          >
+            MEET OUR PARTNERS
+          </h2>
+          <div
+            className="absolute -bottom-3 left-0 w-full h-1"
+            style={{ backgroundColor: BRAND_COLORS.primary }}
+          />
+        </div>
+      </div>
+
       {KEY_PERSONS.map((person) => (
-        <div 
-          key={person.id} 
+        <div
+          key={person.id}
           className="bg-white rounded-2xl overflow-hidden transition-all duration-300"
         >
           <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] lg:items-stretch">
@@ -49,16 +64,18 @@ export const KeyPersons: React.FC = () => {
                     </span>
                   )}
                 </div>
-                <a 
-                  href={`mailto:${person.email}`}
-                  className="flex items-center gap-2 text-sm md:text-base font-semibold transition-colors hover:opacity-80"
-                  style={{ color: BRAND_COLORS.primary }}
-                >
-                  <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  <span className="break-all">{person.email}</span>
-                </a>
+                {person.email?.trim() ? (
+                  <a
+                    href={`mailto:${person.email.trim()}`}
+                    className="flex items-center gap-2 text-sm md:text-base font-semibold transition-colors hover:opacity-80"
+                    style={{ color: BRAND_COLORS.primary }}
+                  >
+                    <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <span className="break-all">{person.email.trim()}</span>
+                  </a>
+                ) : null}
               </div>
 
               <div className="space-y-4">

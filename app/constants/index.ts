@@ -5,7 +5,6 @@ import {
   StrengthItem,
   StrengthMain,
   TeamMember,
-  Founder,
   KeyPerson,
   ImportantLink,
   GalleryPreviewImage,
@@ -272,17 +271,6 @@ export const VISION_MISSION = {
     imageUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200'
   }
 };
-
-// export const FOUNDER_DATA: Founder = {
-//   tag: 'FOUNDER',
-//   name: 'Late CA SAMPAT KACHU MANDLIK',
-//   role: '(FCA, M.COM)',
-//   description: [
-//     'Late CA Sampat Kachu Mandlik (FCA, M.Com) was the pioneer and most senior partner of the firm. With more than three decades of professional excellence, he advised public limited companies, large corporates, high-net-worth individuals, and eminent professionals.',
-//     'His mastery in taxation, audits, and regulatory matters, along with his calm handling of challenging cases, earned him immense respect. His values, ethics, and commitment continue to inspire the firm.'
-//   ],
-//   imageUrl: '/images/team/CA S K Mandlik.jpg'
-// };
 
 export const KEY_PERSONS: KeyPerson[] = [
     {

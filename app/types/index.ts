@@ -55,14 +55,6 @@ export interface TeamMember {
   imagePosition?: string;
 }
 
-export interface Founder {
-  tag: string;
-  name: string;
-  role: string;
-  description: string[];
-  imageUrl: string;
-}
-
 export interface KeyPerson {
   id: string;
   name: string;

@@ -41,7 +41,7 @@ export default function Home() {
           {
             title: 'Professional Audit & Assurance Services You Can Trust',
             description: 'Rigorous audit processes and compliance solutions ensuring your business meets all regulatory requirements with confidence.',
-            image: '/images/hero-slide-new-final.jpeg',
+            image: '/images/hero-itr-due-dates.png',
             buttonText: 'CALL US NOW',
             buttonLink: '/contact'
           }
